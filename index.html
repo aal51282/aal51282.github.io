@@ -1,5 +1,47 @@
-New line test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typing Speed Test</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  #test-passage { width: 80%; margin: 20px auto; padding: 10px; border: 1px solid #ccc; }
+  #input-area { width: 80%; margin: 20px auto; height: 50px; }
+  #result { font-size: 24px; color: green; }
+</style>
+</head>
+<body>
+<h1>Typing Speed Test</h1>
+<div id="test-passage">
+  Type this text as fast as you can!
+</div>
+<textarea id="input-area" placeholder="Start typing here..." oninput="handleTyping()"></textarea>
+<button onclick="startTest()">Start Test</button>
+<button onclick="endTest()">End Test</button>
+<div id="result"></div>
 
+<script>
+let startTime, endTime;
 
+function startTest() {
+  document.getElementById('input-area').value = '';
+  document.getElementById('result').textContent = '';
+  startTime = new Date();
+}
 
-...
+function endTest() {
+  endTime = new Date();
+  const elapsedTime = (endTime - startTime) / 60000; // convert time to minutes
+  const textTyped = document.getElementById('input-area').value.trim();
+  const wordCount = textTyped.split(/\s+/).length;
+  const wpm = Math.round(wordCount / elapsedTime);
+  document.getElementById('result').textContent = `Your typing speed is ${wpm} words per minute.`;
+}
+
+function handleTyping() {
+  if (!startTime) { startTest(); } // Automatically start the test on first input
+}
+</script>
+</body>
+</html>
