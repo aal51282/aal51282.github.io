@@ -4,93 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Typing Speed Test</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
-  h1 {
-    color: #222;
-  }
-  #test-passage, #input-area {
-    width: 80%;
-    max-width: 600px;
-    margin: 10px 0;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    background: #ffffff;
-  }
-  #input-area {
-    height: 100px;
-    resize: none;
-  }
-  button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #5c67f2;
-    color: white;
-    transition: background-color 0.3s;
-  }
-  button:hover {
-    background-color: #4a54e1;
-  }
-  #result {
-    font-size: 20px;
-    color: #4a7c59;
-  }
+  body { font-family: Arial, sans-serif; background: #f4f4f9; }
+  h1 { text-align: center; color: #333; }
+  #test-passage { width: 80%; margin: 20px auto; padding: 10px; border: 2px solid #ccc; text-align: center; }
+  #input-area { width: 80%; margin: 20px auto; height: 100px; padding: 10px; font-size: 16px; }
+  #result { font-size: 24px; color: green; text-align: center; margin-top: 20px; }
 </style>
 </head>
 <body>
 <h1>Typing Speed Test</h1>
-<div id="test-passage">
-  Type this text as fast as you can!
-</div>
+<div id="test-passage">Type this text as fast as you can!</div>
 <textarea id="input-area" placeholder="Start typing here..." oninput="handleTyping()"></textarea>
 <div id="result"></div>
 
 <script>
 let startTime, endTime;
+const sampleTexts = [
+  "The quick brown fox jumps over the lazy dog.",
+  "All human beings are born free and equal in dignity and rights.",
+  "To be or not to be, that is the question.",
+  "A journey of a thousand miles begins with a single step.",
+  "Elementary, my dear Watson."
+];
 
 function startTest() {
-  if (!startTime) {
-    document.getElementById('input-area').value = '';
-    document.getElementById('result').textContent = '';
-    startTime = new Date();
-    document.getElementById('input-area').style.borderColor = '#5c67f2';
-  }
+  document.getElementById('input-area').value = '';
+  document.getElementById('result').textContent = '';
+  const randomText = sampleTexts[Math.floor(Math.random() * sampleTexts.length)];
+  document.getElementById('test-passage').textContent = randomText;
+  startTime = new Date();
 }
 
 function endTest() {
-  if (startTime) {
-    endTime = new Date();
-    const elapsedTime = (endTime - startTime) / 60000; // convert time to minutes
-    const textTyped = document.getElementById('input-area').value.trim();
-    const wordCount = textTyped.split(/\s+/).length;
-    const wpm = Math.round(wordCount / elapsedTime);
-    document.getElementById('result').textContent = `Your typing speed is ${wpm} words per minute.`;
-    startTime = undefined; // Reset start time for the next test
-    document.getElementById('input-area').style.borderColor = '#ddd';
-  }
+  endTime = new Date();
+  const elapsedTime = (endTime - startTime) / 60000; // convert time to minutes
+  const textTyped = document.getElementById('input-area').value.trim();
+  const wordCount = textTyped.split(/\s+/).length;
+  const wpm = Math.round(wordCount / elapsedTime);
+  document.getElementById('result').textContent = `Your typing speed is ${wpm} words per minute.`;
+  startTime = undefined; // Reset start time for the next test
 }
 
 function handleTyping() {
   if (!startTime) { startTest(); } // Automatically start the test on first input
 }
-
-document.getElementById('input-area').addEventListener('blur', endTest); // End test when textarea loses focus
 </script>
 </body>
 </html>
