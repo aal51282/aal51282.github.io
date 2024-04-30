@@ -2,6 +2,7 @@
 
 ## Introduction
 The Typing Speed Test is a web-based application designed to help users improve their typing speed and accuracy. This application measures the number of words typed per minute, providing real-time feedback on user performance.
+Access the website https://aal51282.github.io/
 
 ## Features
 - **Real-time Typing Test**: Measures typing speed in words per minute.
