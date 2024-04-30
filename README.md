@@ -13,5 +13,4 @@ The Typing Speed Test is a web-based application designed to help users improve 
 To set up this project locally, follow these steps:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/aal51282.github.io/typing-speed-test.git
+   git clone git@github.com:aal51282/aal51282.github.io.git
