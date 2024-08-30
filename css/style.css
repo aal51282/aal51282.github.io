@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+}
+
+nav {
+    background-color: lightgrey;
+    padding: 10px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    border-bottom: 2px solid black; /* Add a bottom border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set link color */
+    padding: 10px 15px; /* Add padding to links */
+    font-weight: bold; /* Make links bold */
+}
+
+nav a:hover {
+    background-color: darkgrey; /* Change background on hover */
+    color: white; /* Change text color on hover */
+    border-radius: 5px; /* Add rounded corners on hover */
+}
