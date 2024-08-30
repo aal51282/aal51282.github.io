@@ -5,22 +5,41 @@ body {
 nav {
     background-color: lightgrey;
     padding: 10px;
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out items */
-    align-items: center; /* Center items vertically */
-    border-bottom: 2px solid black; /* Add a bottom border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
 }
 
 nav a {
-    text-decoration: none; /* Remove underline from links */
-    color: black; /* Set link color */
-    padding: 10px 15px; /* Add padding to links */
-    font-weight: bold; /* Make links bold */
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    background-color: darkgrey; /* Change background on hover */
-    color: white; /* Change text color on hover */
-    border-radius: 5px; /* Add rounded corners on hover */
+    background-color: darkgrey;
+    color: white;
+    border-radius: 5px;
 }
+
+footer {
+    background-color: lightgrey;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black;
+    font-weight: bold;
+}
+
+.splash {
+    display: flex;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    }
