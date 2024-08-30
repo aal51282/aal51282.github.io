@@ -42,5 +42,20 @@ footer {
 }
 
 h1 {
-    
+    font-family: "Bona Nova SC", serif;
+    font-weight: 510;
+    font-style: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+img {
+    border: 4px solid black
+}
+
+.address {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
