@@ -108,3 +108,25 @@ h3 {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     text-decoration: underline;
 }
+
+.three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    position: relative;
+    background-color: lightgrey;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
