@@ -45,7 +45,7 @@ h1 {
     font-family: "Bona Nova SC", serif;
     font-weight: 510;
     font-style: normal;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 img {
@@ -53,9 +53,58 @@ img {
 }
 
 .address {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .description {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+    border: 1px solid black;
+    margin: 0px 0px;
+}
+
+h2 {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 510;
+    font-style: normal;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
+}
+
+.Education {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+dl {    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin: 1px;
+}
+
+dt a {
+    text-decoration: none;
+    color: blue;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+dt a:hover {
+    color: rgb(48, 119, 206);
+}
+
+h3 {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 510;
+    font-style: normal;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
 }
