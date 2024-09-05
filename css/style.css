@@ -79,7 +79,7 @@ h2 {
     text-decoration: underline;
 }
 
-.Education {
+.education {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -145,4 +145,52 @@ h3 {
     border: 2px solid black;
     display: block;
     margin: auto; 
+}
+
+.itunes {
+    width: 40%;
+    border: 2px solid black;
+    display: block;
+    margin: auto;
+}
+
+.one-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.one-col input[type="text"],
+.one-col input[type="email"],
+.one-col textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #a8a5a5;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(27, 26, 26, 0.892);
+    color: white;
+    cursor: pointer;
+    width: 10%;
+}
+
+.button:hover {
+    background-color: rgba(27, 26, 26, 0.692);
+    color: white;
+    cursor: pointer;
+}
+
+.contact {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    
 }
