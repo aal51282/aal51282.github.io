@@ -2,133 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angel A. Loaiza</title>
-  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angel A. Loaiza - CV</title>
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Tiny5&display=swap" rel="stylesheet">
-
-  <style>
-    .splash {
-      background-image: url('images/nature.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-
-    .card {
-      background-image: url('images/nature.jpg');
-    background-color: transparent;
-    padding: 5px;
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-  </style>
-  
 </head>
 <body>
-  <nav>
-    <p>Angel A. Loaiza</p>
-    <p><a href="contact.html">Contact Angel</a></p>
-  </nav>
-
-  <section class ="splash">
-    <img src="images/Profile_Picture.jpg" alt="Headshot" width ="250">
-    <div class="name">
-      <h1>Angel A. Loaiza</h1>
-    <div class="address">
-      <p>Gaines School Rd • Athens, GA • 404-379-8011 • aal51282@uga.edu</p>
-    <div class ="description">
-      <p>Passionate and results-driven computer science student with a focus on machine learning and artificial intelligence with a background in aerospace engineering.</p>
-    </div>
-  </section>
-<hr>
-  <section>
-    <h2>Education</h2>
-    <p class="education">University of Georgia, Franklin College of Arts & Sciences. Athens, GA Bachelor of Science in Computer Science May 2025. GPA 3.71/4.00. Courses: Software Development, Systems Programming, Software Engineering, Web Programming, Data Structures.</p>
-  </section>
-
-  <section>
-    <h2>Honors and Awards</h2>
-    <dl>
-      <dt>Dean's List</dt>
-      <dd>Fall 2023</dd>
-      <dt>Zell Miller Scholarship Recipient</dt>
-      <dd>Fall 2023</dd>
-    </dl>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Programming Languages: Java, C, C++, Assembly, HTML, CSS, JavaScript, SQL, MATLAB</li>
-      <li>Frameworks/Libaries: Node.js, React, Docker</li>
-      <li>Databases: MongoDB, MySQL</li>
-      <li>Software: Git, VSCode, Eclipse, mobaXterm, Emacs</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Leadership and Experience</h2>
-    <dl>
-      <dt>Tru Remodeling, INC, Lawrenceville, GA</dt>
-      <dd>08/2019 - Present</dd>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Angel A. Loaiza</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   
-      <dt><a href="https://www.instagram.com/listoatuga/">Listo, UGA | Mentor</a></dt>
-      <dd>09/2023 - Present</dd>
-    </dl> 
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="three-col">
-      <div class="card">
-        <img class="movie-image" src="images/movie_background.jpg" alt="Cinema Booking Site">
-        <h3>Cinema Booking Site</h3>
-        <ul>
-          <li>Developed a cinema movie booking website from the ground up as part of a dedicated SCRUM team.</li>
-          <li>Utilized HTML, CSS, JavaScript for a dynamic and responsive user interface.</li>
-          <li>Created website pages with functionalities for movie browsing, booking tickets, selecting seats, checkout, and user profile management. Developed an admin page with capabilities to add, update, and delete movies and manage promotions.</li>
-          <li>Implemented MongoDB for database management to handle user data, movie details, booking information, promotions, etc.</li>
-        </ul>
+  <main>
+    <section class="splash">
+      <img src="images/Profile_Picture.jpg" alt="Angel A. Loaiza" class="profile-pic">
+      <div class="splash-content">
+        <h1>Angel A. Loaiza</h1>
+        <p class="address">Athens, GA • 404-379-8011 • <a href="mailto:aal51282@uga.edu">aal51282@uga.edu</a></p>
+        <p class="description">Passionate and results-driven computer science student with a focus on machine learning and artificial intelligence, complemented by a background in aerospace engineering.</p>
       </div>
-
-      <div class="card">
-        <img class="api-app-image" src="images/api_app.jpg" alt="Cinema Booking Site">
-        <h3>Multiple API Integration</h3>
-        <ul>
-          <li>Developed a JavaFX application that integrates two RESTful JSON APIs to provide users with venue and weather information.</li>
-          <li>Implemented API calls to retrieve venue details and current weather conditions based on latitude and longitude.</li>
-          <li>Parsed and displayed JSON data using the Google Gson library to dynamically update the UI with real-time venue and weather information.</li>
-          <li>Designed a user-friendly interface with JavaFX components, allowing users to input a venue name and state code to search for information.</li>
-        </ul>
+    </section>
+    
+    <hr>
+    
+    <section class="education">
+      <h2>Education</h2>
+      <p>University of Georgia, Franklin College of Arts & Sciences, Athens, GA</p>
+      <p>Bachelor of Science in Computer Science, May 2025</p>
+      <p>GPA: 3.71/4.00</p>
+      <p>Courses: Software Development, Systems Programming, Software Engineering, Web Programming, Data Structures.</p>
+    </section>
+    
+    <section class="honors-awards">
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li><strong>Dean's List</strong> - Fall 2023</li>
+        <li><strong>Zell Miller Scholarship Recipient</strong> - Fall 2023</li>
+      </ul>
+    </section>
+    
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div>
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Java, C, C++, Assembly, HTML, CSS, JavaScript, SQL, MATLAB</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Frameworks/Libraries</h3>
+          <ul>
+            <li>Node.js, React, Docker</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Databases</h3>
+          <ul>
+            <li>MongoDB, MySQL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Software</h3>
+          <ul>
+            <li>Git, VSCode, Eclipse, mobaXterm, Emacs</li>
+          </ul>
+        </div>
       </div>
-
-      <div class="card">
-        <img class="itunes" src="images/itunes.jpg" alt="Cinema Booking Site">
-        <h3>UI/UX and API Integration</h3>
-        <ul>
-          <li>Developed a JavaFX application that dynamically displays a gallery of images based on search queries to the iTunes Search API.</li>
-          <li>Utilized object-oriented principles such as inheritance, polymorphism, and interfaces to design modular and reusable components for handling image views and event handlers.</li>
-          <li>Implemented API calls to fetch and parse search results from the iTunes Search API, displaying album artwork images in a user-friendly gallery format.</li>
-        </ul>
+    </section>
+    
+    <section class="leadership-experience">
+      <h2>Leadership & Experience</h2>
+      <ul>
+        <li>
+          <strong>Tru Remodeling, INC</strong>, Lawrenceville, GA<br>
+          <em>08/2019 - Present</em>
+        </li>
+        <li>
+          <strong><a href="https://www.instagram.com/listoatuga/">Listo, UGA</a></strong> | Mentor<br>
+          <em>09/2023 - Present</em>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="three-col">
+        <div class="card">
+          <img src="images/movie_background.jpg" alt="Cinema Booking Site" class="project-image">
+          <h3>Cinema Booking Site</h3>
+          <ul>
+            <li>Developed a cinema movie booking website from the ground up as part of a dedicated SCRUM team.</li>
+            <li>Utilized HTML, CSS, JavaScript for a dynamic and responsive user interface.</li>
+            <li>Created website pages with functionalities for movie browsing, booking tickets, selecting seats, checkout, and user profile management. Developed an admin page with capabilities to add, update, and delete movies and manage promotions.</li>
+            <li>Implemented MongoDB for database management to handle user data, movie details, booking information, promotions, etc.</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <img src="images/api_app.jpg" alt="Multiple API Integration" class="project-image">
+          <h3>Multiple API Integration</h3>
+          <ul>
+            <li>Developed a JavaFX application that integrates two RESTful JSON APIs to provide users with venue and weather information.</li>
+            <li>Implemented API calls to retrieve venue details and current weather conditions based on latitude and longitude.</li>
+            <li>Parsed and displayed JSON data using the Google Gson library to dynamically update the UI with real-time venue and weather information.</li>
+            <li>Designed a user-friendly interface with JavaFX components, allowing users to input a venue name and state code to search for information.</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <img src="images/itunes.jpg" alt="UI/UX and API Integration" class="project-image">
+          <h3>UI/UX and API Integration</h3>
+          <ul>
+            <li>Developed a JavaFX application that dynamically displays a gallery of images based on search queries to the iTunes Search API.</li>
+            <li>Utilized object-oriented principles such as inheritance, polymorphism, and interfaces to design modular and reusable components for handling image views and event handlers.</li>
+            <li>Implemented API calls to fetch and parse search results from the iTunes Search API, displaying album artwork images in a user-friendly gallery format.</li>
+          </ul>
+        </div>
       </div>
-
-    </div>
-
-  </section>
-
+    </section>
+  </main>
+  
   <footer>
-    &copy; <a href="contact.html"> Angel A. Loaiza </a> • 
-    <a href="https://www.linkedin.com/in/angelloaiza/"><i class="fa-brands fa-linkedin-in"></i></a>
+    &copy; <a href="contact.html">Angel A. Loaiza</a> • 
+    <a href="https://www.linkedin.com/in/angelloaiza/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
   </footer>
-
 </body>
 </html>
