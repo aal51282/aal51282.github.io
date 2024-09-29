@@ -11,6 +11,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,6 +25,7 @@
       </div>
       <ul class="nav-links">
         <li><a href="contact.html">Contact</a></li>
+        <li><button id="dark-mode-toggle" class="button">Toggle Dark Mode</button></li>
       </ul>
     </nav>
   </header>
@@ -38,7 +42,7 @@
     
     <hr>
     
-    <section class="education">
+    <section class="education" data-aos="fade-up">
       <h2>Education</h2>
       <p>University of Georgia, Franklin College of Arts & Sciences, Athens, GA</p>
       <p>Bachelor of Science in Computer Science, May 2025</p>
@@ -46,7 +50,7 @@
       <p>Courses: Systems Programming, Software Engineering, Web Programming, Computer Networks, Algorithms and Data Structures</p>
     </section>
     
-    <section class="honors-awards">
+    <section class="honors-awards" data-aos="fade-up">
       <h2>Honors & Awards</h2>
       <ul>
         <li><strong>Dean's List</strong> - Fall 2023</li>
@@ -54,7 +58,7 @@
       </ul>
     </section>
     
-    <section class="skills">
+    <section class="skills" data-aos="fade-up">
       <h2>Skills</h2>
       <div class="skills-container">
         <div>
@@ -84,7 +88,7 @@
       </div>
     </section>
     
-    <section class="leadership-experience">
+    <section class="leadership-experience" data-aos="fade-up">
       <h2>Leadership & Experience</h2>
       <ul>
         <li>
@@ -98,12 +102,13 @@
       </ul>
     </section>
     
-    <section class="projects">
+    <section class="projects" data-aos="fade-up">
       <h2>Projects</h2>
       <div class="three-col">
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
           <img src="images/movie_background.jpg" alt="Cinema Booking Site" class="project-image">
           <h3>Cinema Booking Site</h3>
+          <p><em>June 2024 - August 2024</em></p>
           <ul>
             <li>Developed a cinema movie booking website from the ground up as part of a dedicated SCRUM team.</li>
             <li>Utilized React, HTML, CSS, JavaScript for a dynamic and responsive user interface.</li>
@@ -112,7 +117,7 @@
           </ul>
         </div>
         
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
           <img src="images/api_app.jpg" alt="Multiple API Integration" class="project-image">
           <h3>Multiple API Integration</h3>
           <ul>
@@ -123,7 +128,7 @@
           </ul>
         </div>
         
-        <div class="card">
+        <div class="card" data-aos="zoom-in" data-aos-delay="400">
           <img src="images/itunes.jpg" alt="UI/UX and API Integration" class="project-image">
           <h3>UI/UX and API Integration</h3>
           <ul>
@@ -140,5 +145,16 @@
     &copy; <a href="contact.html">Angel A. Loaiza</a> • 
     <a href="https://www.linkedin.com/in/angelloaiza/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>

@@ -37,6 +37,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .nav-links li {
@@ -269,6 +270,45 @@ section h2 {
 
 .button:hover {
     background-color: #16a085;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Darker background */
+    color: #e0e0e0; /* Light gray text for better readability */
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer {
+    background-color: #1f1f1f; /* Slightly lighter than body */
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e; /* Dark card background */
+    border: 1px solid #333; /* Subtle border for separation */
+}
+
+body.dark-mode .button {
+    background-color: #bb86fc; /* Vibrant purple for buttons */
+    color: #ffffff; /* White text on buttons */
+}
+
+body.dark-mode .button:hover {
+    background-color: #985eff; /* Darker purple on hover */
+}
+
+body.dark-mode .nav-links a,
+body.dark-mode footer a {
+    color: #bb86fc; /* Use the same vibrant color for links */
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode footer a:hover {
+    color: #ffffff; /* White on hover for better visibility */
+}
+
+body.dark-mode .splash::after {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for splash */
 }
 
 /* Responsive Design */
