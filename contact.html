@@ -1,80 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Angel A. Loaiza</title>
-  
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  
-  <!-- AOS CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Angel A. Loaiza</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Your Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">Angel A. Loaiza</a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">About</a></li>
-        <li><button id="dark-mode-toggle" class="button">Toggle Dark Mode</button></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <section class="contact-header background" data-aos="fade-up">
-      <h1>Contact Angel Loaiza</h1>
-      <p class="address">Athens, GA • 404-379-8011 • <a href="mailto:aal51282@uga.edu">aal51282@uga.edu</a></p>
-      <hr>
-    </section>
-    
-    <section class="contact-form-section" data-aos="fade-up">
-      <form action="mailto:aal51282@uga.edu" method="post" class="contact-form">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea name="message" id="message" cols="30" rows="7" required></textarea>
-        </div>
-        
-        <div class="form-group">
-          <input type="submit" value="Submit" class="button">
-        </div>
-      </form>
-    </section>
-  </main>
-  
-  <footer>
-    &copy; <a href="index.html">Angel A. Loaiza</a> • 
-    <a href="https://www.linkedin.com/in/angelloaiza/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-  </footer>
+    <!-- Navigation Bar (Assuming it's consistent across pages) -->
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo">
+                <a href="index.html">Angel A. Loaiza</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#about" tabindex="0">About</a></li>
+                <li><a href="index.html#education" tabindex="0">Education</a></li>
+                <li><a href="index.html#skills" tabindex="0">Skills</a></li>
+                <li><a href="index.html#projects" tabindex="0">Projects</a></li>
+                <li><a href="contact.html" tabindex="0">Contact</a></li>
+                <li><button id="dark-mode-toggle" class="button toggle-dark-mode" aria-label="Toggle Dark Mode" tabindex="0">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- AOS JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <!-- Main JavaScript -->
-  <script src="js/script.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+    <main>
+        <section class="contact-section" data-aos="zoom-in">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out for collaborations, questions, or just a friendly hello!</p>
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/meojyrla" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="name">Name<span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <small class="error-message" id="name-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email<span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
+                    <small class="error-message" id="email-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject (optional)">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message<span aria-hidden="true">*</span></label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <small class="error-message" id="message-error"></small>
+                </div>
+
+                <button type="submit" class="button">Send Message</button>
+                <p class="form-success" id="form-success" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <a href="index.html">Angel A. Loaiza</a></p>
+        <div class="social-share">
+            <a href="https://www.linkedin.com/in/angelloaiza/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/aal51282" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="mailto:aal51282@uga.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <!-- Back-to-Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">↑</button>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="spinner" aria-hidden="true">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Your Script -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>

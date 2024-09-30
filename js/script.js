@@ -1,87 +1,140 @@
 // Web Development/cv/aal51282.github.io/js/script.js
 
-// Smooth Scrolling for Navigation Links
+// Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href').split('#')[1];
+    // Responsive Navigation Toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
 
-            // Check if the link is an internal link (e.g., #section)
-            if (targetId) {
-                e.preventDefault(); // Prevent default only for internal links
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 70, // Adjust for navbar height
-                        behavior: 'smooth'
-                    });
-                }
-            }
-            // If it's an external link (like contact.html), allow default behavior
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+
+        // Update ARIA attribute
+        const expanded = menuToggle.classList.contains('active') ? 'true' : 'false';
+        menuToggle.setAttribute('aria-expanded', expanded);
+    });
+
+    // Allow toggling via Enter key for accessibility
+    menuToggle.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+
+            // Update ARIA attribute
+            const expanded = menuToggle.classList.contains('active') ? 'true' : 'false';
+            menuToggle.setAttribute('aria-expanded', expanded);
+        }
+    });
+
+    // Dark Mode Toggle Functionality
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Load saved dark mode preference
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.textContent = '☀️'; // Change icon to sun
+    } else {
+        darkModeToggle.textContent = '🌙'; // Moon icon
+    }
+
+    // Toggle dark mode on button click
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Update dark mode preference in localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+            darkModeToggle.textContent = '☀️'; // Sun icon
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+            darkModeToggle.textContent = '🌙'; // Moon icon
+        }
+    });
+
+    // Back-to-Top Button Functionality
+    const backToTopButton = document.getElementById('back-to-top');
+
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'flex';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    // Scroll smoothly to the top when the button is clicked
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 
-    // Dark Mode Toggle
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    const body = document.body;
+    // Contact Form Validation
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
 
-    // Check for saved dark mode preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        body.classList.add('dark-mode');
-    }
+    contactForm.addEventListener('submit', function(e) {
+        let valid = true;
 
-    // Ensure toggleButton is not null before adding event listener
-    if (toggleButton) {
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-
-            // Save user preference in localStorage
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('dark-mode', 'enabled');
-            } else {
-                localStorage.setItem('dark-mode', 'disabled');
-            }
+        // Clear previous errors
+        document.querySelectorAll('.error-message').forEach(msg => {
+            msg.textContent = '';
+            msg.style.display = 'none';
         });
-    } else {
-        console.error("Toggle button not found");
+
+        // Validate Name
+        const name = document.getElementById('name');
+        if (name.value.trim() === '') {
+            valid = false;
+            const nameError = document.getElementById('name-error');
+            nameError.textContent = 'Name is required.';
+            nameError.style.display = 'block';
+        }
+
+        // Validate Email
+        const email = document.getElementById('email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.value.trim() === '') {
+            valid = false;
+            const emailError = document.getElementById('email-error');
+            emailError.textContent = 'Email is required.';
+            emailError.style.display = 'block';
+        } else if (!emailRegex.test(email.value.trim())) {
+            valid = false;
+            const emailError = document.getElementById('email-error');
+            emailError.textContent = 'Please enter a valid email address.';
+            emailError.style.display = 'block';
+        }
+
+        // Validate Message
+        const message = document.getElementById('message');
+        if (message.value.trim() === '') {
+            valid = false;
+            const messageError = document.getElementById('message-error');
+            messageError.textContent = 'Message is required.';
+            messageError.style.display = 'block';
+        }
+
+        if (!valid) {
+            e.preventDefault(); // Prevent form submission
+        } else {
+            // Display success message
+            e.preventDefault(); // Prevent default submission to handle via JavaScript
+            formSuccess.textContent = 'Thank you! Your message has been sent.';
+            formSuccess.style.display = 'block';
+            contactForm.reset();
+        }
+    });
+
+    // Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
     }
 });
-
-// Form Validation
-const contactForm = document.querySelector('.contact-form');
-
-contactForm.addEventListener('submit', function(e) {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    let valid = true;
-    let errorMessage = '';
-
-    if (name === '') {
-        valid = false;
-        errorMessage += 'Name is required.\n';
-    }
-
-    if (email === '') {
-        valid = false;
-        errorMessage += 'Email is required.\n';
-    } else if (!validateEmail(email)) {
-        valid = false;
-        errorMessage += 'Please enter a valid email address.\n';
-    }
-
-    if (message === '') {
-        valid = false;
-        errorMessage += 'Message is required.\n';
-    }
-
-    if (!valid) {
-        e.preventDefault();
-        alert(errorMessage);
-    }
-});
-
-function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
-    return re.test(String(email).toLowerCase());
-}

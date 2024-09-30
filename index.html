@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angel A. Loaiza - CV</title>
-  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -19,13 +19,22 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main Navigation">
       <div class="logo">
         <a href="index.html">Angel A. Loaiza</a>
       </div>
+      <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
       <ul class="nav-links">
-        <li><a href="contact.html">Contact</a></li>
-        <li><button id="dark-mode-toggle" class="button">Toggle Dark Mode</button></li>
+        <li><a href="#about" tabindex="0">About</a></li>
+        <li><a href="#education" tabindex="0">Education</a></li>
+        <li><a href="#skills" tabindex="0">Skills</a></li>
+        <li><a href="#projects" tabindex="0">Projects</a></li>
+        <li><a href="contact.html" tabindex="0">Contact</a></li>
+        <li><button id="dark-mode-toggle" class="button toggle-dark-mode" aria-label="Toggle Dark Mode" tabindex="0">🌙</button></li>
       </ul>
     </nav>
   </header>
