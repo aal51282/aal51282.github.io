@@ -95,7 +95,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .splash-content {
@@ -105,12 +105,14 @@ footer a:hover {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #fff;
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it circular */
+    filter: brightness(1.2); /* Increase brightness (1 is original, >1 is brighter) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
     object-fit: cover;
     margin-bottom: 20px;
+    border: 2px solid;
 }
 
 .splash h1 {
@@ -149,6 +151,7 @@ section h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #2c3e50;
+    text-decoration: underline;
 }
 
 .education p,
@@ -197,10 +200,11 @@ section h2 {
 }
 
 .project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    width: 100%; /* Make the image responsive */
+    height:250px; /* Set a fixed height */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
 }
 
 .card h3 {
