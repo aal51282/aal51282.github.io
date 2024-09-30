@@ -88,16 +88,22 @@ footer a:hover {
     position: relative;
 }
 
-.splash::after {
+/* Blurred Background using Pseudo-Element */
+.splash::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/nature.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: 0;
 }
 
+/* Content Overlay */
 .splash-content {
     position: relative;
     z-index: 1;
