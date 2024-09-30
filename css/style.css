@@ -179,6 +179,9 @@ section h2 {
     font-size: 1.2em;
     color: #1abc9c;
     margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-color: #1abc9c;
+    text-decoration-thickness: 2px;
 }
 
 .three-col {
@@ -279,7 +282,6 @@ section h2 {
 /* Dark Mode Styles */
 body.dark-mode {
     background-color: #121212; /* Darker background */
-    color: #e0e0e0; /* Light gray text for better readability */
 }
 
 body.dark-mode .navbar,
@@ -288,7 +290,7 @@ body.dark-mode footer {
 }
 
 body.dark-mode .card {
-    background-color: #1e1e1e; /* Dark card background */
+    background-color: rgba(0, 0, 0, 0.804); /* Dark card background */
     border: 1px solid #333; /* Subtle border for separation */
 }
 
@@ -312,7 +314,18 @@ body.dark-mode footer a:hover {
 }
 
 body.dark-mode .splash::after {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for splash */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for splash */
+}
+
+/* Dark Mode Background Color for All Sections */
+body.dark-mode .education,
+body.dark-mode .honors-awards,
+body.dark-mode .skills,
+body.dark-mode .leadership-experience,
+body.dark-mode .projects {
+    background-color: rgba(255, 255, 255, 0.043); /* Dark background for sections in dark mode */
+    color: #ffffff; /* White text for better contrast */
+    margin-bottom: 15px; /* Optional: Add margin for spacing between sections */
 }
 
 /* Responsive Design */
@@ -343,3 +356,4 @@ body.dark-mode .splash::after {
         grid-template-columns: 1fr;
     }
 }
+
