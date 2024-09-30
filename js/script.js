@@ -1,38 +1,49 @@
 // Web Development/cv/aal51282.github.io/js/script.js
 
 // Smooth Scrolling for Navigation Links
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').split('#')[1] || this.getAttribute('href');
-        const targetSection = document.getElementById(targetId) || document.querySelector(this.getAttribute('href'));
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').split('#')[1];
 
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 70, // Adjust for navbar height
-                behavior: 'smooth'
-            });
-        }
+            // Check if the link is an internal link (e.g., #section)
+            if (targetId) {
+                e.preventDefault(); // Prevent default only for internal links
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70, // Adjust for navbar height
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            // If it's an external link (like contact.html), allow default behavior
+        });
     });
-});
 
-// Dark Mode Toggle
-const toggleButton = document.getElementById('dark-mode-toggle');
-const body = document.body;
+    // Dark Mode Toggle
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
 
-// Check for saved dark mode preference
-if (localStorage.getItem('dark-mode') === 'enabled') {
-    body.classList.add('dark-mode');
-}
+    // Check for saved dark mode preference
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
 
-toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+    // Ensure toggleButton is not null before adding event listener
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
 
-    // Save user preference in localStorage
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
+            // Save user preference in localStorage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
     } else {
-        localStorage.setItem('dark-mode', 'disabled');
+        console.error("Toggle button not found");
     }
 });
 
