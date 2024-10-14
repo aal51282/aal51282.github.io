@@ -828,3 +828,23 @@ section {
 }
 
 /* Other Existing Styles */
+
+/* Ensure the body has consistent padding and font */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+/* Style for h1 used across the site */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+/* Navigation link active state */
+.nav-links a.active {
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Add any other global styles as needed */

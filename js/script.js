@@ -7,23 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-
-        // Update ARIA attribute
-        const expanded = menuToggle.classList.contains('active') ? 'true' : 'false';
-        menuToggle.setAttribute('aria-expanded', expanded);
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
     });
 
     // Allow toggling via Enter key for accessibility
     menuToggle.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             navLinks.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-
-            // Update ARIA attribute
-            const expanded = menuToggle.classList.contains('active') ? 'true' : 'false';
-            menuToggle.setAttribute('aria-expanded', expanded);
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
         }
     });
 
