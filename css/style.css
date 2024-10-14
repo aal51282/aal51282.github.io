@@ -829,4 +829,13 @@ h1 {
   font-weight: bold;
 }
 
+/* Message Box */
+#message {
+    resize: vertical;  /* Only allow vertical resizing */
+    min-height: 100px; /* Minimum height */
+    max-height: 400px; /* Maximum height */
+    width: 100%;       /* Full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 /* Add any other global styles as needed */
