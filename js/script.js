@@ -137,4 +137,31 @@ document.addEventListener('DOMContentLoaded', () => {
             once: true,
         });
     }
+
+    // Smooth scrolling for navigation links
+    const links = document.querySelectorAll('.nav-links a');
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar.offsetHeight;
+
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // Prevent default behavior
+            e.preventDefault();
+
+            // Get the target section's ID
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                // Calculate the top position considering the navbar's height
+                const targetPosition = targetSection.offsetTop - navbarHeight;
+
+                // Smooth scroll to the target position
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });

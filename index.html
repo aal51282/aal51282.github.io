@@ -29,10 +29,10 @@
         <span class="bar"></span>
       </div>
       <ul class="nav-links">
-        <li><a href="#about" tabindex="0">About</a></li>
-        <li><a href="#education" tabindex="0">Education</a></li>
-        <li><a href="#skills" tabindex="0">Skills</a></li>
-        <li><a href="#projects" tabindex="0">Projects</a></li>
+        <li><a href="index.html#about" tabindex="0">About</a></li>
+        <li><a href="index.html#education" tabindex="0">Education</a></li>
+        <li><a href="index.html#skills" tabindex="0">Skills</a></li>
+        <li><a href="projects.html" tabindex="0">Projects</a></li>
         <li><a href="contact.html" tabindex="0">Contact</a></li>
         <li><button id="dark-mode-toggle" class="button toggle-dark-mode" aria-label="Toggle Dark Mode" tabindex="0">🌙</button></li>
       </ul>
@@ -40,7 +40,7 @@
   </header>
   
   <main>
-    <section class="splash">
+    <section id="about" class="splash">
       <div class="splash-content">
         <img src="images/Profile_Picture.jpg" alt="Profile Picture" class="profile-pic">
         <div class="splash-content">
@@ -53,7 +53,7 @@
     
     <hr style="border: none; height: 4px; background: linear-gradient(to right, #1abc9c, #2c3e50); margin: 20px 0;">
     
-    <section class="education" data-aos="fade-up">
+    <section id="education" data-aos="fade-up">
       <h2>Education</h2>
       <p>University of Georgia, Franklin College of Arts & Sciences, Athens, GA</p>
       <p>Bachelor of Science in Computer Science, May 2025</p>
@@ -61,7 +61,7 @@
       <p>Courses: Systems Programming, Software Engineering, Web Programming, Computer Networks, Algorithms and Data Structures</p>
     </section>
     
-    <section class="honors-awards" data-aos="fade-up">
+    <section id="honors-awards" data-aos="fade-up">
       <h2>Honors & Awards</h2>
       <ul>
         <li><strong>Dean's List</strong> - Fall 2023</li>
@@ -69,7 +69,7 @@
       </ul>
     </section>
     
-    <section class="skills" data-aos="fade-up">
+    <section id="skills" data-aos="fade-up">
       <h2>Skills</h2>
       <div class="skills-container">
         <div>
@@ -81,7 +81,7 @@
         <div>
           <h3>Frameworks/Libraries</h3>
           <ul>
-            <li>React, Node.js, Express.js</li>
+            <li>React.js, Node.js, Express.js, Tailwind CSS, Bootstrap</li>
           </ul>
         </div>
         <div>
@@ -99,7 +99,7 @@
       </div>
     </section>
     
-    <section class="leadership-experience" data-aos="fade-up">
+    <section id="leadership-experience" data-aos="fade-up">
       <h2>Leadership & Experience</h2>
       <ul>
         <li>
@@ -113,8 +113,8 @@
       </ul>
     </section>
     
-    <section class="projects" data-aos="fade-up">
-      <h2>Projects</h2>
+    <section id="projects" data-aos="fade-up">
+      <h2><a href="projects.html" class="view-all-projects">View All Projects</a></h2>
       <div class="three-col">
         <div class="card" data-aos="zoom-in">
           <img src="images/movie_background.jpg" alt="Cinema Booking Site" class="project-image">
@@ -172,5 +172,8 @@
       once: true
     });
   </script>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
 </body>
 </html>

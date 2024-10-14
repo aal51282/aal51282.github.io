@@ -773,3 +773,58 @@ body, input, textarea, button {
         display: flex; /* Show menu toggle on mobile */
     }
 }
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adjust Scroll Position for Fixed Navbar */
+section {
+  scroll-margin-top: 80px; /* Adjust based on your navbar height */
+}
+
+/* Navigation Link Hover Effect (from previous step) */
+.nav-links li a {
+  position: relative;
+  display: inline-block;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 0;
+  background-color: #1abc9c;
+  transition: height 0.5s ease, left 0.3s ease;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.nav-links li a:hover::before {
+  height: 60px; /* Adjust this value */
+  left: 50%;
+}
+
+.nav-links li a:hover {
+  color: #1abc9c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-links li a::before {
+    height: 0;
+  }
+
+  .nav-links li a:hover::before {
+    height: 80px; /* Adjust for smaller screens */
+  }
+}
+
+/* Other Existing Styles */

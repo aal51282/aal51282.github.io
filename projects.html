@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects - Angel A. Loaiza</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Unique Projects CSS -->
+  <link rel="stylesheet" href="css/projects.css">
+  
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">
+        <a href="index.html">Angel A. Loaiza</a>
+      </div>
+      <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#about" tabindex="0">About</a></li>
+        <li><a href="index.html#education" tabindex="0">Education</a></li>
+        <li><a href="index.html#skills" tabindex="0">Skills</a></li>
+        <li><a href="projects.html" tabindex="0">Projects</a></li>
+        <li><a href="index.html#contact" tabindex="0">Contact</a></li>
+        <li><button id="dark-mode-toggle" class="button toggle-dark-mode" aria-label="Toggle Dark Mode" tabindex="0">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="projects-page">
+      <h1>My Projects</h1>
+      <div class="projects-container">
+        <!-- Project Card 1 -->
+        <div class="project-card" data-aos="fade-up">
+          <img src="images/cinema_booking.jpg" alt="Cinema Booking Site" class="project-image">
+          <div class="project-content">
+            <h2>Cinema Booking Site</h2>
+            <p><em>June 2024 - August 2024</em></p>
+            <p>Developed a cinema movie booking website using React, MongoDB, and Express.js. Features include movie browsing, ticket booking, seat selection, and user profile management.</p>
+            <div class="project-links">
+              <a href="https://github.com/aal51282/cinema-booking" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://cinema-booking-demo.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project Card 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/api_integration.jpg" alt="Multiple API Integration" class="project-image">
+          <div class="project-content">
+            <h2>Multiple API Integration</h2>
+            <p><em>March 2024 - May 2024</em></p>
+            <p>Created a JavaFX application integrating venue and weather APIs to provide users with real-time venue details and weather conditions based on location inputs.</p>
+            <div class="project-links">
+              <a href="https://github.com/aal51282/api-integration-app" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://api-integration-demo.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project Card 3 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="images/uiux_itunes.jpg" alt="UI/UX and API Integration" class="project-image">
+          <div class="project-content">
+            <h2>UI/UX and API Integration</h2>
+            <p><em>January 2024 - February 2024</em></p>
+            <p>Developed a JavaFX application that dynamically displays a gallery of images based on user search queries using the iTunes Search API. Implemented object-oriented principles for modularity.</p>
+            <div class="project-links">
+              <a href="https://github.com/aal51282/uiux-itunes-app" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://uiux-itunes-demo.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 <a href="index.html">Angel A. Loaiza</a></p>
+    <div class="social-share">
+      <a href="https://www.linkedin.com/in/angelloaiza/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/aal51282" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a href="mailto:aal51282@uga.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+  
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
