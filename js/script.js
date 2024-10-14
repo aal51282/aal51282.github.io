@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Smooth scrolling for navigation links
-    const links = document.querySelectorAll('.nav-links a');
+    // const links = document.querySelectorAll('.nav-links a');
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar.offsetHeight;
 
@@ -158,4 +158,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Check if there's a hash in the URL (e.g., #about)
+    if (window.location.hash) {
+        // Remove the '#' from the hash
+        const targetId = window.location.hash.substring(1);
+        // Find the target element
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            // Scroll to the target element
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
 });
