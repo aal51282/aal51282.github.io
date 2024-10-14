@@ -794,24 +794,6 @@ section {
   transition: color 0.3s ease;
 }
 
-.nav-links li a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 0;
-  background-color: #1abc9c;
-  transition: height 0.5s ease, left 0.3s ease;
-  transform: translateX(-50%);
-  z-index: -1;
-}
-
-.nav-links li a:hover::before {
-  height: 60px; /* Adjust this value */
-  left: 50%;
-}
-
 .nav-links li a:hover {
   color: #1abc9c;
 }
