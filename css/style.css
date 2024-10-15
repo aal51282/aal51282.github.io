@@ -524,6 +524,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    background-color: var(--background-color);
 }
 
 .contact-section h1 {
@@ -838,4 +839,9 @@ h1 {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-/* Add any other global styles as needed */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+}

@@ -22,7 +22,7 @@
 <body>
     <!-- Navigation Bar -->
     <header>
-        <nav class="navbar" aria-label="Main Navigation">
+        <nav class="navbar" aria-label="Main Navigation" style="margin-bottom: 100px;">
             <div class="logo">
                 <a href="index.html">Angel A. Loaiza</a>
             </div>
@@ -45,38 +45,13 @@
     <main>
         <section class="contact-section" data-aos="zoom-in">
             <h1>Contact Me</h1>
-            <p>Feel free to reach out for collaborations, questions, or just a friendly hello!</p>
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/meojyrla" method="POST" novalidate>
-                <div class="form-group">
-                    <label for="name">Name<span aria-hidden="true">*</span></label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                    <small class="error-message" id="name-error"></small>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email<span aria-hidden="true">*</span></label>
-                    <input type="email" id="email" name="_replyto" placeholder="username@gmail.com" required>
-                    <small class="error-message" id="email-error"></small>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject (Optional)">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message<span aria-hidden="true">*</span></label>
-                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <small class="error-message" id="message-error"></small>
-                </div>
-
-                <button type="submit" class="button">Send Message</button>
-                <p class="form-success" id="form-success" aria-live="polite"></p>
+            <form id="contact-form" class="contact-form">
+                <div class="email-contact" style="font-size: 3rem; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">angelloaiza7140@gmail.com</div>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 <a href="index.html">Angel A. Loaiza</a></p>
         <div class="social-share">
             <a href="https://www.linkedin.com/in/angelloaiza/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
