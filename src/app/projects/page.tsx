@@ -26,7 +26,7 @@ const projects = [
     title: 'Money Tracker',
     image: '/images/money-tracker.jpg',
     githubLink: 'https://github.com/aal51282/money-tracker',
-    liveDemo: 'https://money-tracker-demo.com',
+    liveDemo: 'https://angel-money-tracker.vercel.app/',
     description: [
       'Built a full-stack web application using the MERN stack to track income and expenses.',
       'Provides users with a clear overview of their financial transactions and analysis.',

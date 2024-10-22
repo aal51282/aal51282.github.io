@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './Projects.module.css';
 import Image from 'next/image';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 interface Project {
   title: string;
   image: string;
   githubLink?: string;
+  externalLink?: string;
   description: string[];
   date: string;
-  externalLink?: string;
 }
 
 const projects: Project[] = [
@@ -17,6 +17,7 @@ const projects: Project[] = [
     title: 'Money Tracker',
     image: '/images/money-tracker.jpg',
     githubLink: 'https://github.com/aal51282/money-tracker',
+    externalLink: 'https://angel-money-tracker.vercel.app/',
     description: [
       'Developed a full-stack web application using the MERN stack (MongoDB, Express, React, Node.js) to track income and expenses.',
       'Utilized React, HTML, CSS, JavaScript for a dynamic and responsive user interface.',
@@ -61,13 +62,17 @@ const Projects: React.FC = () => {
         {projects.map((project, index) => (
           <div key={index} className={styles.card} data-aos="zoom-in" data-aos-delay={index * 200}>
             <Image src={project.image} alt={project.title} width={400} height={250} className={styles.projectImage} />
-            <h3>
-              {project.githubLink ? (
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                  {project.title} <FaGithub className={styles.githubIcon} />
+            <h3 className={styles.projectTitle}>
+              {project.title}
+              {project.githubLink && (
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+                  <FaGithub className={styles.icon} />
                 </a>
-              ) : (
-                project.title
+              )}
+              {project.externalLink && (
+                <a href={project.externalLink} target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+                  <FaExternalLinkAlt className={styles.icon} />
+                </a>
               )}
             </h3>
             <p>
@@ -86,4 +91,3 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
-
