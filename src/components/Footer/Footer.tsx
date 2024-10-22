@@ -1,17 +1,15 @@
-import React from 'react';
-import styles from './Footer.module.css';
-import Link from 'next/link';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import React from "react";
+import styles from "./Footer.module.css";
+import Link from "next/link";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
-      <p>
-        &copy; 2024 Angel A. Loaiza. All rights reserved. | <Link href="/">Home</Link>
-      </p>
+      <p>&copy; 2024 Angel A. Loaiza.</p>
       <div className={styles.socialShare}>
         <a
-          href="https://www.linkedin.com/in/angel-loaiza-a7b5b7246/"
+          href="https://www.linkedin.com/in/angelloaiza/"
           aria-label="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
