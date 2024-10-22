@@ -12,7 +12,6 @@ import Footer from '@/components/Footer/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from './page.module.css';
-import '@/app/globals.css';
 
 export default function Home() {
   useEffect(() => {
@@ -25,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main>
+      <main className={styles.main}>
         <Splash />
         <hr className={styles.divider} />
         <Education />

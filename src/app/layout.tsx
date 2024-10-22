@@ -40,10 +40,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
+        {/* AOS CSS */}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
