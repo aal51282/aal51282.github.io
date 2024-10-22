@@ -7,7 +7,7 @@ const Honors: React.FC = () => {
       <h2>Honors & Awards</h2>
       <ul>
         <li>
-          <strong>Dean's List</strong> - Fall 2023
+          <strong>Dean&apos;s List</strong> - Fall 2023
         </li>
         <li>
           <strong>Zell Miller Scholarship Recipient</strong> - Fall 2023
@@ -18,4 +18,3 @@ const Honors: React.FC = () => {
 };
 
 export default Honors;
-

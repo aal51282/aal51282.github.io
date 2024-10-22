@@ -1,19 +1,17 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import Link from 'next/link';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <p>
-        &copy; 2024{' '}
-        <a href="/" className={styles.footerLink}>
-          Angel A. Loaiza
-        </a>
+        &copy; 2024 Angel A. Loaiza. All rights reserved. | <Link href="/">Home</Link>
       </p>
       <div className={styles.socialShare}>
         <a
-          href="https://www.linkedin.com/in/angelloaiza/"
+          href="https://www.linkedin.com/in/angel-loaiza-a7b5b7246/"
           aria-label="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
@@ -43,4 +41,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
