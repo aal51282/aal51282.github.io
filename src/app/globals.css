@@ -5,57 +5,63 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #1abc9c;
+  --navbar-bg: #ffffff;
+  --footer-bg: #333333;
+  --footer-text: #ffffff;
+  --link-color: #1abc9c;
+  --card-bg: rgba(255, 255, 255, 0.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #16a085;
+  --navbar-bg: #1e1e1e;
+  --footer-bg: #1e1e1e;
+  --footer-text: #f0f0f0;
+  --link-color: #16a085;
+  --card-bg: rgba(30, 30, 30, 0.9);
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: var(--background-color);
+  color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dark {
-  background-color: #121212;
-  color: #ffffff;
+  background: linear-gradient(to right, var(--background-color), var(--accent-color));
 }
 
 a {
-  color: #1abc9c;
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #16a085;
+  color: var(--accent-color);
 }
 
-hr {
-  border: none;
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.dark .navbar {
-  background-color: #1a1a1a;
+/* Other global styles as needed */
+
+/* Apply background gradient to the body or specific sections as needed */
+
+/* Example: Applying gradient to the body */
+body {
+  background: linear-gradient(to right, var(--background-color), var(--accent-color));
 }
 
-.dark .navbar a {
-  color: #ffffff;
-}
-
-.dark .splash {
-  background-color: #1a1a1a;
-}
-
-.dark .splash .description {
-  color: #dddddd;
+/* Alternatively, apply to main content areas for more control */
+.main {
+  background: linear-gradient(to bottom right, var(--background-color), #e0f7fa);
+  min-height: 100vh;
 }

@@ -1,0 +1,49 @@
+.contactSection {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom left, #ffffff, #ffecb3);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #1abc9c;
+  }
+  
+  .contactForm {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .emailContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .emailIcon {
+    margin-right: 0.5rem;
+    color: #1abc9c;
+  }
+  
+  .emailLink {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .emailLink:hover {
+    color: #16a085;
+  }

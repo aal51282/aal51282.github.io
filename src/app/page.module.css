@@ -1,6 +1,6 @@
 .divider {
     height: 3px;
-    background: linear-gradient(to right, #1abc9c, #2c3e50);
+    background: linear-gradient(to right, var(--accent-color), #2c3e50);
     margin: 10px auto;
     width: 50%;
   }

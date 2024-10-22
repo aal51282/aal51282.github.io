@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
-  background-color: #f0f2f5;
+  background: linear-gradient(to bottom right, var(--background-color), #e0f7fa);
 }
 
 .splashContent {
@@ -21,23 +21,23 @@
 .profilePic {
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid var(--accent-color);
 }
 
 .textContent h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .address {
   font-size: 1rem;
-  color: #555555;
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
 .description {
   font-size: 1.1rem;
-  color: #555555;
+  color: var(--text-color);
   max-width: 600px;
 }
-

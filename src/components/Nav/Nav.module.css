@@ -3,17 +3,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--navbar-bg);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background-color 0.3s ease;
 }
 
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #000000;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -31,8 +32,9 @@
 .bar {
   width: 100%;
   height: 3px;
-  background-color: #000000;
+  background-color: var(--text-color);
   border-radius: 2px;
+  transition: background-color 0.3s ease;
 }
 
 .navLinks {
@@ -43,13 +45,13 @@
 
 .navLinks li a {
   text-decoration: none;
-  color: #000000;
+  color: var(--text-color);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navLinks li a:hover {
-  color: #1abc9c;
+  color: var(--accent-color);
 }
 
 .toggleDarkMode {
@@ -57,12 +59,12 @@
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
-  color: #000000;
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
 .toggleDarkMode:hover {
-  color: #1abc9c;
+  color: var(--accent-color);
 }
 
 /* Mobile Styles */
@@ -75,7 +77,7 @@
     position: absolute;
     top: 70px;
     right: 0;
-    background-color: #ffffff;
+    background-color: var(--navbar-bg);
     flex-direction: column;
     width: 200px;
     padding: 1rem;
@@ -96,4 +98,3 @@
     margin-bottom: 0;
   }
 }
-

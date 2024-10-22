@@ -1,8 +1,8 @@
 /* src/components/Footer/Footer.module.css */
 .footer {
   padding: 2rem;
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   text-align: center;
 }
 
@@ -12,13 +12,13 @@
 }
 
 .footerLink {
-  color: #1abc9c;
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footerLink:hover {
-  color: #16a085;
+  color: var(--accent-color);
 }
 
 .socialShare {
@@ -28,12 +28,11 @@
 }
 
 .socialLink {
-  color: #ffffff;
+  color: var(--footer-text);
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
 .socialLink:hover {
-  color: #1abc9c;
+  color: var(--accent-color);
 }
-

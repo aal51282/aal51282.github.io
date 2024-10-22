@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Nav.module.css';
 import Link from 'next/link';
 import { FaMoon, FaSun } from 'react-icons/fa';
@@ -7,13 +7,20 @@ const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  // Synchronize dark mode state with the 'dark' class on the document
+  useEffect(() => {
+    const darkModeClass = document.documentElement.classList.contains('dark');
+    setIsDarkMode(darkModeClass);
+  }, []);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    if (!isDarkMode) {
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    if (newDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
@@ -37,7 +44,7 @@ const Nav: React.FC = () => {
       </button>
       <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.active : ''}`}>
         <li>
-          <Link href="#about">About</Link>
+          <Link href="/">About</Link>
         </li>
         <li>
           <Link href="/projects">Projects</Link>
