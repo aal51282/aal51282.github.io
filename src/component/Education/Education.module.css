@@ -1,0 +1,19 @@
+/* src/components/Education/Education.module.css */
+.education {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.education h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1abc9c;
+}
+
+.education p {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+

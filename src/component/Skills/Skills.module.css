@@ -1,0 +1,38 @@
+/* src/components/Skills/Skills.module.css */
+.skills {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1abc9c;
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skillsContainer div h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #555555;
+}
+
+.skillsContainer div ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skillsContainer div ul li {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 0.25rem;
+}
+

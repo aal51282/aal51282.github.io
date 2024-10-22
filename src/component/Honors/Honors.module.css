@@ -1,0 +1,24 @@
+/* src/components/Honors/Honors.module.css */
+.honors {
+  padding: 4rem 2rem;
+  background-color: #f0f2f5;
+  text-align: center;
+}
+
+.honors h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1abc9c;
+}
+
+.honors ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.honors li {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+

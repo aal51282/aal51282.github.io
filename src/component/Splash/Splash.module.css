@@ -1,0 +1,43 @@
+/* src/components/Splash/Splash.module.css */
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f0f2f5;
+}
+
+.splashContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profileImage {
+  margin-bottom: 2rem;
+}
+
+.profilePic {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.textContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.address {
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #555555;
+  max-width: 600px;
+}
+

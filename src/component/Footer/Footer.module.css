@@ -1,0 +1,39 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+  padding: 2rem;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footerLink {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: #16a085;
+}
+
+.socialShare {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLink {
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #1abc9c;
+}
+
