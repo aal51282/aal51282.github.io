@@ -7,10 +7,13 @@ const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Synchronize dark mode state with the 'dark' class on the document
+  // Initialize dark mode based on localStorage
   useEffect(() => {
-    const darkModeClass = document.documentElement.classList.contains('dark');
-    setIsDarkMode(darkModeClass);
+    const darkModeStored = localStorage.getItem('isDarkMode') === 'true';
+    setIsDarkMode(darkModeStored);
+    if (darkModeStored) {
+      document.documentElement.classList.add('dark');
+    }
   }, []);
 
   const toggleMobileMenu = () => {
@@ -20,6 +23,7 @@ const Nav: React.FC = () => {
   const toggleDarkMode = () => {
     const newDarkMode = !isDarkMode;
     setIsDarkMode(newDarkMode);
+    localStorage.setItem('isDarkMode', newDarkMode.toString());
     if (newDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
