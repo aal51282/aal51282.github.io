@@ -65,3 +65,7 @@ body {
   background: linear-gradient(to bottom right, var(--background-color), #e0f7fa);
   min-height: 100vh;
 }
+
+html {
+  scroll-behavior: smooth;
+}
