@@ -18,8 +18,7 @@ const Splash: React.FC = () => {
         <div className={styles.textContent}>
           <h1>Angel A. Loaiza</h1>
           <p className={styles.address}>
-            Athens, GA • 404-379-8011 •{' '}
-            <a href="mailto:aal51282@uga.edu">aal51282@uga.edu</a>
+            Athens, GA • 404-379-8011 • angelloaiza7140@gmail.com
           </p>
           <p className={styles.description}>
             Passionate computer science student with a focus on machine learning, artificial intelligence, and database management, leveraging a strong foundation in aerospace engineering.
