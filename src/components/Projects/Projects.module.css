@@ -43,10 +43,18 @@
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+.imageContainer {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
 .projectImage {
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   object-fit: cover;
-  margin-bottom: 1rem;
 }
 
 .card h3 {
