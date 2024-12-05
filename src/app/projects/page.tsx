@@ -13,7 +13,7 @@ import { FaGithub, FaLink } from "react-icons/fa";
 const projects = [
   {
     title: "Wardrobe Wizard",
-    image: "/images/wardrobe-wizard.png",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wardrobe-wizard.png`,
     githubLink: "https://github.com/aal51282/wardrobe-wizard",
     liveDemo: "https://wardrobe-wizard-nine.vercel.app/",
     description: [
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     title: "Money Tracker",
-    image: "/images/money-tracker.jpg",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/money-tracker.jpg`,
     githubLink: "https://github.com/aal51282/money-tracker",
     liveDemo: "https://angel-money-tracker.vercel.app/",
     description: [
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     title: "Cinema Booking Site",
-    image: "/images/movie_background.png",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/movie_background.png`,
     githubLink: "https://github.com/aal51282/Cinema-Ebooking-System",
     liveDemo: "https://cinema-ebooking-system.vercel.app/",
     description: [
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: "Multiple API Integration",
-    image: "/images/api_app.jpg",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/api_app.jpg`,
     githubLink: "https://github.com/aal51282/cs1302-api-app",
     liveDemo: "https://api-integration-demo.com",
     description: [
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     title: "UI/UX and API Integration",
-    image: "/images/itunes.jpg",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/itunes.jpg`,
     githubLink: "https://github.com/aal51282/itunes-app",
     liveDemo: "https://uiux-itunes-demo.com",
     description: [
