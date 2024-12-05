@@ -100,7 +100,9 @@ const ProjectsPage: React.FC = () => {
                   data-aos-delay={index * 200}
                   style={{
                     width: '350px',
-                    flex: '0 0 350px'
+                    flex: '0 0 350px',
+                    display: 'flex',
+                    flexDirection: 'column'
                   }}
                 >
                   <Image
@@ -110,11 +112,21 @@ const ProjectsPage: React.FC = () => {
                     height={250}
                     className={styles.projectImage}
                   />
-                  <div className={styles.projectContent}>
-                    <h2 className={styles.projectTitle}>{project.title}</h2>
-                    <p className={styles.projectDate}><em>{project.date}</em></p>
-                    <p className={styles.projectDescription}>{project.description.join(' ')}</p>
-                    <div className={styles.projectLinks}>
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flex: '1',
+                    padding: '1.5rem'
+                  }}>
+                    <div>
+                      <h2 className={styles.projectTitle}>{project.title}</h2>
+                      <p className={styles.projectDate}><em>{project.date}</em></p>
+                      <p className={styles.projectDescription}>{project.description.join(' ')}</p>
+                    </div>
+                    <div style={{
+                      marginTop: 'auto',
+                      paddingTop: '1rem'
+                    }} className={styles.projectLinks}>
                       {project.githubLink && (
                         <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
                           <FaGithub /> GitHub
@@ -122,7 +134,7 @@ const ProjectsPage: React.FC = () => {
                       )}
                       {project.liveDemo && (
                         <Link href={project.liveDemo} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                          <FaLink /> Live Demo
+                          <FaLink /> Deployed Site
                         </Link>
                       )}
                     </div>
