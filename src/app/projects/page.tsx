@@ -12,12 +12,12 @@ import { FaGithub, FaLink } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Digital Wardrobe",
-    image: "/images/digital-wardrobe.png",
+    title: "Wardrobe Wizard",
+    image: "/images/wardrobe-wizard.png",
     githubLink: "https://github.com/aal51282/wardrobe-wizard",
     liveDemo: "https://wardrobe-wizard-nine.vercel.app/",
     description: [
-      "Developed a web application for organizing and managing a digital wardrobe using the MERN stack (MongoDB, Express, React, Node.js).",
+      "Developed a web application for organizing and managing a digital wardrobe using the Next.js framework.",
       "Allows users to upload images and organize clothing items by category, color, size, and season.",
     ],
     date: "October 2024 - November 2024",
