@@ -14,8 +14,8 @@ const projects = [
   {
     title: "Digital Wardrobe",
     image: "/images/digital-wardrobe.png",
-    githubLink: "https://github.com/aal51282/digital-wardrobe",
-    liveDemo: "https://digital-wardrobe-demo.com",
+    githubLink: "https://github.com/aal51282/wardrobe-wizard",
+    liveDemo: "https://wardrobe-wizard-nine.vercel.app/",
     description: [
       "Developed a web application for organizing and managing a digital wardrobe using the MERN stack (MongoDB, Express, React, Node.js).",
       "Allows users to upload images and organize clothing items by category, color, size, and season.",
