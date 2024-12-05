@@ -1,69 +1,69 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import Nav from '@/components/Nav/Nav';
-import Footer from '@/components/Footer/Footer';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import styles from './projects.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaGithub, FaLink } from 'react-icons/fa';
+import React, { useEffect } from "react";
+import Nav from "@/components/Nav/Nav";
+import Footer from "@/components/Footer/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import styles from "./projects.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 const projects = [
   {
-    title: 'Digital Wardrobe',
-    image: '/images/digital-wardrobe.png',
-    githubLink: 'https://github.com/aal51282/digital-wardrobe',
-    liveDemo: 'https://digital-wardrobe-demo.com',
+    title: "Digital Wardrobe",
+    image: "/images/digital-wardrobe.png",
+    githubLink: "https://github.com/aal51282/digital-wardrobe",
+    liveDemo: "https://digital-wardrobe-demo.com",
     description: [
-      'Developed a web application for organizing and managing a digital wardrobe using the MERN stack (MongoDB, Express, React, Node.js).',
-      'Allows users to upload images and organize clothing items by category, color, size, and season.',
+      "Developed a web application for organizing and managing a digital wardrobe using the MERN stack (MongoDB, Express, React, Node.js).",
+      "Allows users to upload images and organize clothing items by category, color, size, and season.",
     ],
-    date: 'October 2024 - November 2024',
+    date: "October 2024 - November 2024",
   },
   {
-    title: 'Money Tracker',
-    image: '/images/money-tracker.jpg',
-    githubLink: 'https://github.com/aal51282/money-tracker',
-    liveDemo: 'https://angel-money-tracker.vercel.app/',
+    title: "Money Tracker",
+    image: "/images/money-tracker.jpg",
+    githubLink: "https://github.com/aal51282/money-tracker",
+    liveDemo: "https://angel-money-tracker.vercel.app/",
     description: [
-      'Built a full-stack web application using the MERN stack to track income and expenses.',
-      'Provides users with a clear overview of their financial transactions and analysis.',
+      "Built a full-stack web application using the MERN stack to track income and expenses.",
+      "Provides users with a clear overview of their financial transactions and analysis.",
     ],
-    date: 'September 2024 - October 2024',
+    date: "September 2024 - October 2024",
   },
   {
-    title: 'Cinema Booking Site',
-    image: '/images/movie_background.png',
-    githubLink: 'https://github.com/xueluofengfei/UGA_SoftwareEngineering_TeamProject',
-    liveDemo: 'https://cinema-booking-demo.com',
+    title: "Cinema Booking Site",
+    image: "/images/movie_background.png",
+    githubLink: "https://github.com/aal51282/Cinema-Ebooking-System",
+    liveDemo: "https://cinema-ebooking-system.vercel.app/",
     description: [
-      'Developed a cinema movie booking website using React, MongoDB, and Express.js.',
-      'Features include movie browsing, ticket booking, seat selection, and user profile management.',
+      "Developed a cinema movie booking website using React, SQLite, and Node.js with Express.",
+      "Features include movie browsing, ticket booking, seat selection, and user profile management.",
     ],
-    date: 'August 2024 - December 2024',
+    date: "August 2024 - December 2024",
   },
   {
-    title: 'Multiple API Integration',
-    image: '/images/api_app.jpg',
-    githubLink: 'https://github.com/aal51282/cs1302-api-app',
-    liveDemo: 'https://api-integration-demo.com',
+    title: "Multiple API Integration",
+    image: "/images/api_app.jpg",
+    githubLink: "https://github.com/aal51282/cs1302-api-app",
+    liveDemo: "https://api-integration-demo.com",
     description: [
-      'Created a JavaFX application integrating venue and weather APIs to provide real-time venue details and weather conditions based on user inputs.',
+      "Created a JavaFX application integrating venue and weather APIs to provide real-time venue details and weather conditions based on user inputs.",
     ],
-    date: 'November 2023 - December 2023',
+    date: "November 2023 - December 2023",
   },
   {
-    title: 'UI/UX and API Integration',
-    image: '/images/itunes.jpg',
-    githubLink: 'https://github.com/aal51282/itunes-app',
-    liveDemo: 'https://uiux-itunes-demo.com',
+    title: "UI/UX and API Integration",
+    image: "/images/itunes.jpg",
+    githubLink: "https://github.com/aal51282/itunes-app",
+    liveDemo: "https://uiux-itunes-demo.com",
     description: [
-      'Developed a JavaFX application that dynamically displays a gallery of images based on user search queries using the iTunes Search API.',
-      'Implemented object-oriented principles for modularity and maintainability.',
+      "Developed a JavaFX application that dynamically displays a gallery of images based on user search queries using the iTunes Search API.",
+      "Implemented object-oriented principles for modularity and maintainability.",
     ],
-    date: 'October 2023 - November 2023',
+    date: "October 2023 - November 2023",
   },
 ];
 
@@ -81,17 +81,21 @@ const ProjectsPage: React.FC = () => {
       <main className={styles.main}>
         <section className={styles.projectsPage}>
           <h1 className={styles.title}>My Projects</h1>
-          <div style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '2rem'
-          }}>
-            <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '2rem',
-              justifyContent: 'center'
-            }}>
+          <div
+            style={{
+              maxWidth: "1200px",
+              margin: "0 auto",
+              padding: "2rem",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "2rem",
+                justifyContent: "center",
+              }}
+            >
               {projects.map((project, index) => (
                 <div
                   key={index}
@@ -99,10 +103,10 @@ const ProjectsPage: React.FC = () => {
                   data-aos="fade-up"
                   data-aos-delay={index * 200}
                   style={{
-                    width: '350px',
-                    flex: '0 0 350px',
-                    display: 'flex',
-                    flexDirection: 'column'
+                    width: "350px",
+                    flex: "0 0 350px",
+                    display: "flex",
+                    flexDirection: "column",
                   }}
                 >
                   <Image
@@ -112,28 +116,47 @@ const ProjectsPage: React.FC = () => {
                     height={250}
                     className={styles.projectImage}
                   />
-                  <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    flex: '1',
-                    padding: '1.5rem'
-                  }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      flex: "1",
+                      padding: "1.5rem",
+                    }}
+                  >
                     <div>
                       <h2 className={styles.projectTitle}>{project.title}</h2>
-                      <p className={styles.projectDate}><em>{project.date}</em></p>
-                      <p className={styles.projectDescription}>{project.description.join(' ')}</p>
+                      <p className={styles.projectDate}>
+                        <em>{project.date}</em>
+                      </p>
+                      <p className={styles.projectDescription}>
+                        {project.description.join(" ")}
+                      </p>
                     </div>
-                    <div style={{
-                      marginTop: 'auto',
-                      paddingTop: '1rem'
-                    }} className={styles.projectLinks}>
+                    <div
+                      style={{
+                        marginTop: "auto",
+                        paddingTop: "1rem",
+                      }}
+                      className={styles.projectLinks}
+                    >
                       {project.githubLink && (
-                        <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                        <Link
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.link}
+                        >
                           <FaGithub /> GitHub
                         </Link>
                       )}
                       {project.liveDemo && (
-                        <Link href={project.liveDemo} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                        <Link
+                          href={project.liveDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.link}
+                        >
                           <FaLink /> Deployed Site
                         </Link>
                       )}
@@ -151,4 +174,3 @@ const ProjectsPage: React.FC = () => {
 };
 
 export default ProjectsPage;
-
