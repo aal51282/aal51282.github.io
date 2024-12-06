@@ -52,9 +52,11 @@ const projects = [
     liveDemo: "https://wardrobe-wizard-nine.vercel.app/",
     description: [
       <>
-        Developed a web application for organizing and managing a digital wardrobe using the <span className={styles.techHighlight}>Next.js</span> framework.
+        Developed a modern wardrobe management application using <span className={styles.techHighlight}>Next.js 14</span> and <span className={styles.techHighlight}>TypeScript</span>, featuring user authentication, comprehensive wardrobe organization, and outfit creation capabilities.
       </>,
-      "Allows users to upload images and organize clothing items by category, color, size, and season.",
+      <>
+        Built with <span className={styles.techHighlight}>MongoDB</span> for data persistence, and implemented an intuitive UI using <span className={styles.techHighlight}>Tailwind CSS</span>, <span className={styles.techHighlight}>Shadcn UI</span>, and <span className={styles.techHighlight}>Radix UI</span>, enabling features like product filtering, outfit styling with a mannequin system, and responsive design.
+      </>,
     ],
     date: "October 2024 - November 2024",
   },
