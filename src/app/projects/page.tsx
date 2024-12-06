@@ -29,7 +29,7 @@ const projects = [
     date: "December 2024",
   },
   {
-    title: "Bitcoin Price Comparison Tool",
+    title: "Bitcoin Price Comparison",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/btc-tracker.png`,
     githubLink: "https://github.com/aal51282/coins-table",
     liveDemo: "https://bitcoin-tracker-demo.vercel.app/",
@@ -146,8 +146,6 @@ const ProjectsPage: React.FC = () => {
                 style={{
                   width: "350px",
                   flex: "0 0 350px",
-                  display: "flex",
-                  flexDirection: "column",
                 }}
               >
                 <Image
@@ -156,35 +154,21 @@ const ProjectsPage: React.FC = () => {
                   width={400}
                   height={250}
                   className={styles.projectImage}
+                  priority={index < 3}
                 />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: "1",
-                    padding: "1.5rem",
-                  }}
-                >
-                  <div>
-                    <h2 className={styles.projectTitle}>{project.title}</h2>
-                    <p className={styles.projectDate}>
-                      <em>{project.date}</em>
-                    </p>
-                    <div className={styles.projectDescription}>
-                      {project.description.map((desc, i) => (
-                        <p key={i} style={{ marginBottom: '0.5rem' }}>
-                          {desc}
-                        </p>
-                      ))}
-                    </div>
+                <div className={styles.projectContent}>
+                  <h2 className={styles.projectTitle}>{project.title}</h2>
+                  <p className={styles.projectDate}>
+                    <em>{project.date}</em>
+                  </p>
+                  <div className={styles.projectDescription}>
+                    {project.description.map((desc, i) => (
+                      <p key={i} style={{ marginBottom: '0.5rem' }}>
+                        {desc}
+                      </p>
+                    ))}
                   </div>
-                  <div
-                    style={{
-                      marginTop: "auto",
-                      paddingTop: "1rem",
-                    }}
-                    className={styles.projectLinks}
-                  >
+                  <div className={styles.projectLinks}>
                     {project.githubLink && (
                       <Link
                         href={project.githubLink}
