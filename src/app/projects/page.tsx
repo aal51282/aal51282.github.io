@@ -19,8 +19,12 @@ const projects = [
     githubLink: "https://github.com/aal51282/ai-video-generator",
     videoDemo: "/videos/The-clockmakers-gamble.mp4",
     description: [
-      "Developed a full-stack application that generates short videos from text input using AI technologies, combining AI-generated images, text overlays, and voice narration.",
-      "Built with Next.js 14, FastAPI, and Python, integrating Stability AI for image generation and ElevenLabs for voice synthesis.",
+      <>
+        Developed a full-stack application that generates short videos from text input using AI technologies, combining AI-generated images, text overlays, and voice narration.
+      </>,
+      <>
+        Built with <span className={styles.techHighlight}>Next.js 14</span>, <span className={styles.techHighlight}>FastAPI</span>, and <span className={styles.techHighlight}>Python</span>, integrating <span className={styles.techHighlight}>Stability AI</span> for image generation and <span className={styles.techHighlight}>ElevenLabs</span> for voice synthesis.
+      </>,
     ],
     date: "December 2024",
   },
@@ -30,8 +34,12 @@ const projects = [
     githubLink: "https://github.com/aal51282/coins-table",
     liveDemo: "https://bitcoin-tracker-demo.vercel.app/",
     description: [
-      "Built a real-time Bitcoin price comparison tool using React, FastAPI, and Python that compares rates across multiple providers (Guardarian, Paybis, Transak, MoonPay).",
-      "Implemented automatic rate sorting, real-time price updates, and comprehensive fee calculations using modern component architecture and Tailwind CSS.",
+      <>
+        Built a real-time Bitcoin price comparison tool using <span className={styles.techHighlight}>React</span>, <span className={styles.techHighlight}>FastAPI</span>, and <span className={styles.techHighlight}>Python</span> that compares rates across multiple providers (Guardarian, Paybis, Transak, MoonPay).
+      </>,
+      <>
+        Implemented automatic rate sorting, real-time price updates, and comprehensive fee calculations using modern component architecture and <span className={styles.techHighlight}>Tailwind CSS</span>.
+      </>,
     ],
     date: "December 2024",
   },
@@ -43,7 +51,9 @@ const projects = [
     githubLink: "https://github.com/aal51282/wardrobe-wizard",
     liveDemo: "https://wardrobe-wizard-nine.vercel.app/",
     description: [
-      "Developed a web application for organizing and managing a digital wardrobe using the Next.js framework.",
+      <>
+        Developed a web application for organizing and managing a digital wardrobe using the <span className={styles.techHighlight}>Next.js</span> framework.
+      </>,
       "Allows users to upload images and organize clothing items by category, color, size, and season.",
     ],
     date: "October 2024 - November 2024",
@@ -56,7 +66,9 @@ const projects = [
     githubLink: "https://github.com/aal51282/money-tracker",
     liveDemo: "https://angel-money-tracker.vercel.app/",
     description: [
-      "Built a full-stack web application using the MERN stack to track income and expenses.",
+      <>
+        Built a full-stack web application using the <span className={styles.techHighlight}>MERN</span> stack (<span className={styles.techHighlight}>MongoDB</span>, <span className={styles.techHighlight}>Express</span>, <span className={styles.techHighlight}>React</span>, <span className={styles.techHighlight}>Node.js</span>) to track income and expenses.
+      </>,
       "Provides users with a clear overview of their financial transactions and analysis.",
     ],
     date: "September 2024 - October 2024",
@@ -69,7 +81,9 @@ const projects = [
     githubLink: "https://github.com/aal51282/Cinema-Ebooking-System",
     liveDemo: "https://cinema-ebooking-system.vercel.app/",
     description: [
-      "Developed a cinema movie booking website using React, SQLite, and Node.js with Express.",
+      <>
+        Developed a cinema movie booking website using <span className={styles.techHighlight}>React</span>, <span className={styles.techHighlight}>SQLite</span>, and <span className={styles.techHighlight}>Node.js</span> with <span className={styles.techHighlight}>Express</span>.
+      </>,
       "Features include movie browsing, ticket booking, seat selection, and user profile management.",
     ],
     date: "August 2024 - December 2024",
@@ -80,7 +94,9 @@ const projects = [
     githubLink: "https://github.com/aal51282/cs1302-api-app",
     liveDemo: "https://api-integration-demo.com",
     description: [
-      "Created a JavaFX application integrating venue and weather APIs to provide real-time venue details and weather conditions based on user inputs.",
+      <>
+        Created a <span className={styles.techHighlight}>JavaFX</span> application integrating venue and weather APIs to provide real-time venue details and weather conditions based on user inputs.
+      </>,
     ],
     date: "November 2023 - December 2023",
   },
@@ -90,8 +106,12 @@ const projects = [
     githubLink: "https://github.com/aal51282/itunes-app",
     liveDemo: "https://uiux-itunes-demo.com",
     description: [
-      "Developed a JavaFX application that dynamically displays a gallery of images based on user search queries using the iTunes Search API.",
-      "Implemented object-oriented principles for modularity and maintainability.",
+      <>
+        Developed a <span className={styles.techHighlight}>JavaFX</span> application that dynamically displays a gallery of images based on user search queries using the <span className={styles.techHighlight}>iTunes Search API</span>.
+      </>,
+      <>
+        Implemented object-oriented principles for modularity and maintainability.
+      </>,
     ],
     date: "October 2023 - November 2023",
   },
@@ -148,9 +168,13 @@ const ProjectsPage: React.FC = () => {
                     <p className={styles.projectDate}>
                       <em>{project.date}</em>
                     </p>
-                    <p className={styles.projectDescription}>
-                      {project.description.join(" ")}
-                    </p>
+                    <div className={styles.projectDescription}>
+                      {project.description.map((desc, i) => (
+                        <p key={i} style={{ marginBottom: '0.5rem' }}>
+                          {desc}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                   <div
                     style={{

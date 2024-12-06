@@ -64,6 +64,15 @@
     color: #555555;
   }
   
+  .techHighlight {
+    color: #2563eb;
+    font-weight: 500;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    display: inline-block;
+  }
+  
   .projectLinks {
     display: flex;
     gap: 1rem;
