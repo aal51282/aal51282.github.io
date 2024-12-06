@@ -12,8 +12,23 @@ import { FaGithub, FaLink } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Bitcoin Price Comparison Tool",
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/btc-tracker.png`,
+    githubLink: "https://github.com/aal51282/coins-table",
+    liveDemo: "https://bitcoin-tracker-demo.vercel.app/",
+    description: [
+      "Built a real-time Bitcoin price comparison tool using React, FastAPI, and Python that compares rates across multiple providers (Guardarian, Paybis, Transak, MoonPay).",
+      "Implemented automatic rate sorting, real-time price updates, and comprehensive fee calculations using modern component architecture and Tailwind CSS.",
+    ],
+    date: "December 2024 - Present",
+  },
+  {
     title: "Wardrobe Wizard",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wardrobe-wizard.png`,
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/wardrobe-wizard.png`,
     githubLink: "https://github.com/aal51282/wardrobe-wizard",
     liveDemo: "https://wardrobe-wizard-nine.vercel.app/",
     description: [
@@ -24,7 +39,9 @@ const projects = [
   },
   {
     title: "Money Tracker",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/money-tracker.jpg`,
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/money-tracker.jpg`,
     githubLink: "https://github.com/aal51282/money-tracker",
     liveDemo: "https://angel-money-tracker.vercel.app/",
     description: [
@@ -35,7 +52,9 @@ const projects = [
   },
   {
     title: "Cinema Booking Site",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/movie_background.png`,
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/movie_background.png`,
     githubLink: "https://github.com/aal51282/Cinema-Ebooking-System",
     liveDemo: "https://cinema-ebooking-system.vercel.app/",
     description: [
@@ -46,7 +65,7 @@ const projects = [
   },
   {
     title: "Multiple API Integration",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/api_app.jpg`,
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/api_app.jpg`,
     githubLink: "https://github.com/aal51282/cs1302-api-app",
     liveDemo: "https://api-integration-demo.com",
     description: [
@@ -56,7 +75,7 @@ const projects = [
   },
   {
     title: "UI/UX and API Integration",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/itunes.jpg`,
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/itunes.jpg`,
     githubLink: "https://github.com/aal51282/itunes-app",
     liveDemo: "https://uiux-itunes-demo.com",
     description: [
