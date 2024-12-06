@@ -12,10 +12,21 @@ import { FaGithub, FaLink } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Bitcoin Price Comparison Tool",
+    title: "AI Video Generator",
     image: `${
       process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/images/btc-tracker.png`,
+    }/images/ai-video-generator.png`,
+    githubLink: "https://github.com/aal51282/ai-video-generator",
+    videoDemo: "/videos/The-clockmakers-gamble.mp4",
+    description: [
+      "Developed a full-stack application that generates short videos from text input using AI technologies, combining AI-generated images, text overlays, and voice narration.",
+      "Built with Next.js 14, FastAPI, and Python, integrating Stability AI for image generation and ElevenLabs for voice synthesis.",
+    ],
+    date: "December 2024",
+  },
+  {
+    title: "Bitcoin Price Comparison Tool",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/btc-tracker.png`,
     githubLink: "https://github.com/aal51282/coins-table",
     liveDemo: "https://bitcoin-tracker-demo.vercel.app/",
     description: [
@@ -177,6 +188,16 @@ const ProjectsPage: React.FC = () => {
                           className={styles.link}
                         >
                           <FaLink /> Deployed Site
+                        </Link>
+                      )}
+                      {project.videoDemo && (
+                        <Link
+                          href={project.videoDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.link}
+                        >
+                          <FaLink /> Watch Demo
                         </Link>
                       )}
                     </div>
