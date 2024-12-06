@@ -22,7 +22,7 @@ const projects = [
       "Built a real-time Bitcoin price comparison tool using React, FastAPI, and Python that compares rates across multiple providers (Guardarian, Paybis, Transak, MoonPay).",
       "Implemented automatic rate sorting, real-time price updates, and comprehensive fee calculations using modern component architecture and Tailwind CSS.",
     ],
-    date: "December 2024 - Present",
+    date: "December 2024",
   },
   {
     title: "Wardrobe Wizard",
