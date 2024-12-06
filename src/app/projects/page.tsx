@@ -100,8 +100,11 @@ const projects = [
 const ProjectsPage: React.FC = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 800,
       once: true,
+      offset: 0,
+      disable: false,
+      easing: 'ease-out-cubic'
     });
   }, []);
 
@@ -110,101 +113,86 @@ const ProjectsPage: React.FC = () => {
       <Nav />
       <main className={styles.main}>
         <section className={styles.projectsPage}>
-          <h1 className={styles.title}>My Projects</h1>
-          <div
-            style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-              padding: "2rem",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "2rem",
-                justifyContent: "center",
-              }}
-            >
-              {projects.map((project, index) => (
+          <h1 className={styles.title} data-aos="fade-down">My Projects</h1>
+          <div className={styles.projectsContainer}>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className={styles.projectCard}
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
+                style={{
+                  width: "350px",
+                  flex: "0 0 350px",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={400}
+                  height={250}
+                  className={styles.projectImage}
+                />
                 <div
-                  key={index}
-                  className={styles.projectCard}
-                  data-aos="fade-up"
-                  data-aos-delay={index * 200}
                   style={{
-                    width: "350px",
-                    flex: "0 0 350px",
                     display: "flex",
                     flexDirection: "column",
+                    flex: "1",
+                    padding: "1.5rem",
                   }}
                 >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={400}
-                    height={250}
-                    className={styles.projectImage}
-                  />
+                  <div>
+                    <h2 className={styles.projectTitle}>{project.title}</h2>
+                    <p className={styles.projectDate}>
+                      <em>{project.date}</em>
+                    </p>
+                    <p className={styles.projectDescription}>
+                      {project.description.join(" ")}
+                    </p>
+                  </div>
                   <div
                     style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      flex: "1",
-                      padding: "1.5rem",
+                      marginTop: "auto",
+                      paddingTop: "1rem",
                     }}
+                    className={styles.projectLinks}
                   >
-                    <div>
-                      <h2 className={styles.projectTitle}>{project.title}</h2>
-                      <p className={styles.projectDate}>
-                        <em>{project.date}</em>
-                      </p>
-                      <p className={styles.projectDescription}>
-                        {project.description.join(" ")}
-                      </p>
-                    </div>
-                    <div
-                      style={{
-                        marginTop: "auto",
-                        paddingTop: "1rem",
-                      }}
-                      className={styles.projectLinks}
-                    >
-                      {project.githubLink && (
-                        <Link
-                          href={project.githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.link}
-                        >
-                          <FaGithub /> GitHub
-                        </Link>
-                      )}
-                      {project.liveDemo && (
-                        <Link
-                          href={project.liveDemo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`${styles.link} ${styles.highlightedLink}`}
-                        >
-                          <FaLink /> Deployed Site
-                        </Link>
-                      )}
-                      {project.videoDemo && (
-                        <Link
-                          href={project.videoDemo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`${styles.link} ${styles.videoLink}`}
-                        >
-                          <FaLink /> Watch Demo
-                        </Link>
-                      )}
-                    </div>
+                    {project.githubLink && (
+                      <Link
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.link}
+                      >
+                        <FaGithub /> GitHub
+                      </Link>
+                    )}
+                    {project.liveDemo && (
+                      <Link
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${styles.link} ${styles.highlightedLink}`}
+                      >
+                        <FaLink /> Deployed Site
+                      </Link>
+                    )}
+                    {project.videoDemo && (
+                      <Link
+                        href={project.videoDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${styles.link} ${styles.videoLink}`}
+                      >
+                        <FaLink /> Watch Demo
+                      </Link>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>
