@@ -3,10 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa";
 import styles from "./Projects.module.css";
-import { projects } from "@/app/projects/page";
-import type { Project } from "@/app/projects/page";
+import { type Project, projects } from "@/app/projects/projectsData";
 
-const Projects: React.FC = () => {
+const Projects = () => {
   const featuredProjects: Project[] = projects.slice(0, 3);
 
   return (
