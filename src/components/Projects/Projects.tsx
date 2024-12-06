@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa";
-import styles from "@/app/projects/projects.module.css";
+import styles from "./Projects.module.css";
 import { projects } from "@/app/projects/page";
 
 const Projects = () => {
@@ -21,9 +21,10 @@ const Projects = () => {
         <div
           style={{
             display: "flex",
-            flexWrap: "wrap",
             gap: "2rem",
             justifyContent: "center",
+            alignItems: "stretch",
+            minHeight: "600px",
           }}
         >
           {featuredProjects.map((project, index) => (
@@ -34,7 +35,8 @@ const Projects = () => {
               data-aos-delay={index * 150}
               style={{
                 width: "350px",
-                flex: "0 0 350px",
+                flex: "1 1 350px",
+                maxWidth: "350px",
               }}
             >
               <Image
@@ -52,7 +54,7 @@ const Projects = () => {
                 </p>
                 <div className={styles.projectDescription}>
                   {project.description.map((desc, i) => (
-                    <p key={i} style={{ marginBottom: '0.5rem' }}>
+                    <p key={i} style={{ marginBottom: "0.5rem" }}>
                       {desc}
                     </p>
                   ))}
@@ -94,11 +96,11 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-        <Link 
-          href="/projects" 
+      <div style={{ textAlign: "center", marginTop: "2rem" }}>
+        <Link
+          href="/projects"
           className={`${styles.link} ${styles.highlightedLink}`}
-          style={{ display: 'inline-flex' }}
+          style={{ display: "inline-flex" }}
         >
           View All Projects
         </Link>
