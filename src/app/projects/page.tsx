@@ -10,7 +10,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa";
 
-export const projects = [
+export interface ProjectDescription {
+  type: string;
+  props: {
+    children: React.ReactNode;
+  };
+}
+
+export interface Project {
+  title: string;
+  image: string;
+  githubLink: string;
+  liveDemo?: string;
+  videoDemo?: string;
+  description: (string | ProjectDescription)[];
+  date: string;
+}
+
+export const projects: Project[] = [
   {
     title: "AI Video Generator",
     image: `${

@@ -4,9 +4,10 @@ import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa";
 import styles from "./Projects.module.css";
 import { projects } from "@/app/projects/page";
+import type { Project } from "@/app/projects/page";
 
-const Projects = () => {
-  const featuredProjects = projects.slice(0, 3);
+const Projects: React.FC = () => {
+  const featuredProjects: Project[] = projects.slice(0, 3);
 
   return (
     <section className={styles.projectsPage} id="projects">
