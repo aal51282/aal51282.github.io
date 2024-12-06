@@ -185,7 +185,7 @@ const ProjectsPage: React.FC = () => {
                           href={project.liveDemo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={styles.link}
+                          className={`${styles.link} ${styles.highlightedLink}`}
                         >
                           <FaLink /> Deployed Site
                         </Link>
@@ -195,7 +195,7 @@ const ProjectsPage: React.FC = () => {
                           href={project.videoDemo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={styles.link}
+                          className={`${styles.link} ${styles.videoLink}`}
                         >
                           <FaLink /> Watch Demo
                         </Link>
