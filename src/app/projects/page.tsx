@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa";
 
-const projects = [
+export const projects = [
   {
     title: "AI Video Generator",
     image: `${
