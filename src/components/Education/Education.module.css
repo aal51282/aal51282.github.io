@@ -1,19 +1,63 @@
 /* src/components/Education/Education.module.css */
 .education {
   padding: 4rem 2rem;
-  background-color: #ffffff;
   text-align: center;
 }
 
 .education h2 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #1abc9c;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
 }
 
-.education p {
+.educationItem {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.educationItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.educationItem h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.location {
+  font-size: 1rem;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.degree {
   font-size: 1.1rem;
-  color: #333333;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
+.dateGpa {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.courses {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 90%;
+  margin: 0 auto;
+}
