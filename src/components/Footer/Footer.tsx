@@ -6,7 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
-      <p>&copy; 2024 Angel A. Loaiza.</p>
+      <p>&copy; 2025 Angel A. Loaiza.</p>
       <div className={styles.socialShare}>
         <a
           href="https://www.linkedin.com/in/angelloaiza/"
