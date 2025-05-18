@@ -1,6 +1,38 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
 .divider {
-  height: 3px;
-  background: linear-gradient(to right, var(--accent-color), #2c3e50);
-  margin: 10px auto;
-  width: 50%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+  opacity: 0.6;
+  border: none;
+}
+
+.section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .divider {
+    width: 90%;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
 }

@@ -1,5 +1,6 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,47 +9,167 @@
   --background-color: #ffffff;
   --text-color: #333333;
   --accent-color: #1abc9c;
-  --navbar-bg: #ffffff;
+  --navbar-bg: rgba(255, 255, 255, 0.9);
   --footer-bg: #333333;
   --footer-text: #ffffff;
   --link-color: #1abc9c;
   --card-bg: rgba(255, 255, 255, 0.8);
+  --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
 }
 
 .dark {
   --background-color: #121212;
   --text-color: #f0f0f0;
   --accent-color: #16a085;
-  --navbar-bg: #1e1e1e;
+  --navbar-bg: rgba(30, 30, 30, 0.9);
   --footer-bg: #1e1e1e;
   --footer-text: #f0f0f0;
   --link-color: #16a085;
   --card-bg: rgba(30, 30, 30, 0.9);
+  --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Poppins", "Roboto", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  background: linear-gradient(to right, var(--background-color), var(--accent-color));
+  line-height: 1.6;
+  background: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    var(--background-color) 85%,
+    rgba(26, 188, 156, 0.1) 100%
+  );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
 }
 
 a:hover {
   color: var(--accent-color);
 }
 
+button {
+  cursor: pointer;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Section styling */
+section {
+  padding: 5rem 2rem;
+}
+
+/* Card styling */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  filter: brightness(110%);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(26, 188, 156, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Other global styles as needed */
@@ -57,15 +178,19 @@ a:hover {
 
 /* Example: Applying gradient to the body */
 body {
-  background: linear-gradient(to right, var(--background-color), var(--accent-color));
+  background: linear-gradient(
+    to right,
+    var(--background-color),
+    var(--accent-color)
+  );
 }
 
 /* Alternatively, apply to main content areas for more control */
 .main {
-  background: linear-gradient(to bottom right, var(--background-color), #e0f7fa);
+  background: linear-gradient(
+    to bottom right,
+    var(--background-color),
+    #e0f7fa
+  );
   min-height: 100vh;
-}
-
-html {
-  scroll-behavior: smooth;
 }
