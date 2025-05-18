@@ -17,13 +17,13 @@
   height: 100%;
   background: radial-gradient(
       circle at 10% 10%,
-      rgba(26, 188, 156, 0.1) 0%,
-      transparent 50%
+      rgba(61, 185, 166, 0.05) 0%,
+      transparent 60%
     ),
     radial-gradient(
       circle at 90% 90%,
-      rgba(26, 188, 156, 0.1) 0%,
-      transparent 50%
+      rgba(61, 185, 166, 0.05) 0%,
+      transparent 60%
     );
   z-index: -1;
 }
@@ -66,7 +66,11 @@
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--text-color);
-  background: linear-gradient(to right, var(--text-color), var(--accent-color));
+  background: linear-gradient(
+    to right,
+    var(--text-color) 30%,
+    var(--accent-color) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -143,7 +147,7 @@
 }
 
 .secondaryButton:hover {
-  background-color: rgba(26, 188, 156, 0.1);
+  background-color: rgba(61, 185, 166, 0.05);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

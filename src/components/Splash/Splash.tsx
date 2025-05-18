@@ -21,7 +21,7 @@ const Splash: React.FC = () => {
         </div>
         <div className={styles.textContent} data-aos="fade-left">
           <h1 className={styles.name}>Angel A. Loaiza</h1>
-          <h2 className={styles.tagline}>Computer Science Professional</h2>
+          <h2 className={styles.tagline}>Software Engineer</h2>
           <p className={styles.description}>
             Passionate computer science student with expertise in machine
             learning, artificial intelligence, and database management,

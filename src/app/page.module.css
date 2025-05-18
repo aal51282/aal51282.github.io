@@ -6,17 +6,17 @@
 }
 
 .divider {
-  height: 2px;
+  height: 1px;
   background: linear-gradient(
     to right,
     transparent,
-    var(--accent-color),
+    rgba(61, 185, 166, 0.4),
     transparent
   );
   margin: 0 auto;
   width: 80%;
   max-width: 1200px;
-  opacity: 0.6;
+  opacity: 0.4;
   border: none;
 }
 

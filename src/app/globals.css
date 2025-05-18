@@ -8,11 +8,11 @@
 :root {
   --background-color: #ffffff;
   --text-color: #333333;
-  --accent-color: #1abc9c;
+  --accent-color: #3db9a6;
   --navbar-bg: rgba(255, 255, 255, 0.9);
   --footer-bg: #333333;
   --footer-text: #ffffff;
-  --link-color: #1abc9c;
+  --link-color: #3db9a6;
   --card-bg: rgba(255, 255, 255, 0.8);
   --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   --border-radius: 8px;
@@ -22,11 +22,11 @@
 .dark {
   --background-color: #121212;
   --text-color: #f0f0f0;
-  --accent-color: #16a085;
+  --accent-color: #4bc0ad;
   --navbar-bg: rgba(30, 30, 30, 0.9);
   --footer-bg: #1e1e1e;
   --footer-text: #f0f0f0;
-  --link-color: #16a085;
+  --link-color: #4bc0ad;
   --card-bg: rgba(30, 30, 30, 0.9);
   --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
@@ -42,8 +42,8 @@ body {
   background: linear-gradient(
     135deg,
     var(--background-color) 0%,
-    var(--background-color) 85%,
-    rgba(26, 188, 156, 0.1) 100%
+    var(--background-color) 90%,
+    rgba(26, 188, 156, 0.05) 100%
   );
 }
 
@@ -125,7 +125,7 @@ section {
 }
 
 .btn-secondary:hover {
-  background-color: rgba(26, 188, 156, 0.1);
+  background-color: rgba(61, 185, 166, 0.05);
   transform: translateY(-2px);
 }
 
@@ -180,8 +180,8 @@ html {
 body {
   background: linear-gradient(
     to right,
-    var(--background-color),
-    var(--accent-color)
+    var(--background-color) 70%,
+    rgba(26, 188, 156, 0.1) 100%
   );
 }
 
@@ -189,8 +189,8 @@ body {
 .main {
   background: linear-gradient(
     to bottom right,
-    var(--background-color),
-    #e0f7fa
+    var(--background-color) 80%,
+    rgba(224, 247, 250, 0.3) 100%
   );
   min-height: 100vh;
 }
