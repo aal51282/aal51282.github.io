@@ -13,7 +13,7 @@ const Experience: React.FC = () => {
       <div className={styles.experienceItem}>
         <div className={styles.experienceHeader}>
           <h3>
-            Tru Remodeling, INC.
+            TRU Remodeling, INC.
             <a
               href="https://truremodeling.com"
               target="_blank"
@@ -61,6 +61,7 @@ const Experience: React.FC = () => {
               uleadathens.org
             </a>
           </h3>
+          <p className={styles.jobLocation}>Athens, GA</p>
           <p className={styles.jobTitle}>Full-Stack Developer</p>
           <p className={styles.jobPeriod}>March 2025 – May 2025</p>
         </div>
@@ -83,8 +84,9 @@ const Experience: React.FC = () => {
       <div className={styles.experienceItem}>
         <div className={styles.experienceHeader}>
           <h3>LISTo UGA (Latinos Invested in the Students of Tomorrow)</h3>
+          <p className={styles.jobLocation}>Athens, GA</p>
           <p className={styles.jobTitle}>Mentor</p>
-          <p className={styles.jobPeriod}>September 2023 – Present</p>
+          <p className={styles.jobPeriod}>September 2023 – May 2025</p>
         </div>
         <ul className={styles.responsibilities}>
           <li>
