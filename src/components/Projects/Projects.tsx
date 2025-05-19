@@ -13,7 +13,8 @@ const Projects = () => {
       <h2 className={homeStyles.title}>Featured Projects</h2>
       <div
         style={{
-          maxWidth: "1200px",
+          width: "100%",
+          maxWidth: "1400px",
           margin: "0 auto",
           padding: "2rem",
         }}
