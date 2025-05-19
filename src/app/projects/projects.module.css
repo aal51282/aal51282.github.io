@@ -40,6 +40,45 @@
   line-height: 1.6;
 }
 
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  background-color: #f8fafc;
+  color: #475569;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.filterButton:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.activeFilter {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+}
+
+.activeFilter:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
 .projectsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -124,6 +163,18 @@
   color: #64748b;
   margin: 0;
   letter-spacing: 0.5px;
+}
+
+.categoryTag {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #2563eb;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  align-self: flex-start;
 }
 
 .projectDescription {
@@ -227,6 +278,16 @@
   .subtitle {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
+  }
+
+  .filterContainer {
+    gap: 0.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .filterButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
 
   .projectContent {

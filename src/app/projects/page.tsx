@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "@/components/Nav/Nav";
 import Footer from "@/components/Footer/Footer";
 import AOS from "aos";
@@ -12,6 +12,14 @@ import { FaGithub, FaLink, FaVideo } from "react-icons/fa";
 import { projects } from "./projectsData";
 
 const ProjectsPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const categories = [
+    "All",
+    "University Projects",
+    "Side Projects",
+    "Websites",
+  ];
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -22,6 +30,20 @@ const ProjectsPage = () => {
       mirror: true,
     });
   }, []);
+
+  // Filter projects based on selected category
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projects
+      : projects.filter((project) => {
+          if (selectedCategory === "University Projects")
+            return project.category === "University Project";
+          if (selectedCategory === "Side Projects")
+            return project.category === "Side Project";
+          if (selectedCategory === "Websites")
+            return project.category === "Website";
+          return false;
+        });
 
   return (
     <>
@@ -40,8 +62,26 @@ const ProjectsPage = () => {
             development projects
           </p>
 
+          <div
+            className={styles.filterContainer}
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            {categories.map((category, index) => (
+              <button
+                key={index}
+                className={`${styles.filterButton} ${
+                  selectedCategory === category ? styles.activeFilter : ""
+                }`}
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           <div className={styles.projectsContainer}>
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <div
                 key={index}
                 className={styles.projectCard}
@@ -63,6 +103,7 @@ const ProjectsPage = () => {
                   <p className={styles.projectDate}>
                     <em>{project.date}</em>
                   </p>
+                  <div className={styles.categoryTag}>{project.category}</div>
                   <div className={styles.projectDescription}>
                     {project.description.map((desc, i) => (
                       <p key={i}>{desc}</p>
