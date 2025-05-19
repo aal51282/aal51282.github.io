@@ -12,9 +12,54 @@ export interface Project {
   category: "University Project" | "Side Project" | "Website";
   isHackathonWinner?: boolean;
   hackathonDetails?: string;
+  isMobileApp?: boolean;
 }
 
 export const projects: Project[] = [
+  {
+    title: "ULEAD Athens Website Redesign",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ulead-athens.png`,
+    liveDemo: "https://www.uleadathens.com/",
+    description: [
+      <>
+        Led the redesign of ULEAD Athens&apos; outdated website to enhance user
+        experience and modernize their online presence.
+      </>,
+      <>
+        Initially developed a dynamic proof-of-concept website utilizing{" "}
+        <span className={styles.techHighlight}>Next.js</span>,{" "}
+        <span className={styles.techHighlight}>TypeScript</span>, and modern UI
+        principles, then successfully transitioned the design to{" "}
+        <span className={styles.techHighlight}>Squarespace</span> for client
+        self-management.
+      </>,
+    ],
+    date: "March 2025 - May 2025",
+    category: "Website",
+  },
+  {
+    title: "Country Quiz Mobile Application",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/country-quiz.png`,
+    githubLink: "https://github.com/aal51282/country-quiz-mobile-app-4",
+    liveDemo:
+      "https://play.google.com/store/apps/details?id=com.angel.countryquiz",
+    description: [
+      <>
+        Developed an Android mobile application that tests users&apos; knowledge
+        of countries and continents through interactive quizzes with multiple
+        choice questions and progress tracking.
+      </>,
+      <>
+        Built with <span className={styles.techHighlight}>Java</span> and{" "}
+        <span className={styles.techHighlight}>SQLite</span>, implementing
+        Material Design principles, offline functionality, and visual continent
+        map displays with data loaded from CSV files.
+      </>,
+    ],
+    date: "March 2025",
+    category: "Side Project",
+    isMobileApp: true,
+  },
   {
     title: "Truest Assist",
     image: `${

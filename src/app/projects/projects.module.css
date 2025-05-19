@@ -339,6 +339,49 @@
   color: #f59e0b;
 }
 
+.mobileAppTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  letter-spacing: 0.3px;
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  transition: all 0.2s ease;
+}
+
+.mobileAppTag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.mobileAppIcon {
+  margin-right: 0.4rem;
+  font-size: 0.85rem;
+  color: #10b981;
+}
+
+.mobileAppLink {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.25);
+  border: none;
+}
+
+.mobileAppLink:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(16, 185, 129, 0.3);
+}
+
 @media (max-width: 768px) {
   .projectsContainer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -380,6 +423,15 @@
   }
 
   .hackathonIcon {
+    font-size: 0.75rem;
+  }
+
+  .mobileAppTag {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  .mobileAppIcon {
     font-size: 0.75rem;
   }
 

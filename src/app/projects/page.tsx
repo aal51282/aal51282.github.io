@@ -16,6 +16,7 @@ import {
   FaLaptopCode,
   FaGlobe,
   FaTrophy,
+  FaMobileAlt,
 } from "react-icons/fa";
 import { projects } from "./projectsData";
 
@@ -132,6 +133,12 @@ const ProjectsPage = () => {
                       {project.hackathonDetails}
                     </div>
                   )}
+                  {project.isMobileApp && (
+                    <div className={styles.mobileAppTag}>
+                      <FaMobileAlt className={styles.mobileAppIcon} />
+                      Mobile Application
+                    </div>
+                  )}
                   <div className={styles.projectDescription}>
                     {project.description.map((desc, i) => (
                       <p key={i}>{desc}</p>
@@ -156,12 +163,18 @@ const ProjectsPage = () => {
                         className={`${styles.link} ${
                           project.category === "Website"
                             ? styles.websiteLink
+                            : project.isMobileApp
+                            ? styles.mobileAppLink
                             : styles.highlightedLink
                         }`}
                       >
                         {project.category === "Website" ? (
                           <>
                             <FaGlobe /> Visit Website
+                          </>
+                        ) : project.isMobileApp ? (
+                          <>
+                            <FaMobileAlt /> Download App
                           </>
                         ) : (
                           <>
