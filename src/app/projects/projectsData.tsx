@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: "ULEAD Athens Website Redesign",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ulead-athens.png`,
-    liveDemo: "https://www.uleadathens.com/",
+    liveDemo: "https://www.uleadathens.org/",
     description: [
       <>
         Led the redesign of ULEAD Athens&apos; outdated website to enhance user

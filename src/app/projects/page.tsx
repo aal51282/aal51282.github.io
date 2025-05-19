@@ -29,6 +29,19 @@ const ProjectsPage = () => {
     "Websites",
   ];
 
+  // Calculate the counts for each category
+  const counts: Record<string, number> = {
+    All: projects.length,
+    "University Projects": projects.filter(
+      (project) => project.category === "University Project"
+    ).length,
+    "Side Projects": projects.filter(
+      (project) => project.category === "Side Project"
+    ).length,
+    Websites: projects.filter((project) => project.category === "Website")
+      .length,
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -84,7 +97,8 @@ const ProjectsPage = () => {
                 }`}
                 onClick={() => setSelectedCategory(category)}
               >
-                {category}
+                {category}{" "}
+                <span className={styles.filterCount}>{counts[category]}</span>
               </button>
             ))}
           </div>
