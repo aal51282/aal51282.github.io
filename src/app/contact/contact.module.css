@@ -6,28 +6,66 @@
 
 .contactSection {
   flex: 1;
-  padding: 2rem;
-  background: linear-gradient(to bottom left, #ffffff, #aed4ba);
+  padding: 6rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    var(--background-color) 80%,
+    rgba(61, 185, 166, 0.15) 100%
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 10% 10%,
+      rgba(61, 185, 166, 0.05) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(61, 185, 166, 0.05) 0%,
+      transparent 60%
+    );
+  z-index: 0;
 }
 
 .title {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #1abc9c;
+  margin-bottom: 2.5rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
 }
 
 .contactForm {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.contactForm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .emailContact {
@@ -36,39 +74,47 @@
   justify-content: center;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333333;
+  color: var(--text-color);
 }
 
 .copyButton {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
-  margin-right: 0.5rem;
+  padding: 0.5rem;
+  margin-right: 0.8rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
-.emailIcon, .checkIcon {
-  color: #1abc9c;
+.copyButton:hover {
+  background-color: rgba(61, 185, 166, 0.1);
+}
+
+.emailIcon,
+.checkIcon {
+  color: var(--accent-color);
   font-size: 1.5rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .copyButton:hover .emailIcon {
-  color: #16a085;
+  color: var(--accent-color);
+  transform: scale(1.1);
 }
 
 .checkIcon {
-  color: #2ecc71;
+  color: #4bc0ad;
 }
 
 .emailText {
-  color: #333333;
+  color: var(--text-color);
   word-break: break-all;
 }
 
 .copiedMessage {
-  margin-top: 0.5rem;
-  color: #2ecc71;
+  margin-top: 1rem;
+  color: #4bc0ad;
   font-size: 0.9rem;
 }
 
@@ -79,10 +125,66 @@
   }
 
   .contactForm {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .emailContact {
     font-size: 1rem;
   }
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
+}
+
+.subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent-color);
+  opacity: 0.7;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.socialLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--border-radius);
+}
+
+.socialLink svg {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.socialLink span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.socialLink:hover {
+  background-color: rgba(61, 185, 166, 0.1);
+  transform: translateY(-3px);
 }
