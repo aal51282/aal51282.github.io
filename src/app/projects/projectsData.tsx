@@ -92,7 +92,7 @@ export const projects: Project[] = [
     date: "August 2024 - December 2024",
   },
   {
-    title: "Multiple API Integration",
+    title: "Venue-Weather Finder",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/api_app.jpg`,
     githubLink: "https://github.com/aal51282/cs1302-api-app",
     liveDemo: "https://api-integration-demo.com",
@@ -104,7 +104,7 @@ export const projects: Project[] = [
     date: "November 2023 - December 2023",
   },
   {
-    title: "UI/UX and API Integration",
+    title: "Gallery App",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/itunes.jpg`,
     githubLink: "https://github.com/aal51282/itunes-app",
     liveDemo: "https://uiux-itunes-demo.com",
