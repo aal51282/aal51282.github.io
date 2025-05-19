@@ -27,11 +27,34 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
+.educationContent {
+  display: flex;
+  align-items: flex-start;
+}
+
+.logoContainer {
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.educationText {
+  text-align: left;
+  flex-grow: 1;
+}
+
 .educationItem h3 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--text-color);
+  text-align: left;
 }
 
 .location {
@@ -58,6 +81,30 @@
   font-size: 1rem;
   line-height: 1.6;
   text-align: left;
-  max-width: 90%;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .educationContent {
+    flex-direction: column;
+  }
+
+  .logoContainer {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .educationText {
+    text-align: center;
+  }
+
+  .educationItem h3 {
+    text-align: center;
+  }
+
+  .courses {
+    text-align: center;
+  }
 }
