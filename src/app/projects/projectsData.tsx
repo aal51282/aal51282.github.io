@@ -17,6 +17,32 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Rideshare Mobile Application",
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/rideshare-app.jpg`,
+    githubLink: "https://github.com/aal51282/UGARideShare",
+    liveDemo: "https://play.google.com/store/apps/details?id=com.uga.rideshare",
+    description: [
+      <>
+        Developed a community-driven ride-sharing Android application that
+        facilitates carpooling with a points-based system where users earn
+        points for offering rides and spend points when requesting rides.
+      </>,
+      <>
+        Built with <span className={styles.techHighlight}>Java</span>,{" "}
+        <span className={styles.techHighlight}>Firebase Realtime Database</span>
+        , and{" "}
+        <span className={styles.techHighlight}>Firebase Authentication</span>,
+        featuring user authentication, ride offers/requests management, and an
+        intuitive navigation system.
+      </>,
+    ],
+    date: "April 2025",
+    category: "University Project",
+    isMobileApp: true,
+  },
+  {
     title: "ULEAD Athens Website Redesign",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ulead-athens.png`,
     liveDemo: "https://www.uleadathens.org/",
