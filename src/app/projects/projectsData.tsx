@@ -16,33 +16,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "TRU Remodeling, INC.",
-    image: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/images/tru-remodeling.webp`,
-    liveDemo: "https://truremodeling.com",
-    description: [
-      <>
-        Designed, developed, and launched the official company website,
-        establishing an online presence and improving client accessibility.
-      </>,
-      <>
-        Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
-        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
-        responsive design, service showcase, and client testimonials to enhance
-        the company&apos;s online presence.
-      </>,
-    ],
-    date: "January 2025 - February 2025",
-    category: "Website",
-  },
-  {
     title: "Truest Assist",
     image: `${
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/truest-assist.png`,
     githubLink: "https://github.com/aal51282/truest-assist",
-    liveDemo: "https://devpost.com/software/truest-assist?_gl=1*3f81e6*_gcl_au*NDAyNzY1NDMyLjE3NDY1NjU1NDk.*_ga*MTMwMDM3MzY0Ni4xNzQ2NTY1NTQ5*_ga_0YHJK3Y10M*czE3NDc2OTA3NzckbzYkZzEkdDE3NDc2OTA3ODkkajAkbDAkaDA.",
+    liveDemo:
+      "https://devpost.com/software/truest-assist?_gl=1*3f81e6*_gcl_au*NDAyNzY1NDMyLjE3NDY1NjU1NDk.*_ga*MTMwMDM3MzY0Ni4xNzQ2NTY1NTQ5*_ga_0YHJK3Y10M*czE3NDc2OTA3NzckbzYkZzEkdDE3NDc2OTA3ODkkajAkbDAkaDA.",
     description: [
       <>
         Co-developed an innovative gamified platform to simplify financial
@@ -62,6 +42,27 @@ export const projects: Project[] = [
     category: "Side Project",
     isHackathonWinner: true,
     hackathonDetails: "2nd Place - UGA X Hackathon",
+  },
+  {
+    title: "TRU Remodeling, INC.",
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/tru-remodeling.webp`,
+    liveDemo: "https://truremodeling.com",
+    description: [
+      <>
+        Designed, developed, and launched the official company website,
+        establishing an online presence and improving client accessibility.
+      </>,
+      <>
+        Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
+        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
+        responsive design, service showcase, and client testimonials to enhance
+        the company&apos;s online presence.
+      </>,
+    ],
+    date: "January 2025 - February 2025",
+    category: "Website",
   },
   {
     title: "AI Video Generator",
