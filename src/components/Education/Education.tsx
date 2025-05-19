@@ -13,9 +13,11 @@ const Education: React.FC = () => {
             <Image
               src="/images/uga-logo.png"
               alt="University of Georgia logo"
-              width={80}
-              height={80}
+              width={110}
+              height={110}
               className={styles.logo}
+              priority
+              quality={100}
             />
           </div>
           <div className={styles.educationText}>
@@ -40,9 +42,11 @@ const Education: React.FC = () => {
             <Image
               src="/images/gt-logo.png"
               alt="Georgia Tech logo"
-              width={80}
-              height={80}
+              width={110}
+              height={110}
               className={styles.logo}
+              priority
+              quality={100}
             />
           </div>
           <div className={styles.educationText}>
