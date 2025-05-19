@@ -10,6 +10,8 @@ export interface Project {
   description: React.ReactNode[];
   date: string;
   category: "University Project" | "Side Project" | "Website";
+  isHackathonWinner?: boolean;
+  hackathonDetails?: string;
 }
 
 export const projects: Project[] = [
@@ -28,11 +30,38 @@ export const projects: Project[] = [
         Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
         <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
         responsive design, service showcase, and client testimonials to enhance
-        the company's online presence.
+        the company&apos;s online presence.
       </>,
     ],
     date: "January 2025 - February 2025",
     category: "Website",
+  },
+  {
+    title: "Truest Assist",
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/truest-assist.png`,
+    githubLink: "https://github.com/aal51282/truest-assist",
+    liveDemo: "https://devpost.com/software/truest-assist?_gl=1*3f81e6*_gcl_au*NDAyNzY1NDMyLjE3NDY1NjU1NDk.*_ga*MTMwMDM3MzY0Ni4xNzQ2NTY1NTQ5*_ga_0YHJK3Y10M*czE3NDc2OTA3NzckbzYkZzEkdDE3NDc2OTA3ODkkajAkbDAkaDA.",
+    description: [
+      <>
+        Co-developed an innovative gamified platform to simplify financial
+        analysis learning, achieving <strong>2nd Place</strong> in Truist
+        Bank&apos;s challenge category at UGA X Hackathon.
+      </>,
+      <>
+        Engineered 5 interactive modules with AI-generated quizzes using{" "}
+        <span className={styles.techHighlight}>Groq AI</span>, video
+        integration, and <span className={styles.techHighlight}>MongoDB</span>{" "}
+        authentication, built with{" "}
+        <span className={styles.techHighlight}>Next.js</span> and{" "}
+        <span className={styles.techHighlight}>Tailwind CSS</span>.
+      </>,
+    ],
+    date: "February 2025",
+    category: "Side Project",
+    isHackathonWinner: true,
+    hackathonDetails: "2nd Place - UGA X Hackathon",
   },
   {
     title: "AI Video Generator",

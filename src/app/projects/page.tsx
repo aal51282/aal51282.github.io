@@ -15,6 +15,7 @@ import {
   FaGraduationCap,
   FaLaptopCode,
   FaGlobe,
+  FaTrophy,
 } from "react-icons/fa";
 import { projects } from "./projectsData";
 
@@ -125,6 +126,12 @@ const ProjectsPage = () => {
                     )}
                     {project.category}
                   </div>
+                  {project.isHackathonWinner && (
+                    <div className={styles.hackathonTag}>
+                      <FaTrophy className={styles.hackathonIcon} />
+                      {project.hackathonDetails}
+                    </div>
+                  )}
                   <div className={styles.projectDescription}>
                     {project.description.map((desc, i) => (
                       <p key={i}>{desc}</p>
