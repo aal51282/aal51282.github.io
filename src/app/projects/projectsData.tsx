@@ -57,7 +57,7 @@ export const projects: Project[] = [
       </>,
     ],
     date: "March 2025",
-    category: "Side Project",
+    category: "University Project",
     isMobileApp: true,
   },
   {
