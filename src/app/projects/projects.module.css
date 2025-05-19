@@ -296,6 +296,20 @@
   font-size: 0.8rem;
 }
 
+.websiteLink {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(14, 165, 233, 0.25);
+  border: none;
+}
+
+.websiteLink:hover {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(14, 165, 233, 0.3);
+}
+
 @media (max-width: 768px) {
   .projectsContainer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

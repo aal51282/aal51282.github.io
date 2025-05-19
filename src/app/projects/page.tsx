@@ -131,7 +131,7 @@ const ProjectsPage = () => {
                     ))}
                   </div>
                   <div className={styles.projectLinks}>
-                    {project.githubLink && (
+                    {project.category !== "Website" && project.githubLink && (
                       <Link
                         href={project.githubLink}
                         target="_blank"
@@ -146,9 +146,21 @@ const ProjectsPage = () => {
                         href={project.liveDemo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${styles.link} ${styles.highlightedLink}`}
+                        className={`${styles.link} ${
+                          project.category === "Website"
+                            ? styles.websiteLink
+                            : styles.highlightedLink
+                        }`}
                       >
-                        <FaLink /> View Live
+                        {project.category === "Website" ? (
+                          <>
+                            <FaGlobe /> Visit Website
+                          </>
+                        ) : (
+                          <>
+                            <FaLink /> View Live
+                          </>
+                        )}
                       </Link>
                     )}
                     {project.videoDemo && (

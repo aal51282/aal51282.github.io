@@ -4,7 +4,7 @@ import styles from "./projects.module.css";
 export interface Project {
   title: string;
   image: string;
-  githubLink: string;
+  githubLink?: string;
   liveDemo?: string;
   videoDemo?: string;
   description: React.ReactNode[];
@@ -37,6 +37,27 @@ export const projects: Project[] = [
     ],
     date: "December 2024",
     category: "Side Project",
+  },
+  {
+    title: "TRU Remodeling, INC.",
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/tru-remodeling.jpg`,
+    liveDemo: "https://truremodeling.com",
+    description: [
+      <>
+        Designed, developed, and launched the official company website,
+        establishing an online presence and improving client accessibility.
+      </>,
+      <>
+        Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
+        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
+        responsive design, service showcase, and client testimonials to enhance
+        the company's online presence.
+      </>,
+    ],
+    date: "January 2025 - February 2025",
+    category: "Website",
   },
   {
     title: "Bitcoin Price Comparison Tool",
