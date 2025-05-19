@@ -166,15 +166,42 @@
 }
 
 .categoryTag {
-  display: inline-block;
-  font-size: 0.8rem;
-  padding: 0.3rem 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.9rem;
   border-radius: 20px;
-  background-color: rgba(59, 130, 246, 0.15);
-  color: #2563eb;
   font-weight: 600;
   margin-top: 0.3rem;
   align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.categoryTag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.categoryTag[data-category="University Project"] {
+  background-color: rgba(79, 70, 229, 0.15);
+  color: #4f46e5;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.categoryTag[data-category="Side Project"] {
+  background-color: rgba(236, 72, 153, 0.15);
+  color: #ec4899;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.categoryTag[data-category="Website"] {
+  background-color: rgba(14, 165, 233, 0.15);
+  color: #0ea5e9;
+  border: 1px solid rgba(14, 165, 233, 0.2);
 }
 
 .projectDescription {
@@ -264,6 +291,11 @@
   box-shadow: 0 7px 14px rgba(16, 185, 129, 0.3);
 }
 
+.categoryIcon {
+  margin-right: 0.4rem;
+  font-size: 0.8rem;
+}
+
 @media (max-width: 768px) {
   .projectsContainer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -288,6 +320,15 @@
   .filterButton {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
+  }
+
+  .categoryTag {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  .categoryIcon {
+    font-size: 0.75rem;
   }
 
   .projectContent {

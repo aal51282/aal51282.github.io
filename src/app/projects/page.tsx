@@ -8,7 +8,14 @@ import "aos/dist/aos.css";
 import styles from "./projects.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaLink, FaVideo } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLink,
+  FaVideo,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaGlobe,
+} from "react-icons/fa";
 import { projects } from "./projectsData";
 
 const ProjectsPage = () => {
@@ -103,7 +110,21 @@ const ProjectsPage = () => {
                   <p className={styles.projectDate}>
                     <em>{project.date}</em>
                   </p>
-                  <div className={styles.categoryTag}>{project.category}</div>
+                  <div
+                    className={styles.categoryTag}
+                    data-category={project.category}
+                  >
+                    {project.category === "University Project" && (
+                      <FaGraduationCap className={styles.categoryIcon} />
+                    )}
+                    {project.category === "Side Project" && (
+                      <FaLaptopCode className={styles.categoryIcon} />
+                    )}
+                    {project.category === "Website" && (
+                      <FaGlobe className={styles.categoryIcon} />
+                    )}
+                    {project.category}
+                  </div>
                   <div className={styles.projectDescription}>
                     {project.description.map((desc, i) => (
                       <p key={i}>{desc}</p>
