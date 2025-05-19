@@ -14,6 +14,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "TRU Remodeling, INC.",
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/tru-remodeling.webp`,
+    liveDemo: "https://truremodeling.com",
+    description: [
+      <>
+        Designed, developed, and launched the official company website,
+        establishing an online presence and improving client accessibility.
+      </>,
+      <>
+        Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
+        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
+        responsive design, service showcase, and client testimonials to enhance
+        the company's online presence.
+      </>,
+    ],
+    date: "January 2025 - February 2025",
+    category: "Website",
+  },
+  {
     title: "AI Video Generator",
     image: `${
       process.env.NEXT_PUBLIC_BASE_PATH || ""
@@ -37,27 +58,6 @@ export const projects: Project[] = [
     ],
     date: "December 2024",
     category: "Side Project",
-  },
-  {
-    title: "TRU Remodeling, INC.",
-    image: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/images/tru-remodeling.jpg`,
-    liveDemo: "https://truremodeling.com",
-    description: [
-      <>
-        Designed, developed, and launched the official company website,
-        establishing an online presence and improving client accessibility.
-      </>,
-      <>
-        Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
-        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
-        responsive design, service showcase, and client testimonials to enhance
-        the company's online presence.
-      </>,
-    ],
-    date: "January 2025 - February 2025",
-    category: "Website",
   },
   {
     title: "Bitcoin Price Comparison Tool",
