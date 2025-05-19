@@ -8,17 +8,18 @@ import "aos/dist/aos.css";
 import styles from "./projects.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub, FaLink, FaVideo } from "react-icons/fa";
 import { projects } from "./projectsData";
 
 const ProjectsPage = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true,
-      offset: 0,
+      once: false,
+      offset: 100,
       disable: false,
-      easing: 'ease-out-cubic'
+      easing: "ease-out-cubic",
+      mirror: true,
     });
   }, []);
 
@@ -27,28 +28,36 @@ const ProjectsPage = () => {
       <Nav />
       <main className={styles.main}>
         <section className={styles.projectsPage}>
-          <h1 className={styles.title}>My Projects</h1>
+          <h1 className={styles.title} data-aos="fade-down">
+            My Projects
+          </h1>
+          <p
+            className={styles.subtitle}
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            A collection of my work, showcasing web applications and software
+            development projects
+          </p>
+
           <div className={styles.projectsContainer}>
             {projects.map((project, index) => (
               <div
                 key={index}
                 className={styles.projectCard}
                 data-aos="fade-up"
-                data-aos-delay={index * 150}
-                style={{
-                  width: "350px",
-                  flex: "1 1 350px",
-                  maxWidth: "350px",
-                }}
+                data-aos-delay={index * 100}
               >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={400}
-                  height={250}
-                  className={styles.projectImage}
-                  priority={index < 3}
-                />
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={400}
+                    height={250}
+                    className={styles.projectImage}
+                    priority={index < 3}
+                  />
+                </div>
                 <div className={styles.projectContent}>
                   <h2 className={styles.projectTitle}>{project.title}</h2>
                   <p className={styles.projectDate}>
@@ -56,9 +65,7 @@ const ProjectsPage = () => {
                   </p>
                   <div className={styles.projectDescription}>
                     {project.description.map((desc, i) => (
-                      <p key={i} style={{ marginBottom: '0.5rem' }}>
-                        {desc}
-                      </p>
+                      <p key={i}>{desc}</p>
                     ))}
                   </div>
                   <div className={styles.projectLinks}>
@@ -79,7 +86,7 @@ const ProjectsPage = () => {
                         rel="noopener noreferrer"
                         className={`${styles.link} ${styles.highlightedLink}`}
                       >
-                        <FaLink /> Deployed Site
+                        <FaLink /> View Live
                       </Link>
                     )}
                     {project.videoDemo && (
@@ -89,7 +96,7 @@ const ProjectsPage = () => {
                         rel="noopener noreferrer"
                         className={`${styles.link} ${styles.videoLink}`}
                       >
-                        <FaLink /> Watch Demo
+                        <FaVideo /> Watch Demo
                       </Link>
                     )}
                   </div>
