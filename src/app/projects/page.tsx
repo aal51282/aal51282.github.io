@@ -6,8 +6,6 @@ import Footer from "@/components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./projects.module.css";
-import Image from "next/image";
-import Link from "next/link";
 import {
   FaGithub,
   FaLink,
@@ -19,6 +17,7 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 import { projects } from "./projectsData";
+import ProjectCard from "@/components/Projects/ProjectCard";
 
 const ProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -105,111 +104,7 @@ const ProjectsPage = () => {
 
           <div className={styles.projectsContainer}>
             {filteredProjects.map((project, index) => (
-              <div
-                key={index}
-                className={styles.projectCard}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className={styles.imageContainer}>
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={400}
-                    height={250}
-                    className={styles.projectImage}
-                    priority={index < 3}
-                  />
-                </div>
-                <div className={styles.projectContent}>
-                  <h2 className={styles.projectTitle}>{project.title}</h2>
-                  <p className={styles.projectDate}>
-                    <em>{project.date}</em>
-                  </p>
-                  <div
-                    className={styles.categoryTag}
-                    data-category={project.category}
-                  >
-                    {project.category === "University Project" && (
-                      <FaGraduationCap className={styles.categoryIcon} />
-                    )}
-                    {project.category === "Side Project" && (
-                      <FaLaptopCode className={styles.categoryIcon} />
-                    )}
-                    {project.category === "Website" && (
-                      <FaGlobe className={styles.categoryIcon} />
-                    )}
-                    {project.category}
-                  </div>
-                  {project.isHackathonWinner && (
-                    <div className={styles.hackathonTag}>
-                      <FaTrophy className={styles.hackathonIcon} />
-                      {project.hackathonDetails}
-                    </div>
-                  )}
-                  {project.isMobileApp && (
-                    <div className={styles.mobileAppTag}>
-                      <FaMobileAlt className={styles.mobileAppIcon} />
-                      Mobile Application
-                    </div>
-                  )}
-                  <div className={styles.projectDescription}>
-                    {project.description.map((desc, i) => (
-                      <p key={i}>{desc}</p>
-                    ))}
-                  </div>
-                  <div className={styles.projectLinks}>
-                    {project.category !== "Website" && project.githubLink && (
-                      <Link
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.link}
-                      >
-                        <FaGithub /> GitHub
-                      </Link>
-                    )}
-                    {project.liveDemo && (
-                      <Link
-                        href={project.liveDemo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${styles.link} ${
-                          project.category === "Website"
-                            ? styles.websiteLink
-                            : project.isMobileApp
-                            ? styles.mobileAppLink
-                            : styles.highlightedLink
-                        }`}
-                      >
-                        {project.category === "Website" ? (
-                          <>
-                            <FaGlobe /> Visit Website
-                          </>
-                        ) : project.isMobileApp ? (
-                          <>
-                            <FaMobileAlt /> Download App
-                          </>
-                        ) : (
-                          <>
-                            <FaLink /> View Live
-                          </>
-                        )}
-                      </Link>
-                    )}
-                    {project.videoDemo && (
-                      <Link
-                        href={project.videoDemo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${styles.link} ${styles.videoLink}`}
-                      >
-                        <FaVideo /> Watch Demo
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              </div>
+              <ProjectCard key={index} project={project} index={index} />
             ))}
           </div>
         </section>
