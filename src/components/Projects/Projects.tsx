@@ -18,14 +18,11 @@ const Projects = () => {
           padding: "2rem",
         }}
       >
-        <div className={styles.projectsContainer}>
+        <div className={homeStyles.featuredProjectsContainer}>
           {featuredProjects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              project={project}
-              index={index}
-              isFeatured={true}
-            />
+            <div key={index} className={homeStyles.featuredProjectCard}>
+              <ProjectCard project={project} index={index} isFeatured={true} />
+            </div>
           ))}
         </div>
       </div>

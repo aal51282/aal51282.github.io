@@ -30,6 +30,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       className={styles.projectCard}
       data-aos="fade-up"
       data-aos-delay={index * 100}
+      style={{
+        height: "100%",
+        margin: isFeatured ? "0" : "auto", // Remove auto margins if featured
+        maxWidth: isFeatured ? "none" : "400px", // Allow full width in featured layout
+      }}
     >
       <div className={styles.imageContainer}>
         <Image

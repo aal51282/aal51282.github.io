@@ -11,88 +11,22 @@
   color: #1abc9c;
 }
 
-.projectCard {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.featuredProjectsContainer {
   display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-.projectImage {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.projectContent {
-  padding: 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.projectTitle {
-  font-size: 1.6rem;
-  color: #333333;
-  line-height: 1.2;
-  margin: 0;
-  font-weight: 600;
-}
-
-.projectDate {
-  font-size: 0.9rem;
-  color: #777777;
-  margin: 0;
-}
-
-.projectDescription {
-  font-size: 1rem;
-  color: #555555;
-  flex: 1;
-  margin: 0.75rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.projectLinks {
-  display: flex;
-  gap: 0.75rem;
+  flex-direction: row;
   flex-wrap: nowrap;
-  margin-top: auto;
-  justify-content: space-between;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
 }
 
-/* Inherit the link styles from the main module */
-.link {
-  composes: link from "@/app/projects/projects.module.css";
+.featuredProjectCard {
   flex: 1;
-  text-align: center;
-  white-space: nowrap;
-  font-size: 0.9rem;
-  padding: 0.5rem 0.75rem;
-  min-width: 0;
+  min-width: 0; /* Allows cards to shrink below content size if needed */
+  max-width: 33%;
 }
 
-.highlightedLink {
-  composes: highlightedLink from "@/app/projects/projects.module.css";
-}
-
-.videoLink {
-  composes: videoLink from "@/app/projects/projects.module.css";
-}
-
+/* Remove the old card styles that are now handled by the shared component */
 /* Responsive adjustments */
 @media (max-width: 460px) {
   .projectLinks {
@@ -111,11 +45,35 @@
   .projectsPage {
     padding: 3rem 1.5rem;
   }
+
+  .featuredProjectsContainer {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .featuredProjectsContainer {
+    flex-wrap: wrap;
+  }
+
+  .featuredProjectCard {
+    flex: 1 1 45%;
+    max-width: 48%;
+  }
 }
 
 @media (max-width: 768px) {
   .title {
     font-size: 2.5rem;
+  }
+
+  .featuredProjectsContainer {
+    flex-direction: column;
+  }
+
+  .featuredProjectCard {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
