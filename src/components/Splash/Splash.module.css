@@ -28,6 +28,17 @@
   z-index: -1;
 }
 
+/* Dark mode specific background effect with more black on right side */
+:global(.dark) .backgroundEffect {
+  background: radial-gradient(
+      circle at 10% 10%,
+      rgba(61, 185, 166, 0.07) 0%,
+      transparent 50%
+    ),
+    radial-gradient(circle at 90% 90%, rgba(0, 0, 0, 0.5) 0%, transparent 70%),
+    linear-gradient(to right, transparent 60%, rgba(0, 0, 0, 0.3) 100%);
+}
+
 .splashContent {
   display: flex;
   flex-direction: row;
@@ -76,6 +87,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Dark mode specific name gradient */
+:global(.dark) .name {
+  background: linear-gradient(to right, #ffffff 30%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 .tagline {
   font-size: 1.5rem;
   font-weight: 500;
@@ -114,6 +134,15 @@
   transform: translateY(-3px);
 }
 
+/* Dark mode social links */
+:global(.dark) .socialLinks a {
+  color: #e0e0e0;
+}
+
+:global(.dark) .socialLinks a:hover {
+  color: var(--accent-color);
+}
+
 .cta {
   display: flex;
   gap: 1rem;
@@ -150,6 +179,28 @@
   background-color: rgba(61, 185, 166, 0.05);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode buttons */
+:global(.dark) .primaryButton {
+  background-color: var(--accent-color);
+  color: #121212;
+  font-weight: 700;
+}
+
+:global(.dark) .primaryButton:hover {
+  background-color: #5dd6c4;
+  box-shadow: 0 4px 12px rgba(75, 192, 173, 0.3);
+}
+
+:global(.dark) .secondaryButton {
+  border: 2px solid var(--accent-color);
+  color: #e0e0e0;
+}
+
+:global(.dark) .secondaryButton:hover {
+  background-color: rgba(61, 185, 166, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {

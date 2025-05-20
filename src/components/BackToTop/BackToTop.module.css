@@ -18,3 +18,16 @@
   background-color: #16a085;
   transform: translateY(-5px);
 }
+
+/* Dark mode back to top button */
+:global(.dark) .backToTop {
+  background-color: #5dd6c4;
+  color: #121212;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+:global(.dark) .backToTop:hover {
+  background-color: #70e5d4;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
