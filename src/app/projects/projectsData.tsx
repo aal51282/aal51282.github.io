@@ -141,7 +141,7 @@ export const projects: Project[] = [
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/ai-video-generator.png`,
     githubLink: "https://github.com/aal51282/ai-video-generator",
-    videoDemo: "/videos/The-clockmakers-gamble.mp4",
+    videoDemo: "https://www.loom.com/share/2561469cc23f47b0907cc5d271ac5c52?sid=9b66acb0-83af-42b6-a866-ae7c8d26dce2",
     description: [
       <>
         Developed a full-stack application that generates short videos from text
