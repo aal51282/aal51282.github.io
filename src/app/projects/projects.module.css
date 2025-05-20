@@ -5,6 +5,18 @@
   padding-bottom: 2rem;
 }
 
+/* Dark mode background with more black on the right */
+:global(.dark) .main {
+  background: linear-gradient(135deg, #121212 0%, #0a0a0a 100%);
+  background-image: radial-gradient(
+      circle at 10% 10%,
+      rgba(61, 185, 166, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(circle at 90% 90%, rgba(0, 0, 0, 0.5) 0%, transparent 70%),
+    linear-gradient(to right, #121212 60%, #050505 100%);
+}
+
 .projectsPage {
   padding: 6rem 2rem 4rem;
   min-height: 100vh;
@@ -19,6 +31,11 @@
   font-weight: 700;
 }
 
+/* Dark mode title */
+:global(.dark) .title {
+  color: #4bc0ad;
+}
+
 .title::after {
   content: "";
   position: absolute;
@@ -31,6 +48,11 @@
   border-radius: 2px;
 }
 
+:global(.dark) .title::after {
+  background: linear-gradient(90deg, #4bc0ad, #2980b9);
+  opacity: 0.8;
+}
+
 .subtitle {
   text-align: center;
   font-size: 1.2rem;
@@ -38,6 +60,11 @@
   max-width: 700px;
   margin: 0 auto 3rem;
   line-height: 1.6;
+}
+
+/* Dark mode subtitle */
+:global(.dark) .subtitle {
+  color: #a0aec0;
 }
 
 .filterContainer {
@@ -66,11 +93,28 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* Dark mode filter buttons */
+:global(.dark) .filterButton {
+  background-color: #292929;
+  color: #cbd5e1;
+  border: 1px solid rgba(75, 85, 99, 0.4);
+}
+
+:global(.dark) .filterButton:hover {
+  background-color: #333333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
 .activeFilter {
   background: linear-gradient(135deg, #3b82f6, #2563eb);
   color: white;
   border: 1px solid transparent;
   box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+}
+
+:global(.dark) .activeFilter {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.35);
 }
 
 .activeFilter:hover {
@@ -104,9 +148,22 @@
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
+/* Dark mode project card */
+:global(.dark) .projectCard {
+  background-color: rgba(30, 30, 30, 0.9);
+  border: 1px solid rgba(50, 50, 50, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px, rgba(0, 0, 0, 0.15) 0px 8px 32px;
+}
+
 .projectCard:hover {
   transform: translateY(-10px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+/* Dark mode project card hover */
+:global(.dark) .projectCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 50px,
+    rgba(75, 192, 173, 0.15) 0px 0px 20px;
 }
 
 .imageContainer {
@@ -147,6 +204,11 @@
   padding-bottom: 0.5rem;
 }
 
+/* Dark mode project title */
+:global(.dark) .projectTitle {
+  color: #e0e0e0;
+}
+
 .projectTitle::after {
   content: "";
   position: absolute;
@@ -163,6 +225,11 @@
   color: #64748b;
   margin: 0;
   letter-spacing: 0.5px;
+}
+
+/* Dark mode project date */
+:global(.dark) .projectDate {
+  color: #a0aec0;
 }
 
 .categoryTag {
@@ -192,16 +259,37 @@
   border: 1px solid rgba(79, 70, 229, 0.2);
 }
 
+/* Dark mode category tags */
+:global(.dark) .categoryTag[data-category="University Project"] {
+  background-color: rgba(79, 70, 229, 0.25);
+  color: #8b83f9;
+  border: 1px solid rgba(79, 70, 229, 0.3);
+}
+
 .categoryTag[data-category="Side Project"] {
   background-color: rgba(236, 72, 153, 0.15);
   color: #ec4899;
   border: 1px solid rgba(236, 72, 153, 0.2);
 }
 
+/* Dark mode category tags */
+:global(.dark) .categoryTag[data-category="Side Project"] {
+  background-color: rgba(236, 72, 153, 0.25);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
 .categoryTag[data-category="Website"] {
   background-color: rgba(14, 165, 233, 0.15);
   color: #0ea5e9;
   border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+/* Dark mode category tags */
+:global(.dark) .categoryTag[data-category="Website"] {
+  background-color: rgba(14, 165, 233, 0.25);
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.3);
 }
 
 .projectDescription {
@@ -213,6 +301,11 @@
   gap: 0.8rem;
   margin: 0;
   line-height: 1.6;
+}
+
+/* Dark mode project description */
+:global(.dark) .projectDescription {
+  color: #cbd5e1;
 }
 
 .projectDescription p {
@@ -230,9 +323,19 @@
   transition: all 0.2s ease;
 }
 
+/* Dark mode tech highlight */
+:global(.dark) .techHighlight {
+  color: #60a5fa;
+  background-color: rgba(59, 130, 246, 0.18);
+}
+
 .techHighlight:hover {
   background-color: rgba(59, 130, 246, 0.2);
   transform: translateY(-1px);
+}
+
+:global(.dark) .techHighlight:hover {
+  background-color: rgba(59, 130, 246, 0.25);
 }
 
 .projectLinks {
@@ -258,9 +361,22 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* Dark mode link */
+:global(.dark) .link {
+  color: #e0e0e0;
+  background-color: #292929;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .link:hover {
   transform: translateY(-3px);
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode link hover */
+:global(.dark) .link:hover {
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+  background-color: #333333;
 }
 
 .highlightedLink {
@@ -328,6 +444,13 @@
   transition: all 0.2s ease;
 }
 
+/* Dark mode hackathon tag */
+:global(.dark) .hackathonTag {
+  background-color: rgba(245, 158, 11, 0.25);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
 .hackathonTag:hover {
   transform: translateY(-1px);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
@@ -355,6 +478,13 @@
   color: #059669;
   border: 1px solid rgba(16, 185, 129, 0.2);
   transition: all 0.2s ease;
+}
+
+/* Dark mode mobile app tag */
+:global(.dark) .mobileAppTag {
+  background-color: rgba(16, 185, 129, 0.25);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .mobileAppTag:hover {
@@ -395,8 +525,18 @@
   font-weight: 600;
 }
 
+/* Dark mode filter count */
+:global(.dark) .filterCount {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
 .activeFilter .filterCount {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+:global(.dark) .activeFilter .filterCount {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
