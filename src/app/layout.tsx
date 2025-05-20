@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import BackToTop from '@/components/BackToTop/BackToTop'; // Import BackToTop
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +27,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/images/al-logo.jpg" type="image/jpeg" />
-        {/* Font Awesome CSS */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -36,17 +34,19 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        {/* Google Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
-        {/* AOS CSS */}
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+          rel="stylesheet"
+        />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-        <BackToTop /> {/* Include BackToTop */}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <div id="root-layout">{children}</div>
       </body>
     </html>
   );

@@ -9,6 +9,7 @@ import Skills from "@/components/Skills/Skills";
 import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
 import Footer from "@/components/Footer/Footer";
+import BackToTop from "@/components/BackToTop/BackToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./page.module.css";
@@ -59,6 +60,7 @@ export default function Home() {
         </div>
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
