@@ -22,7 +22,7 @@ export const projects: Project[] = [
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/rideshare-app.jpg`,
     githubLink: "https://github.com/aal51282/UGARideShare",
-    liveDemo: "https://play.google.com/store/apps/details?id=com.uga.rideshare",
+    liveDemo: "https://www.loom.com/share/7e00c4b333664160aece241c75436b9c?sid=267a06b6-ecba-4038-a138-683d30a79956",
     description: [
       <>
         Developed a community-driven ride-sharing Android application that
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/country-quiz.png`,
     githubLink: "https://github.com/aal51282/country-quiz-mobile-app-4",
     liveDemo:
-      "https://play.google.com/store/apps/details?id=com.angel.countryquiz",
+      "https://www.loom.com/share/1a0f23d3272d4b71aea22854e257f87a?sid=8fdca8c6-b038-4fcf-99ce-703d7d84399f",
     description: [
       <>
         Developed an Android mobile application that tests users&apos; knowledge
