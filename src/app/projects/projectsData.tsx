@@ -93,7 +93,7 @@ export const projects: Project[] = [
     }/images/truest-assist.png`,
     githubLink: "https://github.com/aal51282/truest-assist",
     liveDemo:
-      "https://devpost.com/software/truest-assist?_gl=1*3f81e6*_gcl_au*NDAyNzY1NDMyLjE3NDY1NjU1NDk.*_ga*MTMwMDM3MzY0Ni4xNzQ2NTY1NTQ5*_ga_0YHJK3Y10M*czE3NDc2OTA3NzckbzYkZzEkdDE3NDc2OTA3ODkkajAkbDAkaDA.",
+      "https://www.loom.com/share/f5c76300a38c4d7bb984395358a24959?sid=13c83bfc-e69d-4340-8f83-a7a962fbbd64",
     description: [
       <>
         Co-developed an innovative gamified platform to simplify financial
