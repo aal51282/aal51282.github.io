@@ -179,6 +179,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               : {}
           }
         >
+          {/* GitHub Button - shown for all non-Website projects with a GitHub link */}
           {project.category !== "Website" && project.githubLink && (
             <Link
               href={project.githubLink}
@@ -200,93 +201,61 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <FaGithub /> GitHub
             </Link>
           )}
-          {project.liveDemo && (
+
+          {/* Website Link - shown only for Website category */}
+          {project.category === "Website" && project.liveDemo && (
             <Link
               href={project.liveDemo}
               target="_blank"
               rel="noopener noreferrer"
               className={
-                isFeatured
-                  ? ""
-                  : `${styles.link} ${
-                      project.category === "Website"
-                        ? styles.websiteLink
-                        : project.isMobileApp
-                        ? styles.mobileAppLink
-                        : styles.highlightedLink
-                    }`
+                isFeatured ? "" : `${styles.link} ${styles.websiteLink}`
               }
               style={{
                 ...buttonStyles,
                 ...(isFeatured
                   ? {
-                      background:
-                        project.category === "Website"
-                          ? "linear-gradient(135deg, #0ea5e9, #0284c7)"
-                          : project.isMobileApp
-                          ? "linear-gradient(135deg, #10b981, #059669)"
-                          : "linear-gradient(135deg, #3b82f6, #2563eb)",
+                      background: "linear-gradient(135deg, #0ea5e9, #0284c7)",
                       color: "white",
                       border: "none",
-                      boxShadow:
-                        project.category === "Website"
-                          ? "0 2px 4px rgba(14, 165, 233, 0.25)"
-                          : project.isMobileApp
-                          ? "0 2px 4px rgba(16, 185, 129, 0.25)"
-                          : "0 2px 4px rgba(37, 99, 235, 0.25)",
+                      boxShadow: "0 2px 4px rgba(14, 165, 233, 0.25)",
                     }
                   : {}),
               }}
-              onMouseOver={(e) =>
-                handleGradientMouseOver(
-                  e,
-                  project.category === "Website"
-                    ? "cyan"
-                    : project.isMobileApp
-                    ? "green"
-                    : "blue"
-                )
-              }
+              onMouseOver={(e) => handleGradientMouseOver(e, "cyan")}
               onMouseOut={handleMouseOut}
             >
-              {project.category === "Website" ? (
-                <>
-                  <FaGlobe /> {isFeatured ? "Visit Website" : "Visit Website"}
-                </>
-              ) : project.isMobileApp ? (
-                <>
-                  <FaMobileAlt /> {isFeatured ? "Download" : "Download App"}
-                </>
-              ) : (
-                <>
-                  <FaLink /> {isFeatured ? "Live" : "View Live"}
-                </>
-              )}
+              <FaGlobe /> Visit Website
             </Link>
           )}
-          {project.videoDemo && (
-            <Link
-              href={project.videoDemo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={isFeatured ? "" : `${styles.link} ${styles.videoLink}`}
-              style={{
-                ...buttonStyles,
-                ...(isFeatured
-                  ? {
-                      background: "linear-gradient(135deg, #10b981, #059669)",
-                      color: "white",
-                      border: "none",
-                      boxShadow: "0 2px 4px rgba(16, 185, 129, 0.25)",
-                    }
-                  : {}),
-              }}
-              onMouseOver={(e) => handleGradientMouseOver(e, "green")}
-              onMouseOut={handleMouseOut}
-            >
-              <FaVideo /> {isFeatured ? "Demo" : "Watch Demo"}
-            </Link>
-          )}
+
+          {/* Watch Demo Button - shown for non-Website projects that have videoDemo or liveDemo */}
+          {project.category !== "Website" &&
+            (project.videoDemo || project.liveDemo) && (
+              <Link
+                href={project.videoDemo || project.liveDemo || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={
+                  isFeatured ? "" : `${styles.link} ${styles.videoLink}`
+                }
+                style={{
+                  ...buttonStyles,
+                  ...(isFeatured
+                    ? {
+                        background: "linear-gradient(135deg, #10b981, #059669)",
+                        color: "white",
+                        border: "none",
+                        boxShadow: "0 2px 4px rgba(16, 185, 129, 0.25)",
+                      }
+                    : {}),
+                }}
+                onMouseOver={(e) => handleGradientMouseOver(e, "green")}
+                onMouseOut={handleMouseOut}
+              >
+                <FaVideo /> Watch Demo
+              </Link>
+            )}
         </div>
       </div>
     </div>
