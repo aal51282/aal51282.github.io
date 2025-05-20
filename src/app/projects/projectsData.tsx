@@ -164,7 +164,7 @@ export const projects: Project[] = [
     title: "Bitcoin Price Comparison Tool",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/btc-tracker.png`,
     githubLink: "https://github.com/aal51282/coins-table",
-    liveDemo: "https://bitcoin-tracker-demo.vercel.app/",
+    liveDemo: "https://www.loom.com/share/cede1f41e7c445a28bdb5fb7cd8bf59f?sid=c31673b1-f793-4526-9b71-a8d5471d4928",
     description: [
       <>
         Built a real-time Bitcoin price comparison tool using{" "}
@@ -188,7 +188,7 @@ export const projects: Project[] = [
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/wardrobe-wizard.png`,
     githubLink: "https://github.com/aal51282/wardrobe-wizard",
-    liveDemo: "https://wardrobe-wizard-nine.vercel.app/",
+    liveDemo: "https://www.loom.com/share/e4607878a37640ceb17ee53eda28a466?sid=cac91200-6680-4acb-9539-1519cc98c6c1",
     description: [
       <>
         Developed a modern wardrobe management application using{" "}
