@@ -14,3 +14,9 @@ https://angelloaiza.vercel.app/
 - Tailwind CSS
 - TypeScript
 - Vercel (deployment)
+
+## How to run cv
+In aal51282.github.io folder
+1. pnpm install
+2. pnpm run dev
+3. Open in http://localhost:3000/
