@@ -75,6 +75,12 @@
   gap: 2rem;
   margin: 0;
   padding: 0;
+  align-items: center;
+}
+
+.navLinks li {
+  display: flex;
+  align-items: center;
 }
 
 .navLinks li a {
@@ -84,6 +90,8 @@
   position: relative;
   padding: 0.5rem 0;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .navLinks li a:after {
@@ -107,6 +115,8 @@
 
 .resumeContainer {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .resumeButton {
@@ -210,6 +220,11 @@
   display: none;
 }
 
+.toggleModeContainer {
+  display: flex;
+  align-items: center;
+}
+
 .toggleDarkMode {
   background: none;
   border: none;
@@ -217,16 +232,30 @@
   font-size: 1.2rem;
   color: var(--text-color);
   transition: color 0.3s ease, transform 0.3s ease;
-  padding: 0.5rem;
-  border-radius: 50%;
+  padding: 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.toggleDarkMode:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
 }
 
 .toggleDarkMode:hover {
   color: var(--accent-color);
-  transform: rotate(15deg);
+}
+
+.toggleDarkMode:hover:after {
+  width: 100%;
 }
 
 .overlay {

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Nav.module.css";
 import Link from "next/link";
-import { FaMoon, FaSun, FaTimes, FaFileDownload, FaChevronDown } from "react-icons/fa";
+import {
+  FaMoon,
+  FaSun,
+  FaTimes,
+  FaFileDownload,
+  FaChevronDown,
+} from "react-icons/fa";
 
 const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -120,7 +126,7 @@ const Nav: React.FC = () => {
           </Link>
         </li>
         <li className={styles.resumeContainer}>
-          <button 
+          <button
             className={styles.resumeButton}
             onClick={(e) => {
               e.stopPropagation();
@@ -129,13 +135,13 @@ const Nav: React.FC = () => {
             aria-haspopup="true"
             aria-expanded={isResumeDropdownOpen}
           >
-            <FaFileDownload className={styles.resumeIcon} /> 
+            <FaFileDownload className={styles.resumeIcon} />
             Resume <FaChevronDown className={styles.dropdownIcon} />
           </button>
           {isResumeDropdownOpen && (
             <div className={styles.resumeDropdown}>
-              <a 
-                href="/resume/angel-loaiza-resume.pdf" 
+              <a
+                href="/resume/angel-loaiza-resume.pdf"
                 download="angel-loaiza-resume"
                 onClick={() => {
                   closeMobileMenu();
@@ -144,8 +150,8 @@ const Nav: React.FC = () => {
               >
                 PDF Version
               </a>
-              <a 
-                href="/resume/angel-loaiza-resume.docx" 
+              <a
+                href="/resume/angel-loaiza-resume.docx"
                 download="angel-loaiza-resume"
                 onClick={() => {
                   closeMobileMenu();
@@ -157,7 +163,7 @@ const Nav: React.FC = () => {
             </div>
           )}
         </li>
-        <li>
+        <li className={styles.toggleModeContainer}>
           <button
             onClick={toggleDarkMode}
             className={styles.toggleDarkMode}
