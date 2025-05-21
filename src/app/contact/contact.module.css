@@ -274,15 +274,16 @@
   left: 50%;
   transform: translateX(-50%);
   margin-top: 0.5rem;
-  background-color: var(--card-bg);
+  background-color: white;
   border-radius: var(--border-radius);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   padding: 0.5rem;
   flex-direction: column;
   gap: 0.25rem;
   min-width: 120px;
   z-index: 10;
   animation: fadeIn 0.2s ease forwards;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Create a transparent extended area for the dropdown to prevent losing hover */
@@ -313,7 +314,8 @@
   background: none;
   border: none;
   border-radius: 4px;
-  color: var(--text-color);
+  color: #333333;
+  font-weight: 500;
   cursor: pointer;
   font-size: 0.9rem;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -327,9 +329,13 @@
 
 /* Dark mode resume format options */
 :global(.dark) .resumeFormatOptions {
-  background-color: rgba(30, 30, 30, 0.95);
-  border: 1px solid rgba(50, 50, 50, 0.8);
+  background-color: rgba(30, 30, 30, 0.98);
+  border: 1px solid rgba(80, 80, 80, 0.8);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .resumeFormatOptions button {
+  color: #f0f0f0;
 }
 
 :global(.dark) .resumeFormatOptions button:hover {
