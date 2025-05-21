@@ -115,7 +115,7 @@ export const projects: Project[] = [
     hackathonDetails: "2nd Place - UGA X Hackathon",
   },
   {
-    title: "TRU Remodeling, INC.",
+    title: "TRU Remodeling, INC. Website",
     image: `${
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/tru-remodeling.webp`,
