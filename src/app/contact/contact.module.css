@@ -238,3 +238,63 @@
   background-color: rgba(61, 185, 166, 0.15);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Resume dropdown container */
+.resumeDropdownContainer {
+  position: relative;
+}
+
+.resumeLink {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.resumeFormatOptions {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 100px;
+  z-index: 10;
+}
+
+.resumeDropdownContainer:hover .resumeFormatOptions {
+  display: flex;
+}
+
+.resumeFormatOptions button {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.resumeFormatOptions button:hover {
+  background-color: rgba(61, 185, 166, 0.1);
+}
+
+/* Dark mode resume format options */
+:global(.dark) .resumeFormatOptions {
+  background-color: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(50, 50, 50, 0.8);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .resumeFormatOptions button:hover {
+  background-color: rgba(61, 185, 166, 0.15);
+}

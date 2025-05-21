@@ -6,7 +6,13 @@ import Footer from "@/components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./contact.module.css";
-import { FaEnvelope, FaCheck, FaLinkedin, FaGithub } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaCheck,
+  FaLinkedin,
+  FaGithub,
+  FaFileDownload,
+} from "react-icons/fa";
 
 const ContactPage: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -26,6 +32,19 @@ const ContactPage: React.FC = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
     });
+  };
+
+  const [selectedFormat, setSelectedFormat] = useState("pdf");
+
+  const handleResumeClick = (format: string) => {
+    setSelectedFormat(format);
+    const filename = `angel-loaiza-resume.${format}`;
+    const link = document.createElement("a");
+    link.href = `/resume/${filename}`;
+    link.setAttribute("download", "angel-loaiza-resume");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -76,6 +95,20 @@ const ContactPage: React.FC = () => {
               <FaLinkedin />
               <span>LinkedIn</span>
             </a>
+            <div className={styles.resumeDropdownContainer}>
+              <button
+                onClick={() => handleResumeClick("pdf")}
+                className={`${styles.socialLink} ${styles.resumeLink}`}
+                aria-label="Download Resume"
+              >
+                <FaFileDownload />
+                <span>Resume</span>
+              </button>
+              <div className={styles.resumeFormatOptions}>
+                <button onClick={() => handleResumeClick("pdf")}>PDF</button>
+                <button onClick={() => handleResumeClick("docx")}>Word</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
