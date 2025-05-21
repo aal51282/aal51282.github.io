@@ -105,6 +105,111 @@
   width: 100%;
 }
 
+.resumeContainer {
+  position: relative;
+}
+
+.resumeButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.resumeButton:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.resumeButton:hover {
+  color: var(--accent-color);
+}
+
+.resumeButton:hover:after {
+  width: 100%;
+}
+
+.resumeIcon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdownIcon {
+  font-size: 0.8rem;
+  margin-left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.resumeButton:hover .resumeIcon {
+  transform: translateY(-2px);
+}
+
+.resumeButton:hover .dropdownIcon {
+  transform: translateY(2px);
+}
+
+.resumeDropdown {
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  background-color: var(--navbar-bg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  min-width: 150px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resumeDropdown a {
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.resumeDropdown a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark .resumeDropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.resumeDropdown a:after {
+  display: none;
+}
+
 .toggleDarkMode {
   background: none;
   border: none;
@@ -183,6 +288,15 @@
     display: block;
     width: 100%;
     font-size: 1.1rem;
+  }
+
+  .resumeDropdown {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    margin: 0.5rem 0 0.5rem 1rem;
+    animation: none;
+    opacity: 1;
   }
 
   .overlay {
