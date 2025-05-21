@@ -238,7 +238,7 @@ export const projects: Project[] = [
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/movie_background.png`,
     githubLink: "https://github.com/aal51282/Cinema-Ebooking-System",
-    liveDemo: "https://cinema-ebooking-system.vercel.app/",
+    liveDemo: "https://www.loom.com/share/b6de639caff347368c408a49fd94f21e?sid=db5431d3-201f-4d96-a60d-52f54f8f9e3e",
     description: [
       <>
         Developed a cinema movie booking website using{" "}
