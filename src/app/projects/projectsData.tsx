@@ -254,8 +254,8 @@ export const projects: Project[] = [
   },
   {
     title: "Venue-Weather Finder",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/api_app.jpg`,
-    githubLink: "https://github.com/aal51282/cs1302-api-app",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/venue-weather-finder.png`,
+    githubLink: "https://github.com/aal51282/venue-weather-finder",
     liveDemo: "https://www.loom.com/share/ee46237842b24d859f91a5dacce33867?sid=acce4fc7-9729-4be2-91bd-4ccbf8e24109",
     description: [
       <>
@@ -270,8 +270,8 @@ export const projects: Project[] = [
   {
     title: "Gallery App",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/itunes.jpg`,
-    githubLink: "https://github.com/aal51282/itunes-app",
-    liveDemo: "https://uiux-itunes-demo.com",
+    githubLink: "https://github.com/cs1302uga/cs1302-gallery",
+    liveDemo: "https://www.youtube.com/watch?v=5SsO63m-Q5A&ab_channel=CSCI1302UGA",
     description: [
       <>
         Developed a <span className={styles.techHighlight}>JavaFX</span>{" "}
