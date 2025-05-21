@@ -285,6 +285,17 @@
   animation: fadeIn 0.2s ease forwards;
 }
 
+/* Create a transparent extended area for the dropdown to prevent losing hover */
+.resumeFormatOptions::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background-color: transparent;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

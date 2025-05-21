@@ -30,22 +30,6 @@ const ContactPage: React.FC = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        resumeDropdownRef.current &&
-        !resumeDropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsResumeDropdownOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [resumeDropdownRef]);
-
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
@@ -53,9 +37,12 @@ const ContactPage: React.FC = () => {
     });
   };
 
-  const toggleResumeDropdown = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsResumeDropdownOpen(!isResumeDropdownOpen);
+  const handleResumeMouseEnter = () => {
+    setIsResumeDropdownOpen(true);
+  };
+
+  const handleResumeMouseLeave = () => {
+    setIsResumeDropdownOpen(false);
   };
 
   const handleResumeClick = (format: string) => {
@@ -66,7 +53,6 @@ const ContactPage: React.FC = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    setIsResumeDropdownOpen(false);
   };
 
   return (
@@ -120,9 +106,10 @@ const ContactPage: React.FC = () => {
             <div
               className={styles.resumeDropdownContainer}
               ref={resumeDropdownRef}
+              onMouseEnter={handleResumeMouseEnter}
+              onMouseLeave={handleResumeMouseLeave}
             >
               <button
-                onClick={toggleResumeDropdown}
                 className={`${styles.socialLink} ${styles.resumeLink}`}
                 aria-label="Download Resume"
                 aria-expanded={isResumeDropdownOpen}
