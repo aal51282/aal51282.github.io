@@ -42,7 +42,7 @@ const Splash: React.FC = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/angel-loaiza"
+              href="https://www.linkedin.com/in/angelloaiza/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
