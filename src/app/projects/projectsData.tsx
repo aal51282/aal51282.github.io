@@ -256,7 +256,7 @@ export const projects: Project[] = [
     title: "Venue-Weather Finder",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/api_app.jpg`,
     githubLink: "https://github.com/aal51282/cs1302-api-app",
-    liveDemo: "https://api-integration-demo.com",
+    liveDemo: "https://www.loom.com/share/ee46237842b24d859f91a5dacce33867?sid=acce4fc7-9729-4be2-91bd-4ccbf8e24109",
     description: [
       <>
         Created a <span className={styles.techHighlight}>JavaFX</span>{" "}
