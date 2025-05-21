@@ -249,6 +249,23 @@
   border: none;
   font-family: inherit;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdownIcon {
+  font-size: 0.7rem;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.rotateIcon {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .resumeFormatOptions {
@@ -261,19 +278,26 @@
   border-radius: var(--border-radius);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
-  display: none;
   flex-direction: column;
   gap: 0.25rem;
-  min-width: 100px;
+  min-width: 120px;
   z-index: 10;
+  animation: fadeIn 0.2s ease forwards;
 }
 
-.resumeDropdownContainer:hover .resumeFormatOptions {
-  display: flex;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .resumeFormatOptions button {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   text-align: center;
   background: none;
   border: none;
@@ -281,11 +305,13 @@
   color: var(--text-color);
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 100%;
 }
 
 .resumeFormatOptions button:hover {
   background-color: rgba(61, 185, 166, 0.1);
+  color: var(--accent-color);
 }
 
 /* Dark mode resume format options */
