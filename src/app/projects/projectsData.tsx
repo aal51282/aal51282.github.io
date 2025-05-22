@@ -22,7 +22,8 @@ export const projects: Project[] = [
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/rideshare-app.jpg`,
     githubLink: "https://github.com/aal51282/UGARideShare",
-    liveDemo: "https://www.loom.com/share/7e00c4b333664160aece241c75436b9c?sid=267a06b6-ecba-4038-a138-683d30a79956",
+    liveDemo:
+      "https://www.loom.com/share/7e00c4b333664160aece241c75436b9c?sid=267a06b6-ecba-4038-a138-683d30a79956",
     description: [
       <>
         Developed a community-driven ride-sharing Android application that
@@ -115,33 +116,13 @@ export const projects: Project[] = [
     hackathonDetails: "2nd Place - UGA X Hackathon",
   },
   {
-    title: "TRU Remodeling, INC. Website",
-    image: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/images/tru-remodeling.webp`,
-    liveDemo: "https://truremodeling.com",
-    description: [
-      <>
-        Designed, developed, and launched the official company website,
-        establishing an online presence and improving client accessibility.
-      </>,
-      <>
-        Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
-        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
-        responsive design, service showcase, and client testimonials to enhance
-        the company&apos;s online presence.
-      </>,
-    ],
-    date: "January 2025 - February 2025",
-    category: "Website",
-  },
-  {
     title: "AI Video Generator",
     image: `${
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/ai-video-generator.png`,
     githubLink: "https://github.com/aal51282/ai-video-generator",
-    videoDemo: "https://www.loom.com/share/2561469cc23f47b0907cc5d271ac5c52?sid=9b66acb0-83af-42b6-a866-ae7c8d26dce2",
+    videoDemo:
+      "https://www.loom.com/share/2561469cc23f47b0907cc5d271ac5c52?sid=9b66acb0-83af-42b6-a866-ae7c8d26dce2",
     description: [
       <>
         Developed a full-stack application that generates short videos from text
@@ -164,7 +145,8 @@ export const projects: Project[] = [
     title: "Bitcoin Price Comparison Tool",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/btc-tracker.png`,
     githubLink: "https://github.com/aal51282/coins-table",
-    liveDemo: "https://www.loom.com/share/cede1f41e7c445a28bdb5fb7cd8bf59f?sid=c31673b1-f793-4526-9b71-a8d5471d4928",
+    liveDemo:
+      "https://www.loom.com/share/cede1f41e7c445a28bdb5fb7cd8bf59f?sid=c31673b1-f793-4526-9b71-a8d5471d4928",
     description: [
       <>
         Built a real-time Bitcoin price comparison tool using{" "}
@@ -188,7 +170,8 @@ export const projects: Project[] = [
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/wardrobe-wizard.png`,
     githubLink: "https://github.com/aal51282/wardrobe-wizard",
-    liveDemo: "https://www.loom.com/share/e4607878a37640ceb17ee53eda28a466?sid=cac91200-6680-4acb-9539-1519cc98c6c1",
+    liveDemo:
+      "https://www.loom.com/share/e4607878a37640ceb17ee53eda28a466?sid=cac91200-6680-4acb-9539-1519cc98c6c1",
     description: [
       <>
         Developed a modern wardrobe management application using{" "}
@@ -238,7 +221,8 @@ export const projects: Project[] = [
       process.env.NEXT_PUBLIC_BASE_PATH || ""
     }/images/movie_background.png`,
     githubLink: "https://github.com/aal51282/Cinema-Booking-System",
-    liveDemo: "https://www.loom.com/share/b6de639caff347368c408a49fd94f21e?sid=db5431d3-201f-4d96-a60d-52f54f8f9e3e",
+    liveDemo:
+      "https://www.loom.com/share/b6de639caff347368c408a49fd94f21e?sid=db5431d3-201f-4d96-a60d-52f54f8f9e3e",
     description: [
       <>
         Developed a cinema movie booking website using{" "}
@@ -253,10 +237,34 @@ export const projects: Project[] = [
     category: "University Project",
   },
   {
+    title: "TRU Remodeling, INC. Website",
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/tru-remodeling.webp`,
+    liveDemo: "https://truremodeling.com",
+    description: [
+      <>
+        Designed, developed, and launched the official company website,
+        establishing an online presence and improving client accessibility.
+      </>,
+      <>
+        Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
+        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
+        responsive design, service showcase, and client testimonials to enhance
+        the company&apos;s online presence.
+      </>,
+    ],
+    date: "May 2024",
+    category: "Website",
+  },
+  {
     title: "Venue-Weather Finder",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/venue-weather-finder.png`,
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/venue-weather-finder.png`,
     githubLink: "https://github.com/aal51282/venue-weather-finder",
-    liveDemo: "https://www.loom.com/share/ee46237842b24d859f91a5dacce33867?sid=acce4fc7-9729-4be2-91bd-4ccbf8e24109",
+    liveDemo:
+      "https://www.loom.com/share/ee46237842b24d859f91a5dacce33867?sid=acce4fc7-9729-4be2-91bd-4ccbf8e24109",
     description: [
       <>
         Created a <span className={styles.techHighlight}>JavaFX</span>{" "}
@@ -271,7 +279,8 @@ export const projects: Project[] = [
     title: "Gallery App",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/itunes.jpg`,
     githubLink: "https://github.com/cs1302uga/cs1302-gallery",
-    liveDemo: "https://www.youtube.com/watch?v=5SsO63m-Q5A&ab_channel=CSCI1302UGA",
+    liveDemo:
+      "https://www.youtube.com/watch?v=5SsO63m-Q5A&ab_channel=CSCI1302UGA",
     description: [
       <>
         Developed a <span className={styles.techHighlight}>JavaFX</span>{" "}
