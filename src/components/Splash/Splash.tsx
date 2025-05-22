@@ -23,9 +23,9 @@ const Splash: React.FC = () => {
           <h1 className={styles.name}>Angel A. Loaiza</h1>
           <h2 className={styles.tagline}>Software Engineer</h2>
           <p className={styles.description}>
-            Innovative Software Engineer with expertise in machine learning,
-            artificial intelligence, and database management, building on a
-            strong foundation in aerospace engineering and computer science.
+          Innovative Software Engineer with expertise in machine learning, 
+          artificial intelligence, and database management, with a strong 
+          foundation in computer science and advanced computational systems.
           </p>
           <div className={styles.contact}>
             <p className={styles.address}>

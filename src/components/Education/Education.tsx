@@ -26,7 +26,7 @@ const Education: React.FC = () => {
             <p className={styles.degree}>
               Bachelor of Science in Computer Science, Cum Laude
             </p>
-            <p className={styles.dateGpa}>GPA: 3.65/4.00</p>
+            <p className={styles.dateGpa}>GPA: 3.71/4.00</p>
             <p className={styles.courses}>
               <strong>Courses:</strong> Systems Programming, Software
               Engineering, Web Programming, Computer Networks, Algorithms and
