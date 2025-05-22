@@ -26,7 +26,9 @@ const Education: React.FC = () => {
             <p className={styles.degree}>
               Bachelor of Science in Computer Science, Cum Laude
             </p>
-            <p className={styles.dateGpa}>GPA: 3.71/4.00</p>
+            <p className={styles.dateGpa}>
+              January 2023 - May 2025 | GPA: 3.71/4.00
+            </p>
             <p className={styles.courses}>
               <strong>Courses:</strong> Systems Programming, Software
               Engineering, Web Programming, Computer Networks, Algorithms and
@@ -58,7 +60,9 @@ const Education: React.FC = () => {
             <p className={styles.degree}>
               Attended for Major in Aerospace Engineering (transferred to UGA)
             </p>
-            <p className={styles.dateGpa}>GPA: 3.60/4.00</p>
+            <p className={styles.dateGpa}>
+              August 2019 – May 2020 | GPA: 3.60/4.00
+            </p>
           </div>
         </div>
       </div>

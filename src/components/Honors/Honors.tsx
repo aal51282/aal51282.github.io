@@ -7,14 +7,16 @@ const Honors: React.FC = () => {
       <h2>Honors & Awards</h2>
       <ul>
         <li>
-          <strong>Graduated Cum Laude</strong> - Bachelor of Science in Computer
-          Science
+          <strong>Graduated Cum Laude</strong>
         </li>
         <li>
-          <strong>Dean&apos;s List</strong> - Fall 2023
+          <strong>Dean&apos;s List</strong>
         </li>
         <li>
-          <strong>Zell Miller Scholarship Recipient</strong> - Fall 2023
+          <strong>President&apos;s List</strong>
+        </li>
+        <li>
+          <strong>Zell Miller Scholarship Recipient</strong>
         </li>
       </ul>
     </section>

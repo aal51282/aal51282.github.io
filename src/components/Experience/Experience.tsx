@@ -24,26 +24,18 @@ const Experience: React.FC = () => {
             </a>
           </h3>
           <p className={styles.jobLocation}>Lawrenceville, GA</p>
-          <p className={styles.jobTitle}>IT Support Specialist</p>
-          <p className={styles.jobPeriod}>August 2019 – May 2025</p>
+          <p className={styles.jobTitle}>Software Developer, Intern</p>
+          <p className={styles.jobPeriod}>May 2024 – August 2024</p>
         </div>
         <ul className={styles.responsibilities}>
           <li>
-            Designed, developed, and launched the official company website,
-            establishing an online presence and improving client accessibility.
+          Designed, developed, and launched the official company website, establishing an online presence and directly contributing to a 16% increase in project volume and new client acquisitions.
           </li>
           <li>
-            Successfully installed, assessed, and configured over 50 laptops and
-            desktops, and 4 key company servers, ensuring operational readiness
-            for all new and existing employees.
+          Built a comprehensive material and equipment inventory tracking system with database integration to monitor construction supplies, tools, and equipment across multiple job sites, reducing material waste and improving project cost management by 35%.
           </li>
           <li>
-            Managed computer setups and email account administration for a
-            workforce of approximately 30 employees.
-          </li>
-          <li>
-            Managed the creation and administration of over 120 work contracts,
-            ensuring compliance and clear terms for all parties.
+          Developed an internal communication platform featuring real-time chat systems, automated notifications, and alert mechanisms for project deadlines and safety incidents, improving team coordination and reducing project delays by 25%.
           </li>
         </ul>
       </div>
@@ -62,7 +54,7 @@ const Experience: React.FC = () => {
             </a>
           </h3>
           <p className={styles.jobLocation}>Athens, GA</p>
-          <p className={styles.jobTitle}>Full-Stack Developer</p>
+          <p className={styles.jobTitle}>Website Developer</p>
           <p className={styles.jobPeriod}>March 2025 – May 2025</p>
         </div>
         <ul className={styles.responsibilities}>
