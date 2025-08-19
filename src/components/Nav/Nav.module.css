@@ -343,24 +343,20 @@
     top: 60px; /* Start below the header */
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.98); /* More opaque background */
+    background-color: var(--navbar-bg); /* Use the CSS variable that changes with dark mode */
     flex-direction: column;
     width: 100%;
     padding: 2rem; /* Reduced top padding since we're below header now */
     gap: 1.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(-120%);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     align-items: center;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     max-height: calc(100vh - 60px); /* Account for header height */
     overflow-y: auto;
     z-index: 999; /* Below navbar but above content */
-  }
-  
-  .dark .navLinks {
-    background-color: rgba(30, 30, 30, 0.98); /* More opaque for dark mode */
   }
 
   .navLinks.active {
@@ -376,9 +372,14 @@
     display: inline-block;
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
-    color: var(--text-color) !important;
+    color: var(--text-color) !important; /* Use CSS variable for dynamic color */
     opacity: 1 !important;
     font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks li a:hover {
+    color: var(--accent-color) !important;
   }
   
   /* Style the Resume button on mobile */
@@ -390,17 +391,19 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--text-color) !important;
+    color: var(--text-color) !important; /* Use CSS variable for dynamic color */
     opacity: 1 !important;
     font-weight: 500;
   }
   
   .resumeButton .resumeIcon {
     opacity: 1 !important;
+    color: var(--text-color) !important;
   }
   
   .resumeButton .dropdownIcon {
     transition: transform 0.3s ease;
+    color: var(--text-color) !important;
   }
   
   .resumeContainer.active .dropdownIcon {
@@ -421,7 +424,7 @@
     margin-top: 0.5rem;
     animation: none;
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--navbar-bg);
     border-radius: 8px;
     width: 180px;
     display: flex;
@@ -429,13 +432,9 @@
     gap: 0.5rem;
   }
   
-  .dark .resumeDropdown {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  
   .resumeDropdown a {
     padding: 0.7rem 1rem;
-    background-color: var(--navbar-bg);
+    background-color: var(--card-bg);
     border-radius: 6px;
     text-align: center;
     font-size: 0.9rem;
@@ -443,15 +442,26 @@
     transition: all 0.2s ease;
     display: block;
     width: 100%;
+    color: var(--text-color);
+  }
+  
+  .dark .resumeDropdown a {
+    border: 1px solid rgba(75, 192, 173, 0.3);
   }
   
   .resumeDropdown a:hover {
     background-color: rgba(61, 185, 166, 0.1);
     border-color: var(--accent-color);
   }
+  
+  .dark .resumeDropdown a:hover {
+    background-color: rgba(75, 192, 173, 0.15);
+    border-color: var(--accent-color);
+  }
 
   .overlay {
     display: block;
+    top: 60px; /* Start below the header */
   }
   
   /* Hide desktop dark mode toggle in menu on mobile */
