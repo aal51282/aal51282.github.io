@@ -34,7 +34,7 @@ const ContactPage: React.FC = () => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+      setTimeout(() => setCopied(false), 3000); // Reset after 3 seconds
     });
   };
 
@@ -70,6 +70,7 @@ const ContactPage: React.FC = () => {
               onClick={copyToClipboard}
               className={styles.copyButton}
               aria-label="Copy email to clipboard"
+              title="Click to copy"
             >
               {copied ? (
                 <FaCheck className={styles.checkIcon} />
@@ -78,10 +79,10 @@ const ContactPage: React.FC = () => {
               )}
             </button>
             <span className={styles.emailText}>{email}</span>
+            {copied && (
+              <p className={styles.copiedMessage}>Copied!</p>
+            )}
           </div>
-          {copied && (
-            <p className={styles.copiedMessage}>Email copied to clipboard!</p>
-          )}
 
           <div className={styles.socialLinks}>
             <a

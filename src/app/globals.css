@@ -60,6 +60,7 @@ body {
   );
   overflow-y: auto;
   overflow-x: hidden;
+  padding-top: 60px; /* Account for fixed navbar */
 }
 
 /* Dark mode specific gradient */
