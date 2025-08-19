@@ -260,10 +260,6 @@
   width: 100%;
 }
 
-.mobileControls {
-  display: none; /* Hidden by default on desktop */
-}
-
 .mobileDarkModeToggle {
   display: none; /* Hidden by default on desktop */
 }
@@ -277,6 +273,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 998; /* Below menu but above content */
   display: none;
+  cursor: pointer;
 }
 
 /* Mobile Styles */
@@ -296,23 +293,15 @@
   }
   
   .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    flex: 1;
     text-align: center;
+    order: 2; /* Middle item */
   }
   
   .logo a {
     font-size: 1.2rem;
   }
   
-  .mobileControls {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-left: auto;
-  }
-
   .menuToggle {
     display: flex !important;
     position: relative;
@@ -321,6 +310,7 @@
     opacity: 1 !important;
     transform: translateZ(0); /* Force GPU acceleration */
     -webkit-transform: translateZ(0);
+    order: 1; /* First item on the left */
   }
   
   .mobileDarkModeToggle {
@@ -333,6 +323,7 @@
     padding: 0.5rem;
     align-items: center;
     justify-content: center;
+    order: 3; /* Last item on the right */
   }
 
   .menuToggle.active .bar:nth-child(1) {
@@ -349,23 +340,27 @@
 
   .navLinks {
     position: fixed;
-    top: 0;
+    top: 60px; /* Start below the header */
     left: 0;
     right: 0;
-    background-color: var(--navbar-bg);
+    background-color: rgba(255, 255, 255, 0.98); /* More opaque background */
     flex-direction: column;
     width: 100%;
-    padding: 80px 2rem 2rem; /* Extra padding at top for navbar */
+    padding: 2rem; /* Reduced top padding since we're below header now */
     gap: 1.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-100%);
+    transform: translateY(-120%);
     transition: transform 0.3s ease-in-out;
     align-items: center;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    max-height: 100vh;
+    max-height: calc(100vh - 60px); /* Account for header height */
     overflow-y: auto;
     z-index: 999; /* Below navbar but above content */
+  }
+  
+  .dark .navLinks {
+    background-color: rgba(30, 30, 30, 0.98); /* More opaque for dark mode */
   }
 
   .navLinks.active {
@@ -381,6 +376,9 @@
     display: inline-block;
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
+    color: var(--text-color) !important;
+    opacity: 1 !important;
+    font-weight: 500;
   }
   
   /* Style the Resume button on mobile */
@@ -392,6 +390,13 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    color: var(--text-color) !important;
+    opacity: 1 !important;
+    font-weight: 500;
+  }
+  
+  .resumeButton .resumeIcon {
+    opacity: 1 !important;
   }
   
   .resumeButton .dropdownIcon {

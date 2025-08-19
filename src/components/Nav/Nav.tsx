@@ -78,12 +78,22 @@ const Nav: React.FC = () => {
     setIsResumeDropdownOpen(false);
   };
 
-  // Close resume dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
+      
+      // Close resume dropdown if clicking outside of it
       if (!target.closest(`.${styles.resumeContainer}`)) {
         closeResumeDropdown();
+      }
+      
+      // Close mobile menu if clicking outside of navbar on mobile
+      if (isMobileMenuOpen && window.innerWidth <= 768) {
+        const navbar = document.querySelector(`.${styles.navbar}`);
+        if (navbar && !navbar.contains(target)) {
+          closeMobileMenu();
+        }
       }
     };
 
@@ -91,41 +101,40 @@ const Nav: React.FC = () => {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  }, [isMobileMenuOpen]);
 
   return (
     <nav
       className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}
       aria-label="Main Navigation"
     >
+      <button
+        className={`${styles.menuToggle} ${
+          isMobileMenuOpen ? styles.active : ""
+        }`}
+        onClick={toggleMobileMenu}
+        aria-label="Toggle navigation menu"
+        aria-expanded={isMobileMenuOpen}
+      >
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+      </button>
       <div className={styles.logo}>
         <Link href="/">Angel A. Loaiza</Link>
       </div>
-      <div className={styles.mobileControls}>
-        <button
-          onClick={toggleDarkMode}
-          className={styles.mobileDarkModeToggle}
-          aria-label="Toggle Dark Mode"
-        >
-          {isDarkMode ? <FaSun /> : <FaMoon />}
-        </button>
-        <button
-          className={`${styles.menuToggle} ${
-            isMobileMenuOpen ? styles.active : ""
-          }`}
-          onClick={toggleMobileMenu}
-          aria-label="Toggle navigation menu"
-          aria-expanded={isMobileMenuOpen}
-        >
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-        </button>
-      </div>
+      <button
+        onClick={toggleDarkMode}
+        className={styles.mobileDarkModeToggle}
+        aria-label="Toggle Dark Mode"
+      >
+        {isDarkMode ? <FaSun /> : <FaMoon />}
+      </button>
       <ul
         className={`${styles.navLinks} ${
           isMobileMenuOpen ? styles.active : ""
         }`}
+        onClick={(e) => e.stopPropagation()}
       >
         <li>
           <Link href="/" onClick={closeMobileMenu}>
