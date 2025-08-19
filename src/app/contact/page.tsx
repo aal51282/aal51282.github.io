@@ -34,7 +34,10 @@ const ContactPage: React.FC = () => {
   // Click outside to close dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (resumeDropdownRef.current && !resumeDropdownRef.current.contains(event.target as Node)) {
+      if (
+        resumeDropdownRef.current &&
+        !resumeDropdownRef.current.contains(event.target as Node)
+      ) {
         setIsResumeDropdownOpen(false);
       }
     };
@@ -78,7 +81,9 @@ const ContactPage: React.FC = () => {
         </h1>
         <div className={styles.contactForm} data-aos="fade-up">
           <h2 className={styles.subtitle}>Contact Information</h2>
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <div
+            style={{ display: "flex", justifyContent: "center", width: "100%" }}
+          >
             <div className={styles.emailContact}>
               <button
                 onClick={copyToClipboard}
@@ -93,9 +98,7 @@ const ContactPage: React.FC = () => {
                 )}
               </button>
               <span className={styles.emailText}>{email}</span>
-              {copied && (
-                <p className={styles.copiedMessage}>Copied!</p>
-              )}
+              {copied && <p className={styles.copiedMessage}>Copied!</p>}
             </div>
           </div>
 
