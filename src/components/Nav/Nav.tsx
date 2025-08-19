@@ -23,6 +23,16 @@ const Nav: React.FC = () => {
       document.documentElement.classList.add("dark");
     }
 
+    // Force a repaint on mobile to fix hamburger menu visibility
+    if (window.innerWidth <= 768) {
+      const navbar = document.querySelector(`.${styles.navbar}`) as HTMLElement;
+      if (navbar) {
+        navbar.style.display = 'none';
+        navbar.offsetHeight; // Force reflow
+        navbar.style.display = '';
+      }
+    }
+
     // Add scroll event listener
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -33,22 +43,20 @@ const Nav: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      // Clean up any overflow styles on unmount
+      document.body.style.overflow = "";
+    };
   }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    // Prevent body scrolling when menu is open
-    if (!isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    // Don't prevent scrolling - let users scroll with menu open
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    document.body.style.overflow = "auto";
   };
 
   const toggleDarkMode = () => {

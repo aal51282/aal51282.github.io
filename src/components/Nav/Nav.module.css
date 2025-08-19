@@ -12,6 +12,8 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navbar.scrolled {
@@ -279,12 +281,39 @@
     z-index: 1000;
     width: 100%;
     box-sizing: border-box;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .logo a {
+    font-size: 1.2rem;
+  }
+  
+  .mobileControls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
   }
 
   .menuToggle {
-    display: flex;
+    display: flex !important;
     position: relative;
     z-index: 1001;
+    margin-left: auto;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateZ(0); /* Force GPU acceleration */
+    -webkit-transform: translateZ(0);
   }
 
   .menuToggle.active .bar:nth-child(1) {
