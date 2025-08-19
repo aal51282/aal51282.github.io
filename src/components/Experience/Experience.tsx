@@ -13,6 +13,36 @@ const Experience: React.FC = () => {
       <div className={styles.experienceItem}>
         <div className={styles.experienceHeader}>
           <h3>
+            Angel Automation LLC
+            <a
+              href="https://angelautomation.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.companyLink}
+            >
+              angelautomation.io
+            </a>
+          </h3>
+          <p className={styles.jobLocation}>Loganville, GA</p>
+          <p className={styles.jobTitle}>Founder & CEO</p>
+          <p className={styles.jobPeriod}>July 2025 – Present</p>
+        </div>
+        <ul className={styles.responsibilities}>
+          <li>
+            Launched an AI-powered business automation consultancy serving SMBs nationwide.
+          </li>
+          <li>
+            Built the client automation stack end-to-end: website development, multi-platform AI chatbots with booking, AI phone assistant, automated follow-ups, review management, and CRM pipelines.
+          </li>
+          <li>
+            Delivered sites and automations focused on faster response times, higher lead capture, and stronger local SEO.
+          </li>
+        </ul>
+      </div>
+
+      <div className={styles.experienceItem}>
+        <div className={styles.experienceHeader}>
+          <h3>
             ULEAD Athens Website Redesign
             <a
               href="https://www.uleadathens.org"
@@ -83,7 +113,17 @@ const Experience: React.FC = () => {
 
       <div className={styles.experienceItem}>
         <div className={styles.experienceHeader}>
-          <h3>LISTo UGA (Latinos Invested in the Students of Tomorrow)</h3>
+          <h3>
+            LISTo UGA (Latinos Invested in the Students of Tomorrow)
+            <a
+              href="https://www.instagram.com/listoatuga/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.companyLink}
+            >
+              @listoatuga
+            </a>
+          </h3>
           <p className={styles.jobLocation}>Athens, GA</p>
           <p className={styles.jobTitle}>Mentor</p>
           <p className={styles.jobPeriod}>September 2023 – May 2025</p>
