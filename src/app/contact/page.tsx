@@ -31,6 +31,22 @@ const ContactPage: React.FC = () => {
     });
   }, []);
 
+  // Click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (resumeDropdownRef.current && !resumeDropdownRef.current.contains(event.target as Node)) {
+        setIsResumeDropdownOpen(false);
+      }
+    };
+
+    if (isResumeDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }
+  }, [isResumeDropdownOpen]);
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
@@ -38,12 +54,8 @@ const ContactPage: React.FC = () => {
     });
   };
 
-  const handleResumeMouseEnter = () => {
-    setIsResumeDropdownOpen(true);
-  };
-
-  const handleResumeMouseLeave = () => {
-    setIsResumeDropdownOpen(false);
+  const handleResumeToggle = () => {
+    setIsResumeDropdownOpen(!isResumeDropdownOpen);
   };
 
   const handleResumeClick = (format: string) => {
@@ -54,6 +66,7 @@ const ContactPage: React.FC = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    setIsResumeDropdownOpen(false); // Close dropdown after selection
   };
 
   return (
@@ -65,23 +78,25 @@ const ContactPage: React.FC = () => {
         </h1>
         <div className={styles.contactForm} data-aos="fade-up">
           <h2 className={styles.subtitle}>Contact Information</h2>
-          <div className={styles.emailContact}>
-            <button
-              onClick={copyToClipboard}
-              className={styles.copyButton}
-              aria-label="Copy email to clipboard"
-              title="Click to copy"
-            >
-              {copied ? (
-                <FaCheck className={styles.checkIcon} />
-              ) : (
-                <FaEnvelope className={styles.emailIcon} />
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <div className={styles.emailContact}>
+              <button
+                onClick={copyToClipboard}
+                className={styles.copyButton}
+                aria-label="Copy email to clipboard"
+                title="Click to copy"
+              >
+                {copied ? (
+                  <FaCheck className={styles.checkIcon} />
+                ) : (
+                  <FaEnvelope className={styles.emailIcon} />
+                )}
+              </button>
+              <span className={styles.emailText}>{email}</span>
+              {copied && (
+                <p className={styles.copiedMessage}>Copied!</p>
               )}
-            </button>
-            <span className={styles.emailText}>{email}</span>
-            {copied && (
-              <p className={styles.copiedMessage}>Copied!</p>
-            )}
+            </div>
           </div>
 
           <div className={styles.socialLinks}>
@@ -108,14 +123,13 @@ const ContactPage: React.FC = () => {
             <div
               className={styles.resumeDropdownContainer}
               ref={resumeDropdownRef}
-              onMouseEnter={handleResumeMouseEnter}
-              onMouseLeave={handleResumeMouseLeave}
             >
               <button
                 className={`${styles.socialLink} ${styles.resumeLink}`}
                 aria-label="Download Resume"
                 aria-expanded={isResumeDropdownOpen}
                 aria-haspopup="true"
+                onClick={handleResumeToggle}
               >
                 <FaFileDownload />
                 <span>Resume</span>

@@ -117,15 +117,16 @@
 }
 
 .emailContact {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 1rem;
+  padding: 0.9rem 1.2rem;
   background: rgba(61, 185, 166, 0.05);
   border-radius: 12px;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
   transition: background 0.3s ease;
+  position: relative;
 }
 
 :global(.dark) .emailContact {
@@ -188,9 +189,10 @@
 
 .emailText {
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 500;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.1px;
+  white-space: nowrap;
 }
 
 .copiedMessage {
@@ -218,6 +220,40 @@
   }
 }
 
+@media (max-width: 480px) {
+  .emailText {
+    font-size: 0.85rem;
+    max-width: 200px;
+  }
+  
+  .emailContact {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.8rem;
+  }
+  
+  .copyButton {
+    padding: 0.5rem;
+  }
+  
+  .socialLinks {
+    gap: 0.75rem;
+  }
+  
+  .socialLink {
+    padding: 0.8rem;
+    min-width: 70px;
+  }
+  
+  .socialLink svg {
+    font-size: 1.5rem;
+  }
+  
+  .socialLink span {
+    font-size: 0.75rem;
+  }
+}
+
 @media (max-height: 500px) {
   .title {
     font-size: 2rem;
@@ -226,10 +262,6 @@
 
   .contactForm {
     padding: 1.5rem;
-  }
-
-  .emailContact {
-    font-size: 1rem;
   }
 }
 
