@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Nav from "@/components/Nav/Nav";
 import Footer from "@/components/Footer/Footer";
+import BackToTop from "@/components/BackToTop/BackToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./contact.module.css";
@@ -138,6 +139,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
       <Footer />
+      <BackToTop />
     </div>
   );
 };

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "@/components/Nav/Nav";
 import Footer from "@/components/Footer/Footer";
+import BackToTop from "@/components/BackToTop/BackToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./projects.module.css";
@@ -110,6 +111,7 @@ const ProjectsPage = () => {
         </section>
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 };
