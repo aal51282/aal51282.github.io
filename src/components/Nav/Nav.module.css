@@ -382,14 +382,67 @@
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
   }
+  
+  /* Style the Resume button on mobile */
+  .resumeButton {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    width: auto;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .resumeButton .dropdownIcon {
+    transition: transform 0.3s ease;
+  }
+  
+  .resumeContainer.active .dropdownIcon {
+    transform: rotate(180deg);
+  }
+
+  .resumeContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .resumeDropdown {
-    position: static;
+    position: relative;
     box-shadow: none;
-    padding: 0;
-    margin: 0.5rem 0 0.5rem 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
     animation: none;
     opacity: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .dark .resumeDropdown {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .resumeDropdown a {
+    padding: 0.7rem 1rem;
+    background-color: var(--navbar-bg);
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+    border: 1px solid rgba(61, 185, 166, 0.2);
+    transition: all 0.2s ease;
+    display: block;
+    width: 100%;
+  }
+  
+  .resumeDropdown a:hover {
+    background-color: rgba(61, 185, 166, 0.1);
+    border-color: var(--accent-color);
   }
 
   .overlay {

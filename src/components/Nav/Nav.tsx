@@ -142,7 +142,7 @@ const Nav: React.FC = () => {
             Contact
           </Link>
         </li>
-        <li className={styles.resumeContainer}>
+        <li className={`${styles.resumeContainer} ${isResumeDropdownOpen ? styles.active : ''}`}>
           <button
             className={styles.resumeButton}
             onClick={(e) => {
