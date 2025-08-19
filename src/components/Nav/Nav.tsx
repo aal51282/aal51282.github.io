@@ -101,18 +101,27 @@ const Nav: React.FC = () => {
       <div className={styles.logo}>
         <Link href="/">Angel A. Loaiza</Link>
       </div>
-      <button
-        className={`${styles.menuToggle} ${
-          isMobileMenuOpen ? styles.active : ""
-        }`}
-        onClick={toggleMobileMenu}
-        aria-label="Toggle navigation menu"
-        aria-expanded={isMobileMenuOpen}
-      >
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-      </button>
+      <div className={styles.mobileControls}>
+        <button
+          onClick={toggleDarkMode}
+          className={styles.mobileDarkModeToggle}
+          aria-label="Toggle Dark Mode"
+        >
+          {isDarkMode ? <FaSun /> : <FaMoon />}
+        </button>
+        <button
+          className={`${styles.menuToggle} ${
+            isMobileMenuOpen ? styles.active : ""
+          }`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMobileMenuOpen}
+        >
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </button>
+      </div>
       <ul
         className={`${styles.navLinks} ${
           isMobileMenuOpen ? styles.active : ""

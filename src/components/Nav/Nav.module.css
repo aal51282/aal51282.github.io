@@ -260,6 +260,14 @@
   width: 100%;
 }
 
+.mobileControls {
+  display: none; /* Hidden by default on desktop */
+}
+
+.mobileDarkModeToggle {
+  display: none; /* Hidden by default on desktop */
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -309,11 +317,22 @@
     display: flex !important;
     position: relative;
     z-index: 1001;
-    margin-left: auto;
     visibility: visible !important;
     opacity: 1 !important;
     transform: translateZ(0); /* Force GPU acceleration */
     -webkit-transform: translateZ(0);
+  }
+  
+  .mobileDarkModeToggle {
+    display: flex !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .menuToggle.active .bar:nth-child(1) {
@@ -375,5 +394,10 @@
 
   .overlay {
     display: block;
+  }
+  
+  /* Hide desktop dark mode toggle in menu on mobile */
+  .toggleModeContainer {
+    display: none;
   }
 }
