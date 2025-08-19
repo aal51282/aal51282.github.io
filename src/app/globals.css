@@ -43,6 +43,12 @@ html {
   scroll-padding-top: 70px;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Account for fixed navbar on mobile */
+  }
+}
+
 body {
   font-family: "Poppins", "Roboto", sans-serif;
   color: var(--text-color);
