@@ -5,7 +5,7 @@ This repository hosts the GitHub Pages version of my portfolio website.
 ## Website
 
 My portfolio is deployed at:
-https://angelloaiza.vercel.app/
+https://angelloaiza.com/
 
 ## Technologies Used
 
