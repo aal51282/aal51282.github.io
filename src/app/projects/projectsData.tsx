@@ -17,6 +17,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Angel Automation Website",
+    image: `${
+      process.env.NEXT_PUBLIC_BASE_PATH || ""
+    }/images/angel-automation.png`,
+    liveDemo: "https://angelautomation.io",
+    description: [
+      <>
+        Designed and developed the official website for Angel Automation LLC, an
+        AI-powered business automation consultancy serving SMBs nationwide.
+      </>,
+      <>
+        Built with <span className={styles.techHighlight}>Next.js</span>,{" "}
+        <span className={styles.techHighlight}>TypeScript</span>, and{" "}
+        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
+        modern UI/UX design, responsive layouts, service showcases, and
+        integrated contact forms to drive lead generation and client engagement.
+      </>,
+    ],
+    date: "July 2025",
+    category: "Website",
+  },
+  {
     title: "Rideshare Mobile Application",
     image: `${
       process.env.NEXT_PUBLIC_BASE_PATH || ""
