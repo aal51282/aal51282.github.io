@@ -25,9 +25,6 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /aal51282.github.io
 
-      - name: Export
-        run: npm run export
-
       - name: Copy redirect file
         run: cp index.html out/
 
