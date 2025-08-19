@@ -5,8 +5,8 @@
 }
 
 .contactSection {
-  flex: 1;
-  padding: 5rem 2rem;
+  flex: 1 0 auto;
+  padding: 2rem 2rem 2rem;
   background: linear-gradient(
     135deg,
     var(--background-color) 0%,
@@ -19,6 +19,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  min-height: calc(100vh - 140px); /* Approximate header + footer height */
 }
 
 /* Dark mode contact section with more black on right side */
@@ -66,8 +67,8 @@
 }
 
 .title {
-  font-size: 3rem;
-  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   color: var(--accent-color);
   font-weight: 700;
   position: relative;
@@ -84,7 +85,7 @@
 .contactForm {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  padding: 3rem 2.5rem;
+  padding: 2rem 1.8rem 1.8rem;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   width: 100%;
@@ -121,10 +122,10 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 0.9rem 1.2rem;
+  padding: 0.8rem 1rem;
   background: rgba(61, 185, 166, 0.05);
   border-radius: 12px;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   transition: background 0.3s ease;
   position: relative;
 }
@@ -266,8 +267,8 @@
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
   color: var(--text-color);
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -278,9 +279,9 @@
 .socialLinks {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  padding-top: 2rem;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
   border-top: 1px solid rgba(61, 185, 166, 0.15);
 }
 
@@ -292,15 +293,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   color: var(--text-color);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 12px;
   background: rgba(0, 0, 0, 0.02);
   border: 1px solid transparent;
-  min-width: 80px;
+  min-width: 75px;
 }
 
 /* Dark mode social links */
@@ -310,13 +311,13 @@
 }
 
 .socialLink svg {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--accent-color);
   transition: transform 0.3s ease;
 }
 
 .socialLink span {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   opacity: 0.8;
   transition: opacity 0.3s ease;
@@ -386,7 +387,7 @@
   flex-direction: column;
   gap: 0.2rem;
   min-width: 140px;
-  z-index: 10;
+  z-index: 1000;
   animation: dropIn 0.2s ease forwards;
   border: 1px solid rgba(61, 185, 166, 0.15);
 }
