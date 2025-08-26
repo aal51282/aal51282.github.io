@@ -17,6 +17,14 @@ const Nav: React.FC = () => {
 
   // Initialize dark mode based on localStorage
   useEffect(() => {
+    const setNavbarHeightVar = () => {
+      const navbar = document.querySelector(`.${styles.navbar}`) as HTMLElement | null;
+      if (navbar) {
+        const h = navbar.offsetHeight;
+        document.documentElement.style.setProperty("--navbar-height", `${h}px`);
+      }
+    };
+
     const darkModeStored = localStorage.getItem("isDarkMode") === "true";
     setIsDarkMode(darkModeStored);
     if (darkModeStored) {
@@ -33,7 +41,14 @@ const Nav: React.FC = () => {
       }
     }
 
+    // Initialize navbar height CSS var and keep it updated
+    setNavbarHeightVar();
+    window.addEventListener("resize", setNavbarHeightVar);
+    window.addEventListener("orientationchange", setNavbarHeightVar as any);
+
     return () => {
+      window.removeEventListener("resize", setNavbarHeightVar);
+      window.removeEventListener("orientationchange", setNavbarHeightVar as any);
       // Clean up any overflow styles on unmount
       document.body.style.overflow = "";
     };
@@ -56,6 +71,12 @@ const Nav: React.FC = () => {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
+    }
+    // Recompute navbar height after potential font/metric changes
+    const navbar = document.querySelector(`.${styles.navbar}`) as HTMLElement | null;
+    if (navbar) {
+      const h = navbar.offsetHeight;
+      document.documentElement.style.setProperty("--navbar-height", `${h}px`);
     }
   };
 

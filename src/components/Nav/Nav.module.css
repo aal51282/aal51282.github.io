@@ -279,8 +279,8 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
-  .navbar {
+  @media (max-width: 768px) {
+    .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -292,7 +292,8 @@
     justify-content: space-between !important;
     align-items: center;
     padding: 1rem 1.5rem;
-  }
+    height: var(--navbar-height);
+    }
   
   .logo {
     flex: 1;
@@ -342,7 +343,7 @@
 
   .navLinks {
     position: fixed;
-    top: 60px; /* Start below the header */
+    top: var(--navbar-height); /* Start below the header */
     left: 0;
     right: 0;
     background-color: var(--navbar-bg-translucent); /* Slightly transparent for overlay effect */
@@ -356,7 +357,7 @@
     align-items: center;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    max-height: calc(100vh - 60px); /* Account for header height */
+    max-height: calc(100vh - var(--navbar-height)); /* Account for header height */
     overflow-y: auto;
     z-index: 999; /* Below navbar but above content */
   }
@@ -463,7 +464,7 @@
 
   .overlay {
     display: block;
-    top: 60px; /* Start below the header */
+    top: var(--navbar-height); /* Start below the header */
     background-color: transparent; /* Remove grey dimming */
   }
 

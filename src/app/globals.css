@@ -6,6 +6,7 @@
 @tailwind utilities;
 
 :root {
+  --navbar-height: 60px;
   --background-color: #ffffff;
   --text-color: #333333;
   --accent-color: #3db9a6;
