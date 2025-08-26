@@ -77,6 +77,15 @@ const Nav: React.FC = () => {
         closeResumeDropdown();
       }
       
+      // If clicking the dark mode toggles, do NOT close the mobile menu
+      if (
+        target.closest(`.${styles.mobileDarkModeToggle}`) ||
+        target.closest(`.${styles.toggleDarkMode}`) ||
+        target.closest(`.${styles.toggleModeContainer}`)
+      ) {
+        return;
+      }
+
       // Close mobile menu if clicking outside of navbar on mobile
       if (isMobileMenuOpen && window.innerWidth <= 768) {
         const navbar = document.querySelector(`.${styles.navbar}`);
@@ -110,7 +119,10 @@ const Nav: React.FC = () => {
         <Link href="/">Angel A. Loaiza</Link>
       </div>
       <button
-        onClick={toggleDarkMode}
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleDarkMode();
+        }}
         className={styles.mobileDarkModeToggle}
         aria-label="Toggle Dark Mode"
       >
@@ -177,7 +189,10 @@ const Nav: React.FC = () => {
         </li>
         <li className={styles.toggleModeContainer}>
           <button
-            onClick={toggleDarkMode}
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleDarkMode();
+            }}
             className={styles.toggleDarkMode}
             aria-label="Toggle Dark Mode"
           >

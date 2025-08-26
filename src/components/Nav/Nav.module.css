@@ -345,7 +345,7 @@
     top: 60px; /* Start below the header */
     left: 0;
     right: 0;
-    background-color: var(--navbar-bg); /* Use the CSS variable that changes with dark mode */
+    background-color: var(--navbar-bg-translucent); /* Slightly transparent for overlay effect */
     flex-direction: column;
     width: 100%;
     padding: 2rem; /* Reduced top padding since we're below header now */

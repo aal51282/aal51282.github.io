@@ -10,6 +10,7 @@
   --text-color: #333333;
   --accent-color: #3db9a6;
   --navbar-bg: rgb(255, 255, 255);
+  --navbar-bg-translucent: rgba(255, 255, 255, 0.92);
   --footer-bg: #333333;
   --footer-text: #ffffff;
   --link-color: #3db9a6;
@@ -24,6 +25,7 @@
   --text-color: #f0f0f0;
   --accent-color: #4bc0ad;
   --navbar-bg: rgb(30, 30, 30);
+  --navbar-bg-translucent: rgba(30, 30, 30, 0.9);
   --footer-bg: #1e1e1e;
   --footer-text: #f0f0f0;
   --link-color: #4bc0ad;
