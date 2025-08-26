@@ -12,7 +12,7 @@ import {
 const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  // Keep header size consistent; no scroll-based shrinking
   const [isResumeDropdownOpen, setIsResumeDropdownOpen] = useState(false);
 
   // Initialize dark mode based on localStorage
@@ -33,18 +33,7 @@ const Nav: React.FC = () => {
       }
     }
 
-    // Add scroll event listener
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       // Clean up any overflow styles on unmount
       document.body.style.overflow = "";
     };
@@ -104,10 +93,7 @@ const Nav: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav
-      className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}
-      aria-label="Main Navigation"
-    >
+    <nav className={styles.navbar} aria-label="Main Navigation">
       <button
         className={`${styles.menuToggle} ${
           isMobileMenuOpen ? styles.active : ""

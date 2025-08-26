@@ -464,6 +464,18 @@
   .overlay {
     display: block;
     top: 60px; /* Start below the header */
+    background-color: transparent; /* Remove grey dimming */
+  }
+
+  /* Ensure header controls sit above the sliding menu */
+  .logo {
+    position: relative;
+    z-index: 1002;
+  }
+
+  .mobileDarkModeToggle {
+    position: relative;
+    z-index: 1002;
   }
   
   /* Hide desktop dark mode toggle in menu on mobile */
