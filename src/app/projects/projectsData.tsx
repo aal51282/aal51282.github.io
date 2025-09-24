@@ -66,12 +66,12 @@ export const projects: Project[] = [
     isMobileApp: true,
   },
   {
-    title: "ULEAD Athens Website Redesign",
+    title: "U-Lead Athens Website Redesign",
     image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ulead-athens.png`,
     liveDemo: "https://www.uleadathens.org/",
     description: [
       <>
-        Led the redesign of ULEAD Athens&apos; outdated website to enhance user
+        Led the redesign of U-Lead Athens&apos; outdated website to enhance user
         experience and modernize their online presence.
       </>,
       <>

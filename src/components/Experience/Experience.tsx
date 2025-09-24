@@ -43,7 +43,7 @@ const Experience: React.FC = () => {
       <div className={styles.experienceItem}>
         <div className={styles.experienceHeader}>
           <h3>
-            ULEAD Athens Website Redesign
+            U-Lead Athens Website Redesign
             <a
               href="https://www.uleadathens.org"
               target="_blank"
@@ -59,7 +59,7 @@ const Experience: React.FC = () => {
         </div>
         <ul className={styles.responsibilities}>
           <li>
-            Led the redesign of ULEAD Athens&apos; outdated website to enhance
+            Led the redesign of U-Lead Athens&apos; outdated website to enhance
             user experience and modernize their online presence.
           </li>
           <li>
