@@ -17,6 +17,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Alkali Foundation Website",
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/alkali-foundation.png`,
+    liveDemo: "https://www.alkalifoundation.org",
+    description: [
+      <>
+        Crafted a high-impact digital presence for the Alkali Foundation Website to highlight community programs and simplify donor engagement.
+      </>,
+      <>
+        Delivered a blazing-fast site with <span className={styles.techHighlight}>Next.js</span>, <span className={styles.techHighlight}>TypeScript</span>, and <span className={styles.techHighlight}>Tailwind CSS</span>, layered with <span className={styles.techHighlight}>Shadcn UI</span> components for polished accessibility-first layouts.
+      </>,
+      <>
+        Deployed on <span className={styles.techHighlight}>Vercel</span> with SEO-forward architecture, structured metadata, and content optimizations to maximize discoverability and measurable impact.
+      </>,
+    ],
+    date: "September 2025",
+    category: "Website",
+  },
+  {
     title: "Angel Automation Website",
     image: `${
       process.env.NEXT_PUBLIC_BASE_PATH || ""
@@ -319,3 +337,4 @@ export const projects: Project[] = [
     category: "University Project",
   },
 ];
+
