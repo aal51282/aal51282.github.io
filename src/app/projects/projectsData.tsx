@@ -277,27 +277,6 @@ export const projects: Project[] = [
     category: "University Project",
   },
   {
-    title: "TRU Remodeling, INC. Website",
-    image: `${
-      process.env.NEXT_PUBLIC_BASE_PATH || ""
-    }/images/tru-remodeling.webp`,
-    liveDemo: "https://truremodeling.com",
-    description: [
-      <>
-        Designed, developed, and launched the official company website,
-        establishing an online presence and improving client accessibility.
-      </>,
-      <>
-        Created using <span className={styles.techHighlight}>Next.js</span> and{" "}
-        <span className={styles.techHighlight}>Tailwind CSS</span>, featuring
-        responsive design, service showcase, and client testimonials to enhance
-        the company&apos;s online presence.
-      </>,
-    ],
-    date: "May 2024",
-    category: "Website",
-  },
-  {
     title: "Venue-Weather Finder",
     image: `${
       process.env.NEXT_PUBLIC_BASE_PATH || ""

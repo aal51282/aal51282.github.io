@@ -76,44 +76,6 @@ const Experience: React.FC = () => {
       <div className={styles.experienceItem}>
         <div className={styles.experienceHeader}>
           <h3>
-            TRU Remodeling, INC.
-            <a
-              href="https://truremodeling.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.companyLink}
-            >
-              truremodeling.com
-            </a>
-          </h3>
-          <p className={styles.jobLocation}>Lawrenceville, GA</p>
-          <p className={styles.jobTitle}>Software Developer, Intern</p>
-          <p className={styles.jobPeriod}>May 2024 – August 2024</p>
-        </div>
-        <ul className={styles.responsibilities}>
-          <li>
-            Designed, developed, and launched the official company website,
-            establishing an online presence and directly contributing to a 16%
-            increase in project volume and new client acquisitions.
-          </li>
-          <li>
-            Built a comprehensive material and equipment inventory tracking
-            system with database integration to monitor construction supplies,
-            tools, and equipment across multiple job sites, reducing material
-            waste and improving project cost management by 35%.
-          </li>
-          <li>
-            Developed an internal communication platform featuring real-time
-            chat systems, automated notifications, and alert mechanisms for
-            project deadlines and safety incidents, improving team coordination
-            and reducing project delays by 25%.
-          </li>
-        </ul>
-      </div>
-
-      <div className={styles.experienceItem}>
-        <div className={styles.experienceHeader}>
-          <h3>
             LISTo UGA (Latinos Invested in the Students of Tomorrow)
             <a
               href="https://www.instagram.com/listoatuga/?hl=en"
