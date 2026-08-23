@@ -4,17 +4,12 @@ import Link from "next/link";
 import {
   FaMoon,
   FaSun,
-  FaTimes,
-  FaFileDownload,
-  FaChevronDown,
 } from "react-icons/fa";
 
 const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   // Keep header size consistent; no scroll-based shrinking
-  const [isResumeDropdownOpen, setIsResumeDropdownOpen] = useState(false);
-
   // Initialize dark mode based on localStorage
   useEffect(() => {
     const setNavbarHeightVar = () => {
@@ -80,24 +75,11 @@ const Nav: React.FC = () => {
     }
   };
 
-  const toggleResumeDropdown = () => {
-    setIsResumeDropdownOpen(!isResumeDropdownOpen);
-  };
-
-  const closeResumeDropdown = () => {
-    setIsResumeDropdownOpen(false);
-  };
-
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      
-      // Close resume dropdown if clicking outside of it
-      if (!target.closest(`.${styles.resumeContainer}`)) {
-        closeResumeDropdown();
-      }
-      
+
       // If clicking the dark mode toggles, do NOT close the mobile menu
       if (
         target.closest(`.${styles.mobileDarkModeToggle}`) ||
@@ -169,44 +151,6 @@ const Nav: React.FC = () => {
           <Link href="/contact" onClick={closeMobileMenu}>
             Contact
           </Link>
-        </li>
-        <li className={`${styles.resumeContainer} ${isResumeDropdownOpen ? styles.active : ''}`}>
-          <button
-            className={styles.resumeButton}
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleResumeDropdown();
-            }}
-            aria-haspopup="true"
-            aria-expanded={isResumeDropdownOpen}
-          >
-            <FaFileDownload className={styles.resumeIcon} />
-            Resume <FaChevronDown className={styles.dropdownIcon} />
-          </button>
-          {isResumeDropdownOpen && (
-            <div className={styles.resumeDropdown}>
-              <a
-                href="/resume/angel-loaiza-resume.pdf"
-                download="angel-loaiza-resume"
-                onClick={() => {
-                  closeMobileMenu();
-                  closeResumeDropdown();
-                }}
-              >
-                PDF Version
-              </a>
-              <a
-                href="/resume/angel-loaiza-resume.docx"
-                download="angel-loaiza-resume"
-                onClick={() => {
-                  closeMobileMenu();
-                  closeResumeDropdown();
-                }}
-              >
-                Word Version
-              </a>
-            </div>
-          )}
         </li>
         <li className={styles.toggleModeContainer}>
           <button

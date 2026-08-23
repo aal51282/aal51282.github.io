@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "@/components/Nav/Nav";
 import Footer from "@/components/Footer/Footer";
 import BackToTop from "@/components/BackToTop/BackToTop";
@@ -12,14 +12,10 @@ import {
   FaCheck,
   FaLinkedin,
   FaGithub,
-  FaFileDownload,
-  FaChevronDown,
 } from "react-icons/fa";
 
 const ContactPage: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const [isResumeDropdownOpen, setIsResumeDropdownOpen] = useState(false);
-  const resumeDropdownRef = useRef<HTMLDivElement>(null);
   const email = "angelloaiza7140@gmail.com";
 
   useEffect(() => {
@@ -31,45 +27,11 @@ const ContactPage: React.FC = () => {
     });
   }, []);
 
-  // Click outside to close dropdown
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        resumeDropdownRef.current &&
-        !resumeDropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsResumeDropdownOpen(false);
-      }
-    };
-
-    if (isResumeDropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }
-  }, [isResumeDropdownOpen]);
-
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
-      setTimeout(() => setCopied(false), 3000); // Reset after 3 seconds
+      setTimeout(() => setCopied(false), 3000);
     });
-  };
-
-  const handleResumeToggle = () => {
-    setIsResumeDropdownOpen(!isResumeDropdownOpen);
-  };
-
-  const handleResumeClick = (format: string) => {
-    const filename = `angel-loaiza-resume.${format}`;
-    const link = document.createElement("a");
-    link.href = `/resume/${filename}`;
-    link.setAttribute("download", "angel-loaiza-resume");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setIsResumeDropdownOpen(false); // Close dropdown after selection
   };
 
   return (
@@ -123,36 +85,6 @@ const ContactPage: React.FC = () => {
               <FaLinkedin />
               <span>LinkedIn</span>
             </a>
-            <div
-              className={styles.resumeDropdownContainer}
-              ref={resumeDropdownRef}
-            >
-              <button
-                className={`${styles.socialLink} ${styles.resumeLink}`}
-                aria-label="Download Resume"
-                aria-expanded={isResumeDropdownOpen}
-                aria-haspopup="true"
-                onClick={handleResumeToggle}
-              >
-                <FaFileDownload />
-                <span>Resume</span>
-                <FaChevronDown
-                  className={`${styles.dropdownIcon} ${
-                    isResumeDropdownOpen ? styles.rotateIcon : ""
-                  }`}
-                />
-              </button>
-              {isResumeDropdownOpen && (
-                <div className={styles.resumeFormatOptions}>
-                  <button onClick={() => handleResumeClick("pdf")}>
-                    PDF Version
-                  </button>
-                  <button onClick={() => handleResumeClick("docx")}>
-                    Word Version
-                  </button>
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </section>
