@@ -29,7 +29,7 @@ const Splash: React.FC = () => {
           </p>
           <div className={styles.contact}>
             <p className={styles.address}>
-              Athens, GA • 404-379-8011 • angelloaiza7140@gmail.com
+              Athens, GA • angelloaiza7140@gmail.com
             </p>
           </div>
           <div className={styles.socialLinks}>
